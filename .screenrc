@@ -1,0 +1,33 @@
+# Some guy just said he puts this in his bash_profile
+# screen -a -A -xRR -U -e^Pp
+
+# Make bash the default shell
+# shell /bin/bash
+
+# Detach on hangup
+autodetach off
+
+# Don't display copyright page
+startup_message off
+
+# Remember <x> lines
+defscrollback 9999
+
+# Set altscreen so that when you quit vi, it will go back to what it was before
+altscreen on
+
+# C-a s does'nt suspend the screen, instead split screen
+bind s split
+
+# to start a program 
+# screen -t <title> <program>
+
+# Window list at the bottom
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# folder that contains all hardcopies
+hardcopydir ~/.screen
+
+# Allow bold colors
+attrcolor b ".I"
