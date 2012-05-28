@@ -1,0 +1,16 @@
+
+*.*
+
+!*.cpp
+!*.c
+!*.h
+!*.hpp
+!*.hxx
+!*.cxx
+
+TAGS
+tags
+vtags
+cscope.out
+cscope.in.out
+cscope.po.out

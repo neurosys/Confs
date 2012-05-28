@@ -1,0 +1,9 @@
+
+XTerm*background: black
+XTerm*foreground: white
+XTerm*pointerColor: red
+XTerm*pointerColorBacground: white
+XTerm*loginShell: true
+XTerm*scrollBar: false
+XTerm*scrollKey: true
+XTerm*saveLines: 10000
