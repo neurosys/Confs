@@ -1,6 +1,28 @@
 "
 " Rather rarely used stuff
 "
+" Nice colorschemes
+    " -------------------------------------------------------------------------------
+    " bclear (white background, low contrast)
+    " blacksea (black background, high contrast)
+    " chela_light (white background, medium contrast)
+    " darkZ (grey background, medium contrast), nice colors for c++
+    " darkbode (black backdround, medium contrast) nice colors for c++
+    " darkspectrum (grey background, medium contrast) almost nice for c++
+    " delek (white background, high contrast) ... original pack
+    " desert (grey background, high contrast) good for c++
+    " earendel (grey bg, medium contrast)
+    " evening (grey bg, medium contrast) wierd string highlighting
+    " jellybeans (grey bg, medium contrast) ok for codding... bad for text
+    " mustang (grey bg, medium contrast) ok for codding... bad for text
+    " rootwater (grey bg, medium contrast) ok for coding
+
+" Ctags
+    " -------------------------------------------------------------------------------
+    " :tag /<partial symbol name> 
+    " Searches for <partial symbol name> trough the tag list (regexp can be applyed)
+    " 
+ 
 " Highlight <pattern> with the settings for this <class>
     " -------------------------------------------------------------------------------
     " :match <class> /<pattern>/
@@ -64,6 +86,9 @@
     " -------------------------------------------------------------------------------
     " cmap makes mappings for the command line :-)
     "
+" command
+    " Creates a new command (command name must begin with capital letter)
+    " command Functionlist !ctags -x %
 
 " Special navigation
     " -------------------------------------------------------------------------------
@@ -89,6 +114,8 @@
     " g<C-g>              - Shows a detailed info about the currsor possition
     " "*y                 - Copy to clipboard
     " "*p                 - Paste from cliboard
+    " "<capital letter>yy - Append the line yanked to register <letter>
+    " q<capital letter>   - Appends to macro recorded in register <letter>
     " C-x C-] (insert)    - Autocomplete from the ctags file ;-)
     "
     " :map                - Lists all normal mod mappings
@@ -103,6 +130,21 @@
     " :syntax clear       - Turns of syntax higlight (useful for speed)
     "
     " :set scrollbind     - Scroll all the windows at the same time
+    "
+	"dl"	delete character (alias: "x")		|dl|
+	"diw"	delete inner word			*diw*
+	"daw"	delete a word				*daw*
+	"diW"	delete inner WORD (see |WORD|)		*diW*
+	"daW"	delete a WORD (see |WORD|)		*daW*
+	"dd"	delete one line				|dd|
+	"dis"	delete inner sentence			*dis*
+	"das"	delete a sentence			*das*
+	"dib"	delete inner '(' ')' block		*dib*
+	"dab"	delete a '(' ')' block			*dab*
+	"dip"	delete inner paragraph			*dip*
+	"dap"	delete a paragraph			*dap*
+	"diB"	delete inner '{' '}' block		*diB*
+	"daB"	delete a '{' '}' block			*daB*
 
 " Debug
     " -------------------------------------------------------------------------------
@@ -166,33 +208,53 @@
     "  d    pressed in the file browser window, creates a new directory
 
 set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/mswin.vim
 "behave mswin
 
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
-  else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+if has("win32unix")
+"set runtimepath = ~/.vim,
+    "set runtimepath=~/vimfiles,$VIMRUNTIME
+ "   set runtimepath+=c:/Users/NeuroSys/vimfiles
+ "   set runtimepath+=~/vimfiles
+endif
+
+if has("unix")
+    " Nothing for the moment
+endif
+
+if has("win32")
+    " Nothing for the moment
+endif
+
+"set diffexpr=MyDiff()
+"function MyDiff()
+"  let opt = '-a --binary '
+"  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+"  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+"  let arg1 = v:fname_in
+"  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+"  let arg2 = v:fname_new
+"  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+"  let arg3 = v:fname_out
+"  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+"  let eq = ''
+"  if $VIMRUNTIME =~ ' '
+"    if &sh =~ '\<cmd'
+"      let cmd = '""' . $VIMRUNTIME . '\diff"'
+"      let eq = '"'
+"  else
+"      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+"    endif
+"  else
+"    let cmd = $VIMRUNTIME . '\diff'
+"  endif
+"  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+"endfunction
+
+function FunctionList()
+    :pedit "List of functions for %s"
+    C-w j
+    :r! ctags -x %
+    C-w k 
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -205,21 +267,55 @@ if has("gui")
     " Still, by default we should open inf full screen
     au GUIEnter * simalt ~x
 
+    " Set the color schema
+    "color darkZ
+    "color elflord
+    "color slate
+    "color molokai
+    color default
+
+    " Sugest use of collors that look good on white backrgounds
+    set background=light
+
+    " Use a nicer font
+    ":set guifont=ProggyCleanTT_CE:h12
+    ":set guifont=Ubuntu_Mono:h12:cANSI
+    :set guifont=Ubuntu_Mono:h9:cANSI
+
+    " No menu and tab bar
+    :set guioptions=
+
     " Alt-Space is System menu
     noremap <M-Space> :simalt ~<CR>
     inoremap <M-Space> <C-O>:simalt ~<CR>
     cnoremap <M-Space> <C-C>:simalt ~<CR>
+else
+    " Sugest use of collors that look good on dark backrgounds
+    set background=dark
 endif
 
 " Paste in insert mode
-cmap <C-V> <C-R>+
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+if has("gui")
+    cmap <C-V> <C-R>+
+    exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+else
+    color elflord
+endif
 
-" No menu and tab bar
-:set guioptions=
 
+" Windows
 " Use a nicer font
-:set guifont=ProggyCleanTT_CE:h12
+":set guifont=ProggyCleanTT_CE:h12
+"
+" Linux
+":set guifont=Andale\ Mono\ 10
+":set guifont=Courier\ New\ 12
+":set guifont=DejaVu\ Sans\ Mono\ 10
+":set guifont=Liberation\ Mono\ 10
+":set guifont=Monospace\ 12
+":set guifont=Ubuntu\ Mono\ 12
+"
+"
 
 " No bell, now flashes, NO FUCKING THING !!!!
 :set noerrorbells
@@ -266,8 +362,7 @@ endif
 " - Yellow, LightYellow
 " - White
 
-" Set the color schema
-:color elflord
+
 
 " Define a set of todos, based on the custom colorschemes
 
@@ -291,40 +386,40 @@ if has("autocmd")
 endif
 
 " Do not wrap lines (useful in 60% cases, very annoying in rest)
-:set nowrap
+set nowrap
 
 " I want search highlithing on
-:set hls
+set hls
 
 " Simulate Alt pressing (sincer nu stiu la ce-mi foloseste)
-:set si is
+set si is
 
 " Use line number when printing (on paper)
-:set printoptions=number:y
+set printoptions=number:y
 
 " Use spaces instead of tabs
-:set expandtab
+set expandtab
 
 " Use fast grep for searching
-:set grepprg=fg
+":set grepprg=fg
+set grepprg=egrep
 
 " Ignore case when searching
-:set ignorecase
+set ignorecase
 
 " Use smartcase when searching (if searched string is lowercase => ignore
 " case, if upercase " pressent => case sensitive)
-:set smartcase
+set smartcase
 
 " When in insert mode, I want to be able to backspace things entered in other
 " sessions
 set backspace=indent,eol,start
 
+" Show incomplete commands
+set showcmd
+
 " When a bracket is inserted, briefly jump to the matching one
 set showmatch
-
-" Sugest use of collors that look good on dark backrgounds
-set background=dark
-" set background=light
 
 " When a file is changed outside of vim, reload it
 set autoread
@@ -332,9 +427,6 @@ set autoread
 " Atempt to determine the type of a file based on its name and posibly by
 " content
 filetype indent plugin on
-
-" Enable syntax
-syntax on
 
 " Instead of failing my commands because of unsaved info, ask for my
 " confirmation
@@ -354,8 +446,14 @@ match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 " Allow buffer switching without write
 set hidden
 
-" Highlight columns 80, 120, 130
-set colorcolumn=80,120,130
+if v:version > 720
+    " Highlight columns 80, 120, 130
+    set colorcolumn=80,120,130
+endif
+
+
+" Let me choose how long a text line can be (by default 78)
+set textwidth=0
 
 " In insert mode display tabs as >-
 ":set listchars=tab:>-,trail:-
@@ -379,6 +477,10 @@ au InsertLeave * let &updatetime=updaterestore
 
 " start scrolling when within 5 lines near the top/bottom
 set scrolloff=5
+
+" Spelling en_us maybe sometimes... ro
+command Spell setlocal spell spelllang=en_us
+
 
 " allow freeform selection (i.e. ignoring line endings) in visual block mode
 set virtualedit+=block
@@ -438,6 +540,10 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
     " Write a backup file for each change we make in the file (triggered at :w)
     " XXX DANGEROUS XXX after 30 minutes of work, you could end up with lots of files
     "au BufWritePre * let &bex = '-' . strftime("%Y-%m%d_%H-%M-%S") . '.vimbackup'
+
+    " Make a backup of the original file, if <filename>.origina_file doesn't
+    " exists it's created, if it does, it goes on with <filename>~ files
+    ":set patchmode=.original_file
 " </backup zone>
 
 " <folding>
@@ -461,7 +567,7 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
     let vimwiki_folding=0
 
     "let g:vimwiki_list = [{'path': 'C:/Documents and Settings/camza.AYADOM/vimwiki/'}]
-    let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
+    "let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
     " ????
     let vimwiki_list_ignore_newline=0
 " </VimWiki settings>
@@ -522,7 +628,8 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
     map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
     " display prototype in preview window
     map <M-i> <C-w>}
-    map <F8> :sp <CR>:exec("tag ".expand("<cword>"))<CR>
+    "map <F8> :sp <CR>:exec("tag ".expand("<cword>"))<CR>
+    map <F8> :ptag <C-R>=expand("<cword>")<CR><Enter>
 " </ctags>
 
 
@@ -550,11 +657,6 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
 " </cscope>
 
 
-" <ctags definition browsing>
-    map <F8> :ptag <C-R>=expand("<cword>")<CR><Enter>
-" </ctags definition browsing>
-
-
 " <enhance browsing>
     " Scroll screen up and down
     :map <C-j> <C-e>
@@ -566,7 +668,7 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
 
 " <replace tab with ^>
 " (normal mode) for easier jump to the beginig of the line
-    :map <Tab> ^
+    ":map <Tab> ^
 " <replace tab with ^>
 
 " <grep results browsing>
@@ -615,13 +717,13 @@ let @x=''
 ":map <F1> :let @z=@z+1<Enter>Odexdbgn("<C-R>z", "<C-R>%", "<C-R>x()");<Esc>==:s;\\;\\\\;g<Enter>:nohls<Enter>
 
 " Add a template monitor message
-:map <F1> oMONITOR->Print(_T("DEXTRACE:>> "));<Esc>
+":map <F1> oMONITOR->Print(_T("DEXTRACE:>> "));<Esc>
 
 " Store the name of the current function (you must be over it)
-:map <F2> :let @x='<C-R><C-W>'<Enter>
+":map <F2> :let @x='<C-R><C-W>'<Enter>
 
 " Add #include "C:/dexdbg.h" to the current file
-:map <F4> ggi#include "C:/dexdbg.h"<Enter><Esc>
+":map <F4> ggi#include "C:/dexdbg.h"<Enter><Esc>
 " </put traces in code>
 
 
@@ -639,9 +741,12 @@ map ZZ zz
 " Multi search shortcut
 " :map <F3> :Search <C-r><C-w><Enter>
 
+" I'll add write permissions for this files, bitches love write permissions
 :map <F9> :! chmod +w %<Enter>
 :imap <F9> <Esc>:! chmod +w %<Enter>
 
+:map <F1> :tab split<Enter>
+:imap <F1> :tab split<Enter>
 
 
 
@@ -671,8 +776,32 @@ map ZZ zz
 "map <F2> :python test_executor('<C-R><C-W>')<Enter>
 " / PYTHON ZONE --------------
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Unknown options from vimrc_example.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Don't use Ex mode, use Q for formatting
+map Q gq
 
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
 
 " Taste libere de contract
 " Q - pare sa fie asignat by default cu gq, adica sa sparga linia la
