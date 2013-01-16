@@ -254,7 +254,7 @@ function FunctionList()
     :pedit "List of functions for %s"
     C-w j
     :r! ctags -x %
-    C-w k 
+    C-w k
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -289,19 +289,15 @@ if has("gui")
     noremap <M-Space> :simalt ~<CR>
     inoremap <M-Space> <C-O>:simalt ~<CR>
     cnoremap <M-Space> <C-C>:simalt ~<CR>
-else
-    " Sugest use of collors that look good on dark backrgounds
-    set background=dark
-endif
 
-" Paste in insert mode
-if has("gui")
+    " Paste in insert mode
     cmap <C-V> <C-R>+
     exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 else
+    " Sugest use of collors that look good on dark backrgounds
+    set background=dark
     color elflord
 endif
-
 
 " Windows
 " Use a nicer font
@@ -411,6 +407,12 @@ set ignorecase
 " case, if upercase " pressent => case sensitive)
 set smartcase
 
+" Use incremental search
+set incsearch
+
+" When searching, after reaching the end of the file, continue from the begining
+set wrapscan
+
 " When in insert mode, I want to be able to backspace things entered in other
 " sessions
 set backspace=indent,eol,start
@@ -426,6 +428,8 @@ set autoread
 
 " Atempt to determine the type of a file based on its name and posibly by
 " content
+filetype on
+filetype plugin on
 filetype indent plugin on
 
 " Instead of failing my commands because of unsaved info, ask for my
@@ -435,6 +439,10 @@ set confirm
 " Command line completion
 set wildmenu
 set wildmode=list:full
+
+" Auto complete
+set completeopt=menu,longest,preview
+
 
 " Stop folding
 set nofoldenable
@@ -446,9 +454,12 @@ match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 " Allow buffer switching without write
 set hidden
 
-if v:version > 720
+" Remember more commands in history (default 20)
+set history=100
+
+if v:version > 702
     " Highlight columns 80, 120, 130
-    set colorcolumn=80,120,130
+    "set colorcolumn=80,120,130
 endif
 
 
@@ -475,8 +486,8 @@ au CursorHoldI * stopinsert
 au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
 au InsertLeave * let &updatetime=updaterestore
 
-" start scrolling when within 5 lines near the top/bottom
-set scrolloff=5
+" start scrolling when within 0 lines near the top/bottom
+set scrolloff=0
 
 " Spelling en_us maybe sometimes... ro
 command Spell setlocal spell spelllang=en_us
@@ -528,8 +539,8 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
 
 " <backup zone>
     " If pressent, store backup files in ".backup"
-    :set   backupdir=.\.backup,.,\tmp
-    :set   directory=.,.\.backup,\tmp
+    :set backupdir=.\.backup,.,\tmp
+    :set directory=.,.\.backup,\tmp
 
     " No persistent backup
     :set nobackup
@@ -661,8 +672,8 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
     " Scroll screen up and down
     :map <C-j> <C-e>
     :map! <C-j> <C-e>
-    :map  <C-k> <C-y>
-    :map!  <C-k> <C-y>
+    :map <C-k> <C-y>
+    :map! <C-k> <C-y>
 " </enhance browsing>
 
 
@@ -710,8 +721,8 @@ autocmd BufRead,BufNew *.c,*.C,*.h,*.H,*.cpp,*.CPP,*.hpp,*.HPP syn match       c
 
 " <put traces in code>
 " Add traces to c++ code ;-)
-let @z=0
-let @x=''
+"let @z=0
+"let @x=''
 
 " Add call to dexdbgn, using the file name and the function name
 ":map <F1> :let @z=@z+1<Enter>Odexdbgn("<C-R>z", "<C-R>%", "<C-R>x()");<Esc>==:s;\\;\\\\;g<Enter>:nohls<Enter>
