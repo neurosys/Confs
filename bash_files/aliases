@@ -16,6 +16,9 @@ alias wget='wget -nc --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2
 # -e robots=off ignore the contents of robots.txt
 
 
+alias trek='trek=$(ls -1 | head -n 1) ; vlc "$trek"'
+alias rmtrek='rm "$trek"'
+alias now='date +%Y-%m-%d_%H-%M-%S'
 
 
 

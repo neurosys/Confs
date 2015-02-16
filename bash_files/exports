@@ -7,3 +7,5 @@ then
     export http_proxy=$(cat ~/Confs/bash_files/.cfgproxy)
 fi
 
+
+expor EDITOR=emacs
