@@ -2,6 +2,7 @@
 # screen -a -A -xRR -U -e^Pp
 
 # Make bash the default shell
+# shell cmd.exe
 shell /bin/bash
 
 # Detach on hangup
@@ -28,8 +29,10 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 
 # Allign the shells to the right (I would preffer to the left but...)
 #hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r}) %{g}][%{W} %m-%d %{W}%c %{g}]'
+
 # folder that contains all hardcopies
 hardcopydir ~/.screen
 
 # Allow bold colors
 attrcolor b ".I"
+
