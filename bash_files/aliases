@@ -28,5 +28,4 @@ alias rmtrek='rm "$trek"'
 alias now='date +%Y-%m-%d_%H-%M-%S'
 
 
-
 alias rpmlist='rpm -qlp '
