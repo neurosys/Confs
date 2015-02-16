@@ -16,27 +16,17 @@ alias wget='wget -nc --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2
 # -e robots=off ignore the contents of robots.txt
 
 
-alias trek='trek=$(ls -1 | head -n 1) ; vlc "$trek"'
+if [ $is_cygwin ]
+then
+    player="cygstart vlc"
+else
+    player=vlc
+fi
+
+alias trek='trek=$(ls -1 | head -n 1) ; $player "$trek"'
 alias rmtrek='rm "$trek"'
 alias now='date +%Y-%m-%d_%H-%M-%S'
 
 
-
-
-# Aliases for the yocto build
-alias cdcomp32='cd ~/trunk/QorIQ-SDK-yocto/build_t1040rdb_release; source SOURCE_THIS'
-alias cdcomp64='cd ~/trunk/QorIQ-SDK-yocto/build_t1040rdb-64b_release; source SOURCE_THIS' 
-alias cdimg32='cdcomp32;cd tmp/deploy/images/t1040rdb; ll' 
-alias cdimg64='cdcomp64;cd tmp/deploy/images/t1040rdb; ll' 
-alias cdrpm32='cdcomp32;cd tmp/deploy/rpm; ll ' 
-alias cdrpm64='cdcomp64;cd tmp/deploy/rpm; ll ' 
-alias compall32='cdcomp32;bitbake fsl-image-core' 
-alias compall64='cdcomp64;bitbake fsl-image-core' 
-alias compkernel32='cdcomp32;bitbake virtual/kernel' 
-alias compkernel64='cdcomp64;bitbake virtual/kernel' 
-alias kernelconfig32='cdcomp32;bitbake virtual/kernel -c menuconfig' 
-alias kernelconfig64='cdcomp64;bitbake virtual/kernel -c menuconfig' 
-alias cdubootsrc='cdcomp;cd tmp/work/t1040rdb-fsl-linux/u-boot/2014.01+fslgit-r0/git' 
-alias cdkernsrc='cdcomp;cd tmp/work/t1040rdb-fsl-linux/linux-qoriq-sdk/3.12-r0/git' 
 
 alias rpmlist='rpm -qlp '

@@ -3,9 +3,19 @@ export GREP_OPTIONS="-Rn --color=auto"
 
 if [ -f ~/Confs/bash_files/.cfgproxy ]
 then
-    #export http_proxy=http://camza:Voifiiarasiceamfost.0@http-proxy.itcnetworks:3128
     export http_proxy=$(cat ~/Confs/bash_files/.cfgproxy)
 fi
 
 
-expor EDITOR=emacs
+if [ $is_cygwin ]
+then
+    export EDITOR=runemacs.exe
+else
+    export EDITOR=emacs
+fi
+
+# In order for the git gui to work on CYGWIN
+if [ $is_cygwin ]
+then
+    export DISPLAY=:0.0
+fi

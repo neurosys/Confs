@@ -5,23 +5,26 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
 
-# User specific aliases and functions
+# Set flags corresponding to whatever this system may or may not have
+if [ -f ~/Confs/bash_files/envtests ]
+then
+    . ~/Confs/bash_files/envtests
+fi 
 
-
+# Export various variables
 if [ -f ~/Confs/bash_files/exports ]
 then
     . ~/Confs/bash_files/exports 
 fi
 
+# Set a fancy prompt
 if [ -f ~/Confs/bash_files/prompt ]
 then
     . ~/Confs/bash_files/prompt 
 fi
 
-
+# Various aliases that I feel are useful
 if [ -f ~/Confs/bash_files/aliases ]
 then
     . ~/Confs/bash_files/aliases 
