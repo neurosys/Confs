@@ -5,29 +5,31 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# Path to whom other paths are relative to
+confs_folder=~/Confs/bash_files
 
 # Set flags corresponding to whatever this system may or may not have
-if [ -f ~/Confs/bash_files/envtests ]
+if [ -f ${confs_folder}/envtests ]
 then
-    . ~/Confs/bash_files/envtests
+    . ${confs_folder}/envtests
 fi 
 
 # Export various variables
-if [ -f ~/Confs/bash_files/exports ]
+if [ -f ${confs_folder}/exports ]
 then
-    . ~/Confs/bash_files/exports 
+    . ${confs_folder}/exports
 fi
 
 # Set a fancy prompt
-if [ -f ~/Confs/bash_files/prompt ]
+if [ -f ${confs_folder}/prompt ]
 then
-    . ~/Confs/bash_files/prompt 
+    . ${confs_folder}/prompt
 fi
 
 # Various aliases that I feel are useful
-if [ -f ~/Confs/bash_files/aliases ]
+if [ -f ${confs_folder}/aliases ]
 then
-    . ~/Confs/bash_files/aliases 
+    . ${confs_folder}/aliases
 fi
 
 

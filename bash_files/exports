@@ -1,9 +1,9 @@
 
 export GREP_OPTIONS="-Rn --color=auto"
 
-if [ -f ~/Confs/bash_files/.cfgproxy ]
+if [ -f ${confs_folder}/.cfgproxy ]
 then
-    export http_proxy=$(cat ~/Confs/bash_files/.cfgproxy)
+    export http_proxy=$(cat ${confs_folder}/.cfgproxy)
 fi
 
 
