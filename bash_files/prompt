@@ -5,7 +5,14 @@ RED='\[\e[1;31m\]'
 BLUE='\[\e[1;34m\]'
 COLOR_END='\[\e[0m\]'
 
-HOST=`hostname -s`
+if [ $is_cygwin ]
+then
+    HOST=$HOSTNAME
+    USER=$USERNAME
+else
+    HOST=`hostname -s`
+fi
+
 PROMPT_COMMAND='res=$?;\
 field_separators=3
 res_len=${#res};\

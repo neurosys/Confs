@@ -1,5 +1,5 @@
 
-if [[ $(uname) =~ CYGINW* ]]
+if [[ "$(uname)" == CYGWIN* ]]
 then
     is_cygwin=1
 fi

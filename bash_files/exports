@@ -1,5 +1,10 @@
 
-export GREP_OPTIONS="-Rn --color=auto"
+if [ $is_cygwin ]
+then 
+    unset GREP_OPTIONS
+else 
+    export GREP_OPTIONS="-Rn --color=auto"
+fi
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
