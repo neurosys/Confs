@@ -1,0 +1,24 @@
+
+#PS1='${USER}@${HOST} $ '
+GREEN='\[\e[1;32m\]'
+RED='\[\e[1;31m\]'
+BLUE='\[\e[1;34m\]'
+COLOR_END='\[\e[0m\]'
+
+HOST=`hostname -s`
+PROMPT_COMMAND='res=$?;\
+field_separators=3
+res_len=${#res};\
+padd_char="=";\
+line_len=${COLUMNS:-80};\
+pwd_len=${#PWD};\
+line_space_left=$(($line_len - $pwd_len));\
+current_date=$(date "+%Y-%m-%d_%H:%M:%S");\
+current_date_len=${#current_date};\
+padd_len=$(($line_len - $pwd_len - $current_date_len - $res_len - $field_separators));\
+PADDING=;\
+for (( i=0; i<padd_len; i++ )) ; do PADDING=${PADDING}$padd_char ; done;\
+echo -e "${res} \e[1;32m${PWD}\e[0m ${PADDING} \e[4;36m${current_date}\e[0m"'
+
+PS1='\[\e[1;31m\]${USER}\[\e[0m\]@\[\e[1;93m\]${HOST}\[\e[0m\] \$ '
+export PS1

@@ -2,7 +2,7 @@
 # screen -a -A -xRR -U -e^Pp
 
 # Make bash the default shell
-# shell /bin/bash
+shell /bin/bash
 
 # Detach on hangup
 autodetach off
@@ -19,13 +19,15 @@ altscreen on
 # C-a s does'nt suspend the screen, instead split screen
 bind s split
 
-# to start a program 
+# to start a program
 # screen -t <title> <program>
 
 # Window list at the bottom
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %m-%d %c %{g}]'
 
+# Allign the shells to the right (I would preffer to the left but...)
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r}) %{g}][%{W} %m-%d %{W}%c %{g}]'
 # folder that contains all hardcopies
 hardcopydir ~/.screen
 

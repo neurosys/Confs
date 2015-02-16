@@ -1,5 +1,7 @@
-;; disable startup messageeee
-(setq inhibit-startup-message t)
+; I do not like (or need) a splash screen for a text editor
+(setq inhibit-splash-screen t)
+; Line numbers are useful
+(global-linum-mode 1)
 
 ; scroll 1 line
 (setq scroll-step 1)
@@ -50,6 +52,12 @@
 ;;(add-to-list 'auto-mode-alist '("\\.php[34]?\\'\\|\\.phtml\\'" . php-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.module\\'" . php-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.inc\\'" . php-mode))
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-cC-l" 'org-insert-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
 
 ;; indenting like i like (C++ style) :-p
 ;(setq c-default-style "linux")

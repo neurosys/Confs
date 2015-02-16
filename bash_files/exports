@@ -1,0 +1,9 @@
+
+export GREP_OPTIONS="-Rn --color=auto"
+
+if [ -f ~/Confs/bash_files/.cfgproxy ]
+then
+    #export http_proxy=http://camza:Voifiiarasiceamfost.0@http-proxy.itcnetworks:3128
+    export http_proxy=$(cat ~/Confs/bash_files/.cfgproxy)
+fi
+

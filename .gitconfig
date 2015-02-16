@@ -5,3 +5,5 @@
 [color]
     ui = always
 
+#[http]
+#    proxy = http://<usr>:<pwd>@<proxy fqdn>:<port>
