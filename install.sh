@@ -40,7 +40,7 @@ fi
 
 backup_folder="backup_config_$(date +%Y-%m-%d_%H-%M-%S)"
 
-configs=".Xresources .bash_profile .bashrc .emacs .fetchmailrc .gitconfig .gitignore .minttyrc .msmtprc .muttrc .screenrc .tmux.conf .vimperatorrc"
+configs=".Xresources .bash_profile .bashrc .emacs .fetchmailrc .gitignore .minttyrc .msmtprc .muttrc .screenrc .tmux.conf .vimperatorrc"
 for i in $configs
 do
     echo "$i"
