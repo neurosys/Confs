@@ -14,6 +14,11 @@ then
     . ${confs_folder}/envtests
 fi 
 
+if [ -f ${confs_folder}/defines ]
+then
+    . ${confs_folder}/defines
+fi
+
 # Export various variables
 if [ -f ${confs_folder}/exports ]
 then
@@ -33,5 +38,9 @@ then
 fi
 
 
+if [ -f ${confs_folder}/print_status ]
+then
+    . ${confs_folder}/print_status
+fi
 
 

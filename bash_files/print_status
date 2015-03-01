@@ -1,0 +1,6 @@
+
+# Print a fortune
+if [ -f /usr/bin/fortune ]
+then
+    echo -e "${YELLOW}" ; fortune ; echo -e ""
+fi
