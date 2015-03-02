@@ -22,7 +22,7 @@
 (tool-bar-mode -1)
 ;(menu-bar-mode -1)
 (scroll-bar-mode -1)
-(w32-send-sys-command #xf030)
+;(w32-send-sys-command #xf030)
 
 ;; highlight during searching
 (setq query-replace-highlight t)
