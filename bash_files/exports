@@ -1,14 +1,15 @@
 
 if [ $is_cygwin ]
 then 
-    unset GREP_OPTIONS
+    #unset GREP_OPTIONS
+    export GREP_OPTIONS="-Rn --color=auto"
 else 
     export GREP_OPTIONS="-Rn --color=auto"
 fi
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
-    export http_proxy=$(cat ${confs_folder}/.cfgproxy)
+    export http_proxy=$(cat ${confs_folder}/.cfgproxy | base64 -d)
 fi
 
 
