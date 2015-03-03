@@ -2,5 +2,11 @@
 # Print a fortune
 if [ -f /usr/bin/fortune ]
 then
-    echo -e "${YELLOW}" ; fortune ; echo -e ""
+    echo -e "${YELLOW}" ; fortune ; echo -e "${NOCOL}"
+fi
+
+# Print the current TODO list from task
+if [ -f /usr/bin/task ]
+then
+    task list
 fi
