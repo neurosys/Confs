@@ -23,9 +23,9 @@ fi
 
 if [ $is_cygwin ]
 then
-    export EDITOR=runemacs.exe
+    export EDITOR=vim
 else
-    export EDITOR=emacs
+    export EDITOR=vim
 fi
 
 # In order for the git gui to work on CYGWIN
