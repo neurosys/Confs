@@ -28,6 +28,13 @@ else
     player=vlc
 fi
 
+if [ $is_cygwin ] && [ $is_tmux ]
+then
+    alias mc='mc -a -S gotar'
+else
+    alias mc='mc -S gotar'
+fi
+
 alias trek='trek=$(ls -1 | head -n 1) ; $player "$trek"'
 alias rmtrek='rm "$trek"'
 alias now='date +%Y-%m-%d_%H-%M-%S'

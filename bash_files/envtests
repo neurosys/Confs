@@ -3,3 +3,8 @@ if [[ "$(uname)" == CYGWIN* ]]
 then
     is_cygwin=1
 fi
+
+if [ $TMUX ] && [ $TMUX_PANE ]
+then
+    is_tmux=1
+fi
