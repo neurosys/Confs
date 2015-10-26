@@ -31,10 +31,16 @@ then
     . ${confs_folder}/prompt
 fi
 
-# Various aliases that I feel are useful
+# Various aliases that I feel are useful on every platform
 if [ -f ${confs_folder}/aliases ]
 then
     . ${confs_folder}/aliases
+fi
+
+# Various local aliases, that have meaning only on this specific PC
+if [ -f ${confs_folder}/.local_aliases ]
+then
+    . ${confs_folder}/.local_aliases
 fi
 
 

@@ -15,6 +15,11 @@ alias wget='wget -nc --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2
 # --no-parent don't ascend to parent directory
 # -e robots=off ignore the contents of robots.txt
 
+# Run Firefox with different profiles (Worker and Organizer)
+alias fworker='firefox -P Worker -no-remote &> /dev/null &'
+alias forganizer='firefox -P Organizer -no-remote &> /dev/null &'
+
+
 if [ $is_cygwin ]
 then
     alias grep='grep -Rn --color=auto'
