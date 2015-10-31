@@ -18,3 +18,8 @@ LIGHTPURPLE='\e[1;35m'
 YELLOW='\e[1;33m'
 WHITE='\e[1;37m'
 NOCOL='\e[0m'              # No Color
+
+# Prompt colors
+PYELLOW='\[\e[1;33m\]'
+PLIGHTRED='\[\e[1;31m\]'
+PNOCOL='\[\e[0m\]'

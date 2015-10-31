@@ -22,5 +22,5 @@ for (( i=0; i<padd_len; i++ )) ; do PADDING=${PADDING}$padd_char ; done;\
 echo -e "${res} \e[1;32m${PWD}\e[0m ${PADDING} \e[4;36m${current_date}\e[0m"'
 
 #PS1='\[\e[1;31m\]${USER}\[\e[0m\]@\[\e[1;93m\]${HOST}\[\e[0m\] \$ '
-PS1="${LIGHTRED}${USER}${NOCOL}@${YELLOW}${HOST}${NOCOL} \$ "
+PS1="${PLIGHTRED}${USER}${PNOCOL}@${PYELLOW}${HOST}${PNOCOL} \$ "
 export PS1
