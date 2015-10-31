@@ -8,3 +8,7 @@ if [ $TMUX ] && [ $TMUX_PANE ]
 then
     is_tmux=1
 fi
+
+if [[ $EUID -e 0 ]]
+then
+fi
