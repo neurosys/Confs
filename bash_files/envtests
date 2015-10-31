@@ -11,4 +11,5 @@ fi
 
 if [[ $EUID -e 0 ]]
 then
+    is_root=1
 fi
