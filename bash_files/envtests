@@ -9,7 +9,7 @@ then
     is_tmux=1
 fi
 
-if [[ $EUID -e 0 ]]
+if [[ $EUID -eq 0 ]]
 then
     is_root=1
 fi
