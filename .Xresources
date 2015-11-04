@@ -1,4 +1,4 @@
-
+# After editing please run xrdb -merge ~/.Xresources to update the current configuration
 XTerm*background: black
 XTerm*foreground: white
 XTerm*pointerColor: red
@@ -7,3 +7,12 @@ XTerm*loginShell: true
 XTerm*scrollBar: false
 XTerm*scrollKey: true
 XTerm*saveLines: 10000
+XTerm*faceName: Liberation Mono for Powerline
+XTerm*faceSize: 12
+
+URxvt.depth: 32
+# The numbers in square paranthesis, represent the opacity in percents
+URxvt.background: [80]#000000
+URxvt.foreground: white
+URxvt.font: xft:Liberation Mono for Powerline:normal:size=12
+URxvt.scrollBar: false
