@@ -44,9 +44,8 @@ then
 fi
 
 
-if [ -f ${confs_folder}/print_status ]
+# Print a status, but except the scp connections, otherwise scp transfers will fail
+if [ "$TERM" != "dumb" ] && [ -f ${confs_folder}/print_status ]
 then
     . ${confs_folder}/print_status
 fi
-
-
