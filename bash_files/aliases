@@ -1,5 +1,7 @@
 
+alias ls='ls --color=auto'
 alias ll='ls -lGah --color=auto'
+
 
 # Display the size (in MB) each item (file or folder) in this folder takes up and display them in a sorted order
 alias lu='find -maxdepth 1 -exec du -sm {} \; | sed -e "s;^\([0-9]\+\)\t\+;\1 M\t;" | sort -rn'
