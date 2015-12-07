@@ -6,7 +6,9 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Path to whom other paths are relative to
-confs_folder=~/Confs/bash_files
+#confs_folder=~/Confs/bash_files
+path_to_bashrc=$(readlink -f ~/.bashrc)
+confs_folder=$(dirname $path_to_bashrc)/bash_files
 
 # Set flags corresponding to whatever this system may or may not have
 if [ -f ${confs_folder}/envtests ]
