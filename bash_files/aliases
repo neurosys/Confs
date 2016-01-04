@@ -48,3 +48,6 @@ alias now='date +%Y-%m-%d_%H-%M-%S'
 
 
 alias rpmlist='rpm -qlp '
+
+# Sent SIGTERM to process
+alias terminate='kill -15'
