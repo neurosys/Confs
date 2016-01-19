@@ -87,8 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls --color=auto'
-alias ll='ls -lGah --color=auto'
+alias ls='ls -a --color=auto'
+alias ll='ls -lah --color=auto'
 
 
 # Display the size (in MB) each item (file or folder) in this folder takes up and display them in a sorted order
