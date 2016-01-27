@@ -4,7 +4,8 @@ then
     # In windows we have to make sure system32 is not before /bin in PATH
     export PATH=/bin:/usr/bin:$PATH:$HOME/.local/bin:$HOME/bin
 else
-    export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+    #export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+    export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 fi
 
 if [ $is_cygwin ]

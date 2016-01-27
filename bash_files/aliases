@@ -51,3 +51,9 @@ alias rpmlist='rpm -qlp '
 
 # Sent SIGTERM to process
 alias terminate='kill -15'
+
+alias gdb='gdb -q'
+
+# Start an http server in the local folder over port 8000
+python -m SimpleHTTPServer
+
