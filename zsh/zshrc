@@ -61,6 +61,7 @@ plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp su
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+export GREP_OPTIONS="-Rn --color=auto"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,8 +88,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls -a --color=auto'
-alias ll='ls -lah --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -lGah --color=auto'
 
 
 # Display the size (in MB) each item (file or folder) in this folder takes up and display them in a sorted order
@@ -118,10 +119,35 @@ alias ds30me='sshpass -p salutare ssh camza@77.81.122.58'
 alias ttyds='sudo minicom --baudrate 115200 --device /dev/ttyUSB1 --color=on'
 alias ttyv2='sudo minicom --baudrate 38400  --device /dev/ttyUSB0 --color=on'
 
+alias terms="lsof /dev/pts/* | grep -v NAME | tr -s ' ' | cut -d' ' -f9 | sort -u"
 #alias terminate='kill -15'
 function terminate()
 {
     kill -15 $(pgrep $1)
+}
+
+# Start an http server in the local folder over port 8000 or the one specified as parameter
+function httphere()
+{
+    local port=8000
+    if [[ "$1" != "" ]]
+    then
+        port=$1
+    fi
+
+    pyversion=$(python --version 2>&1)
+
+    echo "$pyversion"
+
+    if [[ $pyversion =~ Python\ 2\..* ]]
+    then
+        # python 2
+        python -m SimpleHTTPServer $port
+    else
+        echo "Not what I was expecting"
+        # python 3
+        python -m http.server $port
+    fi
 }
 
 . ~/.oh-my-zsh/plugins/z/z.sh
