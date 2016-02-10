@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/camza/.oh-my-zsh
+export ZSH=/home/camza/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -10,25 +10,6 @@
 #ZSH_THEME="bira"
 #ZSH_THEME="bureau"
 ZSH_THEME="rkj-repos"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -44,108 +25,50 @@ ZSH_THEME="rkj-repos"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
 
 # User configuration
 
-  export PATH="/home/camza/.local/bin:/home/camza/bin:/home/camza/.local/bin:/home/camza/bin:/home/camza/local/bin:/usr/lib64/qt-3.3/bin:/home/camza/perl5/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-export GREP_OPTIONS="-Rn --color=auto"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+path_to_conf_folder=$( readlink -f ~/.zshrc )
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [ -f ${path_to_conf_folder}/envtests ]
+then
+    . ${path_to_conf_folder}/envtests
+fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+if [ -f ${path_to_conf_folder}/defines ]
+then
+    . ${path_to_conf_folder}/defines
+fi
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+if [ -f ${path_to_conf_folder}/exports ]
+then
+    . ${path_to_conf_folder}/exports
+fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ -f ${path_to_conf_folder}/aliases ]
+then
+    . ${path_to_conf_folder}/aliases
+fi
 
-alias ls='ls --color=auto'
-alias ll='ls -lGah --color=auto'
-
-
-# Display the size (in MB) each item (file or folder) in this folder takes up and display them in a sorted order
-alias lu='find -maxdepth 1 -exec du -sm {} \; | sed -e "s;^\([0-9]\+\)\t\+;\1 M\t;" | sort -rn'
-
-alias wget='wget -nc --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17" -m --convert-links --page-requisites --no-parent -e robots=off'
-# -nc no clobber (Don't overwrite an already file, nor save it as file.nr1 nr2 ... 
-# --wait=20 wait 20 seconds between requests
-# --random-wait randomize the wait between 0.5 * wait - 1.5 * wait time
-# --user-agent=  Name of the user-agent 
-# --convert-links after download convert links for local usage
-# -m mirrors the url
-# --page-requisites load the resources necesarry to view the page as it is on the web
-# --no-parent don't ascend to parent directory
-# -e robots=off ignore the contents of robots.txt
-
-# Run Firefox with different profiles (Worker and Organizer)
-alias fworker='firefox -P Worker -no-remote &> /dev/null &'
-alias forganizer='firefox -P Organizer -no-remote &> /dev/null &'
-
-
-alias gdb='gdb -q'
+if [ -f ${path_to_conf_folder}/.local_aliases ]
+then
+    . ${path_to_conf_folder}/.local_aliases
+fi
 
 alias ds30me='sshpass -p salutare ssh camza@77.81.122.58'
-
-
 alias ttyds='sudo minicom --baudrate 115200 --device /dev/ttyUSB1 --color=on'
 alias ttyv2='sudo minicom --baudrate 38400  --device /dev/ttyUSB0 --color=on'
-
 alias terms="lsof /dev/pts/* | grep -v NAME | tr -s ' ' | cut -d' ' -f9 | sort -u"
-#alias terminate='kill -15'
-function terminate()
-{
-    kill -15 $(pgrep $1)
-}
 
-# Start an http server in the local folder over port 8000 or the one specified as parameter
-function httphere()
-{
-    local port=8000
-    if [[ "$1" != "" ]]
-    then
-        port=$1
-    fi
-
-    #pyversion=$(python --version 2>&1)
-
-    if [[ $pyversion =~ Python\ 2\..* ]]
-    then
-        # python 2
-        python -m SimpleHTTPServer $port
-    else
-        echo "Not what I was expecting"
-        # python 3
-        python -m http.server $port
-    fi
-}
 
 . ~/.oh-my-zsh/plugins/z/z.sh

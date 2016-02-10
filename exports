@@ -5,7 +5,7 @@ then
     export PATH=/bin:/usr/bin:$PATH:$HOME/.local/bin:$HOME/bin
 else
     #export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-    export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+    export PATH=$HOME/.local/bin:$HOME/bin:$PATH
 fi
 
 if [ $is_cygwin ]
@@ -40,3 +40,6 @@ if [ ! $is_cygwin ] && [ -f /usr/bin/minicom ]
 then
     export MINICOM="-m -c on"
 fi
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
