@@ -49,11 +49,34 @@ alias now='date +%Y-%m-%d_%H-%M-%S'
 
 alias rpmlist='rpm -qlp '
 
-# Sent SIGTERM to process
-alias terminate='kill -15'
+# Sent SIGTERM to process identified by name
+function terminate()
+{
+    kill -15 $(pgrep $1)
+}
 
 alias gdb='gdb -q'
 
-# Start an http server in the local folder over port 8000
-python -m SimpleHTTPServer
+# Start an http server in the local folder over port 8000 or the one specified as parameter
+function httphere()
+{
+    local port=8000
+    if [[ "$1" != "" ]]
+    then
+        port=$1
+    fi
 
+    local pyversion=$( python --version 2>&1 )
+
+    echo "$pyversion"
+
+    if [[ $pyversion =~ Python\ 2\..* ]]
+    then
+        # python 2
+        python -m SimpleHTTPServer $port
+    else
+        echo "Not what I was expecting"
+        # python 3
+        python -m http.server $port
+    fi
+}
