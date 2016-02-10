@@ -135,9 +135,7 @@ function httphere()
         port=$1
     fi
 
-    pyversion=$(python --version 2>&1)
-
-    echo "$pyversion"
+    #pyversion=$(python --version 2>&1)
 
     if [[ $pyversion =~ Python\ 2\..* ]]
     then
