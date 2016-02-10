@@ -7,6 +7,12 @@ else
     HOST=`hostname -s`
 fi
 
+PROMPT_CHAR=\$
+if [[ $UID -eq 0 ]]
+then
+    PROMPT_CHAR=\#
+fi
+
 PROMPT_COMMAND='res=$?;\
 field_separators=3
 res_len=${#res};\
@@ -22,5 +28,5 @@ for (( i=0; i<padd_len; i++ )) ; do PADDING=${PADDING}$padd_char ; done;\
 echo -e "${res} \e[1;32m${PWD}\e[0m ${PADDING} \e[4;36m${current_date}\e[0m"'
 
 #PS1='\[\e[1;31m\]${USER}\[\e[0m\]@\[\e[1;93m\]${HOST}\[\e[0m\] \$ '
-PS1="${PLIGHTRED}${USER}${PNOCOL}@${PYELLOW}${HOST}${PNOCOL} \$ "
+PS1="${PLIGHTRED}${USER}${PNOCOL}@${PYELLOW}${HOST}${PNOCOL} ${PROMPT_CHAR} "
 export PS1
