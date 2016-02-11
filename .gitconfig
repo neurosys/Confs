@@ -1,9 +1,14 @@
 [user]
-	name = neurosys
-	email = blabla
+	name = NeuroSys
+	email = bla-bla
 
 [color]
     ui = always
+    #ui = never
 
 #[http]
 #    proxy = http://<usr>:<pwd>@<proxy fqdn>:<port>
+
+[alias]
+	ss = status -s
+    adu = add -u
