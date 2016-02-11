@@ -4,11 +4,6 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="bira"
-#ZSH_THEME="bureau"
-#ZSH_THEME="rkj-repos"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -30,7 +25,6 @@
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 #plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
-plugins=( )
 
 # User configuration
 
@@ -40,8 +34,6 @@ plugins=( )
 path_to_conf_folder=$( readlink -f ~/.zshrc )
 modules_folder=$(dirname $path_to_conf_folder)
 
-export ZSH=${modules_folder}/zsh/oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 if [ -f ${modules_folder}/envtests ]
 then
@@ -63,10 +55,20 @@ then
     . ${modules_folder}/aliases
 fi
 
+
 if [ -f ${modules_folder}/.local_aliases ]
 then
     . ${modules_folder}/.local_aliases
 fi
+
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="bira"
+#ZSH_THEME="bureau"
+#ZSH_THEME="rkj-repos"
+plugins=( )
+export ZSH=${modules_folder}/zsh/oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 alias ds30me='sshpass -p salutare ssh camza@77.81.122.58'
 alias ttyds='sudo minicom --baudrate 115200 --device /dev/ttyUSB1 --color=on'
