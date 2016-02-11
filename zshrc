@@ -29,7 +29,8 @@
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
+#plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
+plugins=( )
 
 # User configuration
 
@@ -73,4 +74,4 @@ alias ttyv2='sudo minicom --baudrate 38400  --device /dev/ttyUSB0 --color=on'
 alias terms="lsof /dev/pts/* | grep -v NAME | tr -s ' ' | cut -d' ' -f9 | sort -u"
 
 
-. ~/.oh-my-zsh/plugins/z/z.sh
+#. ~/oh-my-zsh/plugins/z/z.sh
