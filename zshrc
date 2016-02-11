@@ -1,5 +1,4 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/camza/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -36,33 +35,36 @@ plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp su
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
 
 path_to_conf_folder=$( readlink -f ~/.zshrc )
+modules_folder=$(dirname $path_to_conf_folder)
 
-if [ -f ${path_to_conf_folder}/envtests ]
+export ZSH=${modules_folder}/zsh/oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+if [ -f ${modules_folder}/envtests ]
 then
-    . ${path_to_conf_folder}/envtests
+    . ${modules_folder}/envtests
 fi
 
-if [ -f ${path_to_conf_folder}/defines ]
+if [ -f ${modules_folder}/defines ]
 then
-    . ${path_to_conf_folder}/defines
+    . ${modules_folder}/defines
 fi
 
-if [ -f ${path_to_conf_folder}/exports ]
+if [ -f ${modules_folder}/exports ]
 then
-    . ${path_to_conf_folder}/exports
+    . ${modules_folder}/exports
 fi
 
-if [ -f ${path_to_conf_folder}/aliases ]
+if [ -f ${modules_folder}/aliases ]
 then
-    . ${path_to_conf_folder}/aliases
+    . ${modules_folder}/aliases
 fi
 
-if [ -f ${path_to_conf_folder}/.local_aliases ]
+if [ -f ${modules_folder}/.local_aliases ]
 then
-    . ${path_to_conf_folder}/.local_aliases
+    . ${modules_folder}/.local_aliases
 fi
 
 alias ds30me='sshpass -p salutare ssh camza@77.81.122.58'
