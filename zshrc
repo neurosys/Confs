@@ -21,10 +21,7 @@
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 #HIST_STAMPS="yyyy-mm-dd"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
-#plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
 
 # User configuration
 
@@ -61,12 +58,22 @@ then
     . ${modules_folder}/.local_aliases
 fi
 
-#ZSH_THEME="robbyrussell"
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=${modules_folder}/zsh/
+
 #ZSH_THEME="agnoster"
 #ZSH_THEME="bira"
 #ZSH_THEME="bureau"
 #ZSH_THEME="rkj-repos"
-plugins=( )
+if [ $is_cygwin -eq 1 ]
+then
+    plugins=(git zsh-syntax-highlighting colored-man-pages colorize cp k)
+    ZSH_THEME="robbyrussell"
+else
+    ZSH_THEME="rkj-repos"
+    plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
+fi
+
 export ZSH=${modules_folder}/zsh/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -77,3 +84,4 @@ alias terms="lsof /dev/pts/* | grep -v NAME | tr -s ' ' | cut -d' ' -f9 | sort -
 
 
 #. ~/oh-my-zsh/plugins/z/z.sh
+. $ZSH/plugins/z/z.sh
