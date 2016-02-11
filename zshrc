@@ -8,7 +8,7 @@
 #ZSH_THEME="agnoster"
 #ZSH_THEME="bira"
 #ZSH_THEME="bureau"
-ZSH_THEME="rkj-repos"
+#ZSH_THEME="rkj-repos"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -24,7 +24,7 @@ ZSH_THEME="rkj-repos"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy-mm-dd"
+#HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
