@@ -24,8 +24,8 @@ alias forganizer='firefox -P Organizer -no-remote &> /dev/null &'
 
 if [ $is_cygwin ]
 then
-#    alias grep='grep -Rn --color=auto'
-#    alias egrep=grep
+    alias grep='grep -n --color=auto'
+    alias egrep=grep
 fi
 
 if [ $is_cygwin ]
