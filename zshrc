@@ -65,10 +65,20 @@ ZSH_CUSTOM=${modules_folder}/zsh/
 #ZSH_THEME="bira"
 #ZSH_THEME="bureau"
 #ZSH_THEME="rkj-repos"
+#ZSH_THEME="amuse"
+#ZSH_THEME="arrow"
+#ZSH_THEME="blinks"
+    #ZSH_THEME="candy"
+    #ZSH_THEME="darkblood"
 if [ $is_cygwin -eq 1 ]
 then
     plugins=(git zsh-syntax-highlighting colored-man-pages colorize cp k)
-    ZSH_THEME="robbyrussell"
+    #ZSH_THEME="cypher"
+    #ZSH_THEME="evan"
+    #ZSH_THEME="dstufft"
+    #ZSH_THEME="flazz"
+    #ZSH_THEME="fox"
+    ZSH_THEME="fox"
 else
     ZSH_THEME="rkj-repos"
     plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
