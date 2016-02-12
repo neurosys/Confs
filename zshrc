@@ -84,6 +84,7 @@ else
     plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
 fi
 
+DISABLE_AUTO_UPDATE="false"
 export ZSH=${modules_folder}/zsh/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
