@@ -1,6 +1,6 @@
 
 # Print a fortune
-if [ -f /usr/bin/fortune ]
+if [ -f /usr/bin/fortune ] || [ -f /usr/games/fortune ]
 then
     echo -e "${YELLOW}" ; fortune ; echo -e "${NOCOL}"
 fi

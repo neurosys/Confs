@@ -89,11 +89,12 @@ DISABLE_AUTO_UPDATE="false"
 export ZSH=${modules_folder}/zsh/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-alias ds30me='sshpass -p salutare ssh camza@77.81.122.58'
-alias ttyds='sudo minicom --baudrate 115200 --device /dev/ttyUSB1 --color=on'
-alias ttyv2='sudo minicom --baudrate 38400  --device /dev/ttyUSB0 --color=on'
-alias terms="lsof /dev/pts/* | grep -v NAME | tr -s ' ' | cut -d' ' -f9 | sort -u"
 
+# Print a status, but except the scp connections, otherwise scp transfers will fail
+if [ "$TERM" != "dumb" ] && [ -f ${modules_folder}/print_status ]
+then
+    . ${modules_folder}/print_status
+fi
 
 #. ~/oh-my-zsh/plugins/z/z.sh
 . $ZSH/plugins/z/z.sh
