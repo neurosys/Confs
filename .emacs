@@ -94,6 +94,8 @@
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(column-number-mode t)
  '(custom-enabled-themes (quote (wheatgrass)))
+ '(indicate-buffer-boundaries (quote right))
+ '(indicate-empty-lines t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -104,4 +106,19 @@
 
 (setq visible-bell 1)
 
-(global-hl-line-mode 1)
+; Highlight the current line (annoying)
+;(global-hl-line-mode 1)
+
+; When reformatting text,  break lines at 80  characters with M-q or  M-1 M-q or
+; C-u M-q
+(setq-default fill-column 80)
+
+; Move trough paragraphs M-{ and M-}
+; Highlight current paragraph M-h
+
+; To switch to other frames C-x 5 o
+; To close the current frame C-x 5 0
+
+										; Cycle trough the buffers
+(define-key global-map "\M-n" 'next-buffer)
+(define-key global-map "\M-p" 'previous-buffer)
