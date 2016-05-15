@@ -40,11 +40,24 @@ fi
 
 backup_folder="backup_config_$(date +%Y-%m-%d_%H-%M-%S)"
 
-configs=".Xresources .bash_profile .bashrc .emacs .fetchmailrc .gitignore .minttyrc .msmtprc .muttrc .screenrc .tmux.conf .vimperatorrc"
+configs=".Xresources .bash_profile .emacs .fetchmailrc .gitignore .minttyrc .msmtprc .muttrc .screenrc .vimperatorrc"
 for i in $configs
 do
     echo "$i"
     backup_if_exists ~/$i $backup_folder
     ln -s $PWD/$i ~/$i
-    sed -e "s;confs_folder=.*;confs_folder=$PWD/bash_files;" -i "$PWD/.bashrc"
+    #sed -e "s;confs_folder=.*;confs_folder=$PWD/bash_files;" -i "$PWD/.bashrc"
 done
+
+backup_if_exists ~/.bashrc
+ln -s $PWD/bashrc ~/.bashrc
+
+git submodule update --init
+backup_if_exists ~/.zshrc
+ln -s $PWD/zshrc ~/.zshrc
+ln -s $PWD/zsh/oh-my-zsh ~/.oh-my-zsh
+
+backup_if_exists ~/.tmux.conf
+ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
+ln -s $PWD/tmux/tmux.conf.local ~/.tmux.conf.local
+
