@@ -40,7 +40,7 @@ fi
 
 backup_folder="backup_config_$(date +%Y-%m-%d_%H-%M-%S)"
 
-configs=".Xresources .bash_profile .emacs .fetchmailrc .gitignore .minttyrc .msmtprc .muttrc .screenrc .vimperatorrc"
+configs=".Xresources .bash_profile .emacs .fetchmailrc .gitconfig .gitignore .minttyrc .msmtprc .muttrc .screenrc .vimperatorrc"
 for i in $configs
 do
     echo "$i"
@@ -60,4 +60,3 @@ ln -s $PWD/zsh/oh-my-zsh ~/.oh-my-zsh
 backup_if_exists ~/.tmux.conf
 ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
 ln -s $PWD/tmux/tmux.conf.local ~/.tmux.conf.local
-
