@@ -84,3 +84,13 @@ function httphere()
 alias clor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
  
 alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
+
+
+# Because typing "cd .." repeatedly is boring.
+up() {
+    local x='';
+    for i in $(seq ${1:-1}); do
+        x="$x../";
+    done;
+    cd $x;
+}
