@@ -19,7 +19,8 @@
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-#HIST_STAMPS="yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
+#setopt APPEND_HISTORY
 
 
 
@@ -72,22 +73,26 @@ ZSH_CUSTOM=${modules_folder}/zsh/
     #ZSH_THEME="darkblood"
 if [[ $is_cygwin -eq 1 ]]
 then
-    plugins=(git zsh-syntax-highlighting colored-man-pages colorize cp k)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp)
     #ZSH_THEME="cypher"
     #ZSH_THEME="evan"
     #ZSH_THEME="dstufft"
     #ZSH_THEME="flazz"
     #ZSH_THEME="fox"
-    ZSH_THEME="fox"
+    ZSH_THEME="jtriley"
 else
     #ZSH_THEME="rkj-repos"
-    ZSH_THEME="fox"
-    plugins=(git zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo k vim-interaction calc)
+    #ZSH_THEME="fox"
+    ZSH_THEME="jtriley"
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo vim-interaction calc)
 fi
 
 DISABLE_AUTO_UPDATE="false"
 export ZSH=${modules_folder}/zsh/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# oh-my zsh activates a shared history among the instances and I don't like that
+unset SHARE_HISTORY
 
 
 # Print a status, but except the scp connections, otherwise scp transfers will fail
