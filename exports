@@ -5,7 +5,7 @@ then
     export PATH=/bin:/usr/bin:$PATH:$HOME/.local/bin:$HOME/bin
 else
     #export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-    export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+    export PATH=$HOME/.bin:$HOME/bin:$HOME/.local/bin:$PATH
 fi
 
 if [ $is_cygwin ]
