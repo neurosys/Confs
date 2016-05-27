@@ -98,3 +98,22 @@ fi
 
 #. ~/oh-my-zsh/plugins/z/z.sh
 . $ZSH/plugins/z/z.sh
+
+
+# The following lines were added by compinstall
+
+#zstyle ':completion:*' completer _complete _ignored
+#zstyle :compinstall filename '/home/camza/.zshrc'
+#
+#autoload -Uz compinit
+#compinit
+## End of lines added by compinstall
+## Lines configured by zsh-newuser-install
+#HISTFILE=~/.zsh-histfile
+#HISTSIZE=99999
+#SAVEHIST=99999
+#setopt appendhistory
+#unsetopt beep
+#bindkey -e
+# End of lines configured by zsh-newuser-install
+#
