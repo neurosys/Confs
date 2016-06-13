@@ -87,10 +87,14 @@ alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
 
 
 # Because typing "cd .." repeatedly is boring.
-up() {
+function up() {
     local x='';
     for i in $(seq ${1:-1}); do
         x="$x../";
     done;
     cd $x;
 }
+
+alias ggs='git status -s'
+alias ggc='git adu ; git commit -m '
+
