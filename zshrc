@@ -110,8 +110,8 @@ fi
 #zstyle ':completion:*' completer _complete _ignored
 #zstyle :compinstall filename '/home/camza/.zshrc'
 #
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit
+compinit
 ## End of lines added by compinstall
 ## Lines configured by zsh-newuser-install
 #HISTFILE=~/.zsh-histfile
@@ -121,4 +121,4 @@ fi
 #unsetopt beep
 #bindkey -e
 # End of lines configured by zsh-newuser-install
-#
+
