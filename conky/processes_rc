@@ -25,7 +25,7 @@ default_color 101010
 default_shade_color 101010
 alignment top_left
 gap_x 320
-gap_y 440
+gap_y 460
 no_buffers yes
 cpu_avg_samples 1
 uppercase no
@@ -49,14 +49,14 @@ ${color3}CPU3: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
 #${color3}CPU4: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu4 6,140}
 
 ${color3}Top Processes:
-${font Open Sans:pixelsize=12}Name: $alignr PID   CPU   MEM  
-  ${top name 1} $alignr ${top pid 1}  ${top cpu 1}  ${top mem 1}  
-  ${top name 2} $alignr ${top pid 2}  ${top cpu 2}  ${top mem 2}  
-  ${top name 3} $alignr ${top pid 3}  ${top cpu 3}  ${top mem 3}  
-  ${top name 4} $alignr ${top pid 4}  ${top cpu 4}  ${top mem 4}  
-  ${top name 5} $alignr ${top pid 5}  ${top cpu 5}  ${top mem 5}  
-  ${top name 6} $alignr ${top pid 6}  ${top cpu 6}  ${top mem 6}  
-  ${top name 7} $alignr ${top pid 7}  ${top cpu 7}  ${top mem 7}  
-  ${top name 8} $alignr ${top pid 8}  ${top cpu 8}  ${top mem 8}  
-  ${top name 9} $alignr ${top pid 9}  ${top cpu 9}  ${top mem 9}  
-  ${top name 10} $alignr ${top pid 10}  ${top cpu 10}  ${top mem 10}  
+${font Open Sans:pixelsize=12}Name: $alignr${tab}PID${tab}CPU${tab}MEM      
+  ${top name 1}   $alignr ${top pid 1}${tab}${top cpu 1}${tab}${top mem 1}  
+  ${top name 2}   $alignr ${top pid 2}${tab}${top cpu 2}${tab}${top mem 2}  
+  ${top name 3}   $alignr ${top pid 3}${tab}${top cpu 3}${tab}${top mem 3}  
+  ${top name 4}   $alignr ${top pid 4}${tab}${top cpu 4}${tab}${top mem 4}  
+  ${top name 5}   $alignr ${top pid 5}${tab}${top cpu 5}${tab}${top mem 5}  
+  ${top name 6}   $alignr ${top pid 6}${tab}${top cpu 6}${tab}${top mem 6}  
+  ${top name 7}   $alignr ${top pid 7}${tab}${top cpu 7}${tab}${top mem 7}  
+  ${top name 8}   $alignr ${top pid 8}${tab}${top cpu 8}${tab}${top mem 8}  
+  ${top name 9}   $alignr ${top pid 9}${tab}${top cpu 9}${tab}${top mem 9}  
+  ${top name 10}   $alignr ${top pid 10}${tab}${top cpu 10}${tab}${top mem 10}  
