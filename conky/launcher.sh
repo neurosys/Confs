@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sleep 10
-INSERT_PATH=/home/camza/work/lite_x/tests_conky/my_conky
+INSERT_PATH=./
 
 conky -dq -c $INSERT_PATH/time_rc
 conky -dq -c $INSERT_PATH/system_rc

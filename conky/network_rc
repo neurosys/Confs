@@ -42,16 +42,19 @@ color3 FFF
 TEXT
 ${color1}${font Oswald:size=10:bold}NETWORK ${color2} ${hr 2}
 ${if_up enp3s2}
+${color3}${font Open Sans:size=9:bold}enp3s2 ${alignr}${addr enp3s2}
 ${color3}${font Open Sans:size=9}Down: ${downspeed enp3s2}/s ${alignr}Up: ${upspeed enp3s2} /s
 ${color1}${color1}${downspeedgraph enp3s2 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp3s2 20,90 444444 eeeeee}
 ${color3}  Total: ${totaldown enp3s2} ${alignr}Total: ${totalup enp3s2}
 ${endif}
 ${if_up enp2s0}
+${color3}${font Open Sans:size=9:bold}enp2s0 ${alignr}${addr enp2s0}
 ${color3}${font Open Sans:size=9}Down: ${downspeed enp2s0}/s ${alignr}Up: ${upspeed enp2s0} /s
 ${color1}${color1}${downspeedgraph enp2s0 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp2s0 20,90 444444 eeeeee}
 ${color3}  Total: ${totaldown enp2s0} ${alignr}Total: ${totalup enp2s0}
 ${endif}
 ${if_up enp3s2}
+${color3}${font Open Sans:size=9:bold}enp3s2 ${alignr}${addr enp3s3}
 ${color3}${font Open Sans:size=9}Down: ${downspeed enp3s1}/s ${alignr}Up: ${upspeed enp3s1} /s
 ${color1}${color1}${downspeedgraph enp3s1 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp3s1 20,90 444444 eeeeee}
 ${color3}  Total: ${totaldown enp3s1} ${alignr}Total: ${totalup enp3s1}
