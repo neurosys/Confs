@@ -1,36 +1,6 @@
 #!/usr/bin/env bash
 
-function backup_if_exists()
-{
-    if [ -z $1 ]
-    then
-        return
-    fi
-
-    file=$1
-    bkp_dir=$2
-    if [ -z $bkp_dir ]
-    then
-        bkp_dir=backup_config_
-    fi
-
-    if [ -f $file ]
-    then
-        echo "$file exists"
-        if [ -h $file ]
-        then
-            echo "$file is a symlink removing.."
-            rm "$file"
-        else 
-            if [ ! -d $bkp_dir ]
-            then
-                mkdir $bkp_dir
-            fi
-            mv $file $bkp_dir/$(basename $file)
-        fi
-    fi
-}
-
+source shell/utils.sh
 
 if [ $PWD == ~ ]
 then
@@ -38,25 +8,40 @@ then
     exit 0
 fi
 
-backup_folder="backup_config_$(date +%Y-%m-%d_%H-%M-%S)"
+backup_folder="$HOME/backup_config_$(date +%Y-%m-%d_%H-%M-%S)"
+echo "PWD = $PWD"
 
-configs=".Xresources .bash_profile .emacs .fetchmailrc .gitconfig .gitignore .minttyrc .msmtprc .muttrc .screenrc .vimperatorrc"
-for i in $configs
-do
-    echo "$i"
-    backup_if_exists ~/$i $backup_folder
-    ln -s $PWD/$i ~/$i
-    #sed -e "s;confs_folder=.*;confs_folder=$PWD/bash_files;" -i "$PWD/.bashrc"
-done
+#echo "Downloading oh-my-zsh"
+#git submodule update --init
+#if [ $? -eq 0 ]
+#then
+#    echo "oh-my-zsh downloaded"
+#else
+#    echo "Failed to download oh-my-zsh"
+#fi
 
-backup_if_exists ~/.bashrc
-ln -s $PWD/bashrc ~/.bashrc
+link_or_fail        $PWD/shell/bashrc               ~/.bashrc          $backup_folder
+link_or_fail        $PWD/shell/zsh/bash_profile     ~/.bash_profile    $backup_folder
 
-git submodule update --init
-backup_if_exists ~/.zshrc
-ln -s $PWD/zshrc ~/.zshrc
-ln -s $PWD/zsh/oh-my-zsh ~/.oh-my-zsh
+link_or_fail        $PWD/shell/zshrc                ~/.zshrc           $backup_folder
+link_or_fail        $PWD/shell/zsh/oh-my-zsh        ~/.oh-my-zsh       $backup_folder
 
-backup_if_exists ~/.tmux.conf
-ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
-ln -s $PWD/tmux/tmux.conf.local ~/.tmux.conf.local
+link_or_fail        $PWD/tmux/tmux.conf             ~/.tmux.conf       $backup_folder
+link_or_fail        $PWD/tmux/tmux.conf.local       ~/.tmux.conf.local $backup_folder
+
+link_or_fail        $PWD/git.d/gitconfig            ~/.gitconfig       $backup_folder
+
+link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_folder
+link_or_fail        $PWD/.emacs                     ~/.emacs           $backup_folder
+link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_folder
+link_or_fail        $PWD/.vimperatorrc              ~/.vimperatorrc    $backup_folder
+link_or_fail        $PWD/.minttyrc                  ~/.minttyrc        $backup_folder
+
+backup_if_exists    ~/.fetchmailrc                                     $backup_folder
+cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
+
+backup_if_exists    ~/.muttrc                                          $backup_folder
+cp                  $PWD/mail_template/muttrc       ~/.muttrc
+
+backup_if_exists    ~/.msmtprc                                         $backup_folder
+cp                  $PWD/mail_template/msmtprc      ~/.msmtprc
