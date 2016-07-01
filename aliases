@@ -45,6 +45,7 @@ fi
 alias trek='trek=$(ls -1 | head -n 1) ; $player "$trek"'
 alias rmtrek='rm "$trek"'
 alias now='date +%Y-%m-%d_%H-%M-%S'
+alias today='date +%Y-%m-%d'
 
 
 alias rpmlist='rpm -qlp '
@@ -95,3 +96,18 @@ fi
 # Increase/decrease backlight of monitor
 alias lighter='xbacklight -inc 10'
 alias darker='xbacklight -dec 10'
+
+alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
+
+
+# Because typing "cd .." repeatedly is boring.
+function up() {
+    local x='';
+    for i in $(seq ${1:-1}); do
+        x="$x../";
+    done;
+    cd $x;
+}
+
+alias ggs='git status -s'
+alias ggc='git adu ; git commit -m '
