@@ -83,9 +83,13 @@ then
 else
     #ZSH_THEME="rkj-repos"
     #ZSH_THEME="fox"
+    
     ZSH_THEME="jtriley"
+    ZSH_THEME="junkfood"
+    #ZSH_THEME="random"
     plugins=(zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo vim-interaction calc)
 fi
+
 
 DISABLE_AUTO_UPDATE="false"
 export ZSH=${modules_folder}/zsh/oh-my-zsh
@@ -122,3 +126,5 @@ compinit
 #bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# Cusotomize zsh-syntax-highlighting (get ride of the dark blue color, to turn it off, set it to none)
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan,bold'
