@@ -62,31 +62,13 @@ fi
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${modules_folder}/zsh/
 
-#ZSH_THEME="agnoster"
-#ZSH_THEME="bira"
-#ZSH_THEME="bureau"
-#ZSH_THEME="rkj-repos"
-#ZSH_THEME="amuse"
-#ZSH_THEME="arrow"
-#ZSH_THEME="blinks"
-    #ZSH_THEME="candy"
-    #ZSH_THEME="darkblood"
 if [[ $is_cygwin -eq 1 ]]
 then
     plugins=(zsh-syntax-highlighting colored-man-pages colorize cp)
-    #ZSH_THEME="cypher"
-    #ZSH_THEME="evan"
-    #ZSH_THEME="dstufft"
-    #ZSH_THEME="flazz"
-    #ZSH_THEME="fox"
-    ZSH_THEME="jtriley"
+    ZSH_THEME="myjtriley"
 else
-    #ZSH_THEME="rkj-repos"
-    #ZSH_THEME="fox"
-    
-    #ZSH_THEME="junkfood"
-    ZSH_THEME="jtriley"
-    #ZSH_THEME="random"
+    ZSH_THEME="myjtriley"
+   #ZSH_THEME="random"
     plugins=(zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo vim-interaction calc)
 fi
 
