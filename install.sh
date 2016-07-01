@@ -33,6 +33,7 @@ link_or_fail        $PWD/git.d/gitconfig            ~/.gitconfig       $backup_f
 
 link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_folder
 link_or_fail        $PWD/xorg/xbindkeysrc           ~/.xbindkeysrc     $backup_folder
+link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_folder
 
 link_or_fail        $PWD/.emacs                     ~/.emacs           $backup_folder
 link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_folder
