@@ -21,7 +21,7 @@ echo "PWD = $PWD"
 #fi
 
 link_or_fail        $PWD/shell/bashrc               ~/.bashrc          $backup_folder
-link_or_fail        $PWD/shell/zsh/bash_profile     ~/.bash_profile    $backup_folder
+link_or_fail        $PWD/shell/bash_profile         ~/.bash_profile    $backup_folder
 
 link_or_fail        $PWD/shell/zshrc                ~/.zshrc           $backup_folder
 link_or_fail        $PWD/shell/zsh/oh-my-zsh        ~/.oh-my-zsh       $backup_folder
