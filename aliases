@@ -83,3 +83,15 @@ function httphere()
 
 alias clor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
  
+# 0 - fully transparent
+# 1 - opaque
+# 0.8 seems optim
+# 0.75 is implicit (if no arguments are passed)
+if [[ -f /usr/bin/transset-df ]]
+then
+    alias mktrans='transset-df'
+fi
+
+# Increase/decrease backlight of monitor
+alias lighter='xbacklight -inc 10'
+alias darker='xbacklight -dec 10'
