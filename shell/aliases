@@ -116,6 +116,10 @@ alias ggc='git adu ; git commit -m '
 # ======================================================================================
 #     ============== Experimental plugins from common-alias (oh-my-zsh) ============
 # ======================================================================================
+mySHELL=$(ps -p $$ | grep -v CMD | awk '{ print $5; }')
+if [[ $mySHELL == zsh ]]
+then
+
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
@@ -158,3 +162,6 @@ alias sortnr='sort -n -r'
 alias unexport='unset'
 
 alias whereami=display_info
+
+fi
+
