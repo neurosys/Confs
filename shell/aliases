@@ -116,7 +116,7 @@ alias ggc='git adu ; git commit -m '
 # ======================================================================================
 #     ============== Experimental plugins from common-alias (oh-my-zsh) ============
 # ======================================================================================
-mySHELL=$(ps -p $$ | grep -v CMD | awk '{ print $5; }')
+mySHELL=$(ps -p $$ | grep -v CMD | awk '{ print $4; }')
 if [[ $mySHELL == zsh ]]
 then
 
