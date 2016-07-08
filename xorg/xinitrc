@@ -49,10 +49,10 @@ xrandr --setprovideroffloadsink 0x55 0x7b
 epxort DRI_PRIME=1
 
 # Fix two monitor setup
-#xrandr --output HDMI-1 --auto --left-of LVDS-1 --output LVDS1 --auto --scale 1.0001x1.0001
+xrandr --output HDMI1 --auto --left-of LVDS1 --output LVDS1 --auto 
 
 # Set wallpaper
-feh --bg-center ~/Pictures/luis_royo_fallenangelI.jpg
+feh --bg-center ~/Pictures/wallhaven-280260.jpg
 
 # Make Caps-Lock a new Ctrl
 setxkbmap -layout us -option ctrl:nocaps
