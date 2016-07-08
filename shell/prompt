@@ -30,3 +30,5 @@ echo -e "${res} \e[1;32m${PWD}\e[0m ${PADDING} \e[4;36m${current_date}\e[0m"'
 #PS1='\[\e[1;31m\]${USER}\[\e[0m\]@\[\e[1;93m\]${HOST}\[\e[0m\] \$ '
 PS1="${PLIGHTRED}${USER}${PNOCOL}@${PYELLOW}${HOST}${PNOCOL} ${PROMPT_CHAR} "
 export PS1
+
+# vim:syn=sh

@@ -15,3 +15,5 @@ then
 fi
 
 pyversion=$( python --version 2>&1 )
+
+# vim:syn=sh

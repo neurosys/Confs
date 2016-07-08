@@ -158,3 +158,5 @@ alias sortnr='sort -n -r'
 alias unexport='unset'
 
 alias whereami=display_info
+
+# vim:syn=sh
