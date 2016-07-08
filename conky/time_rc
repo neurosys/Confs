@@ -42,5 +42,5 @@ color3 FFF
 
 TEXT
 ${color1}${font Oswald:size=10:bold}TIME ${color2} ${hr 2} ${color3}${font}
-${color3}${font Antipasto:pixelsize=70}${alignr}${time %I:%M}${font}
+${color3}${font Antipasto:pixelsize=70}${alignr}${time %H:%M}${font}
 ${color3}${font Open Sans:pixelsize=11}${alignr}${time %A %F (w %U)}${font}

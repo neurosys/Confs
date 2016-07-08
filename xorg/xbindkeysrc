@@ -67,19 +67,29 @@
 
 # Lenovo E520 (model circa 2011)
 # Volume Mute (Fn + F1)
-#"amixer set Master toggle"
 "pamixer -t"
     m:0x0 + c:121
 
+# Toggle Volume Win + *
+#"amixer set Master toggle"
+"amixer -c1 sset Speaker toggle"
+    m:0x40 + c:63
+
 # Volume Down (Fn + F2)
-#"amixer set Master playback 1-"
 "pamixer -d 5"
     m:0x0 + c:122
 
+# Volume Down Win + -
+#"amixer set Master playback 1-"
+"amixer -c1 sset Speaker 5%-"
+    m:0x40 + c:82
+
 # Volume Up (Fn + F3)
-#"amixer set Master playback 1+"
 "pamixer -i 5"
     m:0x0 + c:123
 
 
-
+# Volume Up Win + +
+#"amixer set Master playback 1+"
+"amixer -c1 sset Speaker 5%+"
+    m:0x40 + c:86
