@@ -44,8 +44,10 @@ fi
 
 alias trek='trek=$(ls -1 | head -n 1) ; $player "$trek"'
 alias rmtrek='rm "$trek"'
-alias now='date +%Y-%m-%d_%H-%M-%S'
-alias today='date +%Y-%m-%d'
+#alias now='date +%Y-%m-%d_%H-%M-%S'
+alias now='date +%F_%H-%M-%S'
+#alias today='date +%Y-%m-%d'
+alias today='date +%F'
 
 
 alias rpmlist='rpm -qlp '
@@ -94,8 +96,11 @@ then
 fi
 
 # Increase/decrease backlight of monitor
-alias lighter='xbacklight -inc 10'
-alias darker='xbacklight -dec 10'
+if [[ -f /usr/bin/xbacklight ]]
+then
+    alias lighter='xbacklight -inc 10'
+    alias darker='xbacklight -dec 10'
+fi
 
 alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
 
@@ -124,7 +129,6 @@ alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
 alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
-alias ll='ls -l'      #long list
 alias ldot='ls -ld .*'
 alias lS='ls -1FSsh'
 alias lart='ls -1Fcart'
