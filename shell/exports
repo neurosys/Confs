@@ -9,13 +9,13 @@ else
     export PATH=$HOME/.bin:$HOME/bin:$HOME/.local/bin:$PATH
 fi
 
-if [ $is_cygwin ]
-then 
-    #unset GREP_OPTIONS
-    export GREP_OPTIONS="-Rn --color=auto"
-else 
-    export GREP_OPTIONS="-Rn --color=auto"
-fi
+#if [ $is_cygwin ]
+#then 
+#    #unset GREP_OPTIONS
+#    export GREP_OPTIONS="-Rn --color=auto"
+#else 
+#    export GREP_OPTIONS="-Rn --color=auto"
+#fi
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
