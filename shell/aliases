@@ -49,6 +49,8 @@ alias now='date +%F_%H-%M-%S'
 #alias today='date +%Y-%m-%d'
 alias today='date +%F'
 
+alias tree='tree -C'
+
 
 alias rpmlist='rpm -qlp '
 
