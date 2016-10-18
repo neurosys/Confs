@@ -9,4 +9,5 @@ conky -dq -c $INSERT_PATH/memory_rc
 conky -dq -c $INSERT_PATH/filesystem_rc
 conky -dq -c $INSERT_PATH/network_rc
 conky -dq -c $INSERT_PATH/fortune_rc
+conky -dq -c $INSERT_PATH/calendar_rc
 #conky -dq -c $INSERT_PATH/mediaplayer_rc
