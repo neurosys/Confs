@@ -26,7 +26,8 @@ draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
 #alignment top_left
-alignment top_middle
+#alignment top_middle
+alignment top_right
 gap_x 160
 gap_y 40
 no_buffers yes
@@ -48,7 +49,7 @@ ${color3}${font Open Sans:pixelsize=11}${alignr}${time %A %F (w %U)}${font}
 ${hr 2} 
 
 
-${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m | sed -e 's;\\(\\<'$(date +%m)'\\>\\);\${color red}\\1\${color3};'"}${font}
+${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m | sed -e 's;\\(\\<'$(date +%d)'\\>\\);\${color red}\\1\${color3};'"}${font}
 
 
 ${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month')" }${font}
