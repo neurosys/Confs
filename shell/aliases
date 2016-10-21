@@ -169,4 +169,6 @@ alias whereami=display_info
 
 fi
 
+alias cobzar='mplayer -novideo -loop 0'
+
 # vim:syn=sh
