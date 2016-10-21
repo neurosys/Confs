@@ -26,7 +26,8 @@ draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
 #alignment top_left
-alignment top_middle
+#alignment top_middle
+alignment top_right
 gap_x 160
 gap_y 40
 no_buffers yes

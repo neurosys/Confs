@@ -105,7 +105,9 @@ fi
 if [[ -f /usr/bin/xbacklight ]]
 then
     alias lighter='xbacklight -inc 10'
+    alias lightest='xbacklight -inc 100'
     alias darker='xbacklight -dec 10'
+    alias darkest='xbacklight -dec 100'
 fi
 
 alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
