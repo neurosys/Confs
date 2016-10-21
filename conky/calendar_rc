@@ -40,6 +40,7 @@ color2 aaa
 #color3 ddd
 color3 FFF
 
+#TODO highlight the Sa and Su days!!!!
 TEXT
 ${color1}${font Oswald:size=10:bold}TIME ${color2} ${hr 2} ${color3}${font}
 ${color3}${font Antipasto:pixelsize=70}${alignr}${time %H:%M}${font}
@@ -48,7 +49,7 @@ ${color3}${font Open Sans:pixelsize=11}${alignr}${time %A %F (w %U)}${font}
 ${hr 2} 
 
 
-${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m | sed -e 's;\\(\\<'$(date +%m)'\\>\\);\${color red}\\1\${color3};'"}${font}
+${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m | sed -e 's;\\(\\<'$(date +%d)'\\>\\);\${color red}\\1\${color3};'"}${font}
 
 
 ${color3}${font Liberation Mono for Powerline:pixelsize=18}${alignr}${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month')" }${font}
