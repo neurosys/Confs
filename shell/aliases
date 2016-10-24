@@ -171,8 +171,11 @@ alias whereami=display_info
 
 fi
 
+alias cobzar='mplayer -novideo -loop 0'
+
 # -C = compress
 # -X -Y = X11 forwarding enabled
 # -c = use cypher (taken from man ssh_config)
 alias fastssh='ssh -C -X -Y -c 3des-cbc'
+
 # vim:syn=sh
