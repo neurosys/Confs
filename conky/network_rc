@@ -60,3 +60,10 @@ ${color3}${font Open Sans:size=9}Down: ${downspeed enp3s1}/s ${alignr}Up: ${upsp
 ${color1}${color1}${downspeedgraph enp3s1 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp3s1 20,90 444444 eeeeee}
 ${color3}  Total: ${totaldown enp3s1} ${alignr}Total: ${totalup enp3s1}
 ${endif}
+
+${if_up wlp9s0}
+${color3}${font Open Sans:size=9:bold}wlp9s0 ${alignr}${addr wlp9s0}
+${color3}${font Open Sans:size=9}Down: ${downspeed wlp9s0}/s ${alignr}Up: ${upspeed wlp9s0} /s
+${color1}${color1}${downspeedgraph wlp9s0 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph wlp9s0 20,90 444444 eeeeee}
+${color3}  Total: ${totaldown wlp9s0} ${alignr}Total: ${totalup wlp9s0}
+${endif}
