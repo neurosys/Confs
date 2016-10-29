@@ -25,10 +25,11 @@ draw_borders no
 draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
-#alignment top_left
+alignment top_left
 #alignment top_middle
-alignment top_right
-gap_x 160
+#alignment top_right
+#gap_x 160
+gap_x 1100
 gap_y 40
 no_buffers yes
 cpu_avg_samples 1
@@ -43,9 +44,13 @@ color3 FFF
 
 TEXT
 ${color1}${font Oswald:size=10:bold}TIME ${color2} ${hr 2} ${color3}${font}
-${color3}${font Antipasto:pixelsize=70}${alignr}${time %H:%M}${font}
 ${color3}${font Open Sans:pixelsize=11}${alignr}${time %A %F (w %U)}${font}
-
+${color3}${font Antipasto:pixelsize=70}${alignr}${time %H:%M}${font}
+${color3}${font Open Sans:pixelsize=11}Welwyn:   ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours ago"'} (GMT +1)${font} 
+${color3}${font Open Sans:pixelsize=11}New York: ${alignr}${execp bash -c 'date "+%H:%M" --date="5 hours ago"'} (GMT -5)${font} 
+${color3}${font Open Sans:pixelsize=11}Ottawa:   ${alignr}${execp bash -c 'date "+%H:%M" --date="5 hours ago"'} (GMT -5)${font}
+${color3}${font Open Sans:pixelsize=11}Pune:     ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours 30 min"'} (GMT +x)${font}
+${color3}${font Open Sans:pixelsize=11}Moscow:   ${alignr}${execp bash -c 'date "+%H:%M" --date="0 hour"'} (GMT +3)${font}
 ${hr 2} 
 
 ${color3}\
