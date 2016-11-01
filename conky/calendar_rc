@@ -25,11 +25,11 @@ draw_borders no
 draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
-alignment top_left
-#alignment top_middle
+#alignment top_left # home
+alignment top_middle # work
 #alignment top_right
-#gap_x 160
-gap_x 1100
+gap_x 160 # work
+#gap_x 1100 # home
 gap_y 40
 no_buffers yes
 cpu_avg_samples 1
@@ -56,7 +56,7 @@ ${hr 2}
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/' -e 's;\\(\\<'$(date +%d)'\\>\\);\${color red}\\1\${color3};'"}\
+${execp bash -c "cal -m | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/' -e 's;\\(\\<'$(date +%-d)'\\>\\);\${color red}\\1\${color3};'"}\
 ${font}
 
 ${color3}\
