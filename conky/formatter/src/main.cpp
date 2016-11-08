@@ -11,7 +11,7 @@ std::string today = "0";
 std::string weekend_color_start = "${color1}";
 std::string weekend_color_end   = "${color3}";
 std::string today_color_start   = "${color red}";
-std::string today_color_end     = "${color}";
+std::string today_color_end     = "${color3}";
 
 std::string months[] = {
     "January",
@@ -128,11 +128,10 @@ bool CheckMonth(std::string *line)
 void ProcessInput()
 {
     std::string line;
-    void* rez = NULL;
 
     // Get the month antet
-    rez = std::getline(std::cin, line);
-    if (rez != 0)
+    std::getline(std::cin, line);
+    if (std::cin)
     {
         if (CheckMonth(&line))
         {
@@ -150,8 +149,8 @@ void ProcessInput()
         return;
     }
 
-    rez = std::getline(std::cin, line);
-    if (rez != 0)
+    
+    if (std::getline(std::cin, line))
     {
         if (line == days_m || line == days_s)
         {
