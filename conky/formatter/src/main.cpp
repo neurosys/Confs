@@ -79,8 +79,16 @@ SplitByColumns(std::string line, int col_size, int skip)
 }
 
 void
-HiglightMondayFirstWeek(std::vector<std::string> tokens, std::string today)
+HiglightWeek(std::vector<std::string> tokens, std::string today)
 {
+    std::size_t saturday = 5;
+    std::size_t sunday   = 6;
+    if (sunday_first)
+    {
+        sunday = 0;
+        saturday = 6;
+    }
+    
     for (std::size_t i = 0; i < tokens.size(); i++)
     {
         if ((today.size() == 1 && tokens[i][0] == ' ' && tokens[i][1] == today[0]) || 
@@ -90,7 +98,7 @@ HiglightMondayFirstWeek(std::vector<std::string> tokens, std::string today)
         }
         else
         {
-            if (i == 5 || i == 6)
+            if (i == saturday || i == sunday)
             {
                 std::cout << weekend_color_start << tokens[i] << weekend_color_end <<  " "; 
             }
@@ -159,28 +167,13 @@ void ProcessInput()
         }
 
         std::vector<std::string> tokens = SplitByColumns(line, 2, 1);
-
-        if (sunday_first)
-        {
-            std::size_t i = 0;
-            std::cout << weekend_color_start << tokens[i++] << weekend_color_end <<  " ";
-            for (; i < tokens.size() - 1; i++)
-            {
-                std::cout << tokens[i] << " " ;
-            }
-            std::cout << weekend_color_start << tokens[i++] << weekend_color_end <<  " ";
-            std::cout << std::endl;
-        }
-        else
-        {
-            HiglightMondayFirstWeek(tokens, today);
-        }
+        HiglightWeek(tokens, today);
     }
 
     while (std::getline(std::cin, line))
     {
         std::vector<std::string> tokens = SplitByColumns(line, 2, 1);
-        HiglightMondayFirstWeek(tokens, today);
+        HiglightWeek(tokens, today);
     }
 }
 
