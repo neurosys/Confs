@@ -56,19 +56,19 @@ ${hr 2}
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m | calformat --today $(date +%-d)"}\
+${execp bash -c "cal -m | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/' -e 's;\\(\\<'$(date +%-d)'\\>\\);\${color red}\\1\${color3};'"}\
 ${font}
 
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month') | calformat" }\
+${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month') | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/'" }\
 ${font}
 
 
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 2 month') | calformat" }\
+${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 2 month') | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/'" }\
 ${font}\
 
