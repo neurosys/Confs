@@ -188,22 +188,39 @@ int main(int argc, char* argv[])
 {
     for (int i = 0; i < argc; i++)
     {
-        if (std::string(argv[i]) == "--today" && i + 1 < argc)
+        if ((std::string(argv[i]) == "--today" || std::string(argv[i]) == "-td" )
+                && i + 1 < argc)
         {
             i++;
             today = std::string(argv[i]);
         }
 
-        if (std::string(argv[i]) == "--weekend-color" && i + 1 < argc)
+        if ((std::string(argv[i]) == "--weekend-color" || std::string(argv[i]) == "-w" )
+            && i + 1 < argc)
         {
             i++;
             weekend_color_start = std::string(argv[i]);
         }
 
-        if (std::string(argv[i]) == "--today-color" && i + 1 < argc)
+        if ((std::string(argv[i]) == "--weekend-end" || std::string(argv[i]) == "-we" )
+            && i + 1 < argc)
+        {
+            i++;
+            weekend_color_end = std::string(argv[i]);
+        }
+
+        if ((std::string(argv[i]) == "--today-color" || std::string(argv[i]) == "-t" )
+            && i + 1 < argc)
         {
             i++;
             today_color_start = std::string(argv[i]);
+        }
+
+        if ((std::string(argv[i]) == "--today-end" || std::string(argv[i]) == "-te" )
+            && i + 1 < argc)
+        {
+            i++;
+            today_color_end = std::string(argv[i]);
         }
     }
     ProcessInput();
