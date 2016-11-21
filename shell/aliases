@@ -178,4 +178,12 @@ alias cobzar='mplayer -novideo -loop 0'
 # -c = use cypher (taken from man ssh_config)
 alias fastssh='ssh -C -X -Y -c 3des-cbc'
 
+function mkscript()
+{
+    : > $1
+    chmod +x $1
+    echo "#!/usr/bin/env bash" > $1
+    vim $1
+}
+
 # vim:syn=sh
