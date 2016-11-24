@@ -1,17 +1,28 @@
 #!/bin/bash
 
 INSERT_PATH=./
+MACHINE_NAME=$(hostname)
 
-conky -dq -c $INSERT_PATH/time_rc
-conky -dq -c $INSERT_PATH/system_rc
-conky -dq -c $INSERT_PATH/processes_rc
-conky -dq -c $INSERT_PATH/memory_rc
-conky -dq -c $INSERT_PATH/filesystem_rc
-conky -dq -c $INSERT_PATH/network_rc
-conky -dq -c $INSERT_PATH/fortune_rc
+function launcher()
+{
+    if [ -f $INSERT_PATH/$1_$MACHINE_NAME ]
+    then
+        conky -dq -c $INSERT_PATH/$1_$MACHINE_NAME
+    else
+        conky -dq -c $INSERT_PATH/$1
+    fi
+}
 
-width_of_primary_monitor=$(xrandr | grep primary | grep -o "[0-9]\+x[0-9]\+" | grep -o "^[0-9]\+")
-calendar=calendar_rc_$width_of_primary_monitor
-conky -dq -c $INSERT_PATH/$calendar
+#launcher time_rc
 
-#conky -dq -c $INSERT_PATH/mediaplayer_rc
+launcher system_rc
+launcher memory_rc
+launcher fortune_rc
+
+launcher calendar_rc
+launcher processes_rc
+launcher filesystem_rc
+launcher network_rc
+
+#launcher mediaplayer_rc
+
