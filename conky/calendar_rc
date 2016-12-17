@@ -43,14 +43,14 @@ color2 aaa
 color3 FFF
 
 TEXT
-${color1}${font Oswald:size=10:bold}TIME ${color2} ${hr 2} ${color3}${font}
-${color3}${font Open Sans:pixelsize=11}${alignr}${time %A %F (w %U)}${font}
+${color1}${font Oswald:size=12:bold}TIME ${color2} ${hr 2} ${color3}${font}
+${color3}${font Open Sans:pixelsize=12}${alignr}${time %A %F (w %U)}${font}
 ${color3}${font Antipasto:pixelsize=70}${alignr}${time %H:%M}${font}
-${color3}${font Open Sans:pixelsize=11}Welwyn:   ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours ago"'} (GMT +1)${font} 
-${color3}${font Open Sans:pixelsize=11}New York: ${alignr}${execp bash -c 'date "+%H:%M" --date="5 hours ago"'} (GMT -5)${font} 
-${color3}${font Open Sans:pixelsize=11}Ottawa:   ${alignr}${execp bash -c 'date "+%H:%M" --date="5 hours ago"'} (GMT -5)${font}
-${color3}${font Open Sans:pixelsize=11}Pune:     ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours 30 min"'} (GMT +x)${font}
-${color3}${font Open Sans:pixelsize=11}Moscow:   ${alignr}${execp bash -c 'date "+%H:%M" --date="0 hour"'} (GMT +3)${font}
+${color3}${font Open Sans:pixelsize=12}Welwyn:   ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours ago"'} (GMT +1)${font} 
+${color3}${font Open Sans:pixelsize=12}New York: ${alignr}${execp bash -c 'date "+%H:%M" --date="7 hours ago"'} (GMT -5)${font} 
+${color3}${font Open Sans:pixelsize=12}Ottawa:   ${alignr}${execp bash -c 'date "+%H:%M" --date="7 hours ago"'} (GMT -5)${font}
+${color3}${font Open Sans:pixelsize=12}Pune:     ${alignr}${execp bash -c 'date "+%H:%M" --date="3 hours 30 min"'} (GMT +x)${font}
+${color3}${font Open Sans:pixelsize=12}Moscow:   ${alignr}${execp bash -c 'date "+%H:%M" --date="1 hour"'} (GMT +3)${font}
 ${hr 2} 
 
 ${color3}\
