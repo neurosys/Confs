@@ -101,13 +101,41 @@ then
     alias mktrans='transset-df'
 fi
 
+function light() {
+    magick_place=/sys/class/backlight/intel_backlight/brightness
+    local light_level=$(cat $magick_place)
+
+    case $1 in
+        "") # Show the current level
+            echo $light_level
+            ;;
+        "inc") 
+            sudo tee $magick_place <<< $(($light_level + 100))
+            ;;
+        "dec")
+            sudo tee $magick_place <<< $(($light_level - 100))
+            ;;
+        "off")
+            sudo tee $magick_place <<< 20
+            ;;
+        ".")
+            sudo tee $magick_place <<< $2
+            ;;
+    esac
+
+}
+
 # Increase/decrease backlight of monitor
 if [[ -f /usr/bin/xbacklight ]]
 then
-    alias lighter='xbacklight -inc 10'
-    alias lightest='xbacklight -inc 100'
-    alias darker='xbacklight -dec 10'
-    alias darkest='xbacklight -dec 100'
+    current_backlight=$(xbacklight -get)
+    if [ $current_backlight ]
+    then
+        alias lighter='xbacklight -inc 10'
+        alias lightest='xbacklight -inc 100'
+        alias darker='xbacklight -dec 10'
+        alias darkest='xbacklight -dec 100'
+    fi
 fi
 
 alias noproxy='unset http_proxy HTTP_PROXY ftp_proxy FTP_PROXY HTTPS_PROXY'
@@ -185,5 +213,7 @@ function mkscript()
     echo "#!/usr/bin/env bash" > $1
     vim $1
 }
+
+alias py='python -q'
 
 # vim:syn=sh
