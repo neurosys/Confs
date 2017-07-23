@@ -1,5 +1,11 @@
 
-mySHELL=$(ps -p $$ | grep -v CMD | awk '{ print $4; }')
+if [ $is_cygwin -eq 1 ]
+then
+    mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $8; }' | xargs basename )
+else
+    mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $4; }' | xargs basename )
+fi
+
 if [[ $mySHELL == bash ]]
 then
     alias ls='ls --color=auto'
