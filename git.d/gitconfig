@@ -1,14 +1,30 @@
 [user]
-	name = NeuroSys
-	email = bla-bla
+    name = NeuroSys
+    email = bla-bla
 
 [color]
-    ui = always
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+
+    #ui = always
     #ui = never
+    #
+
+[color "status"]
+    added = green
+    changed = red bold
+    untracked = magenta bold
+
+[color "branch"]
+    remote = yellow
 
 #[http]
 #    proxy = http://<usr>:<pwd>@<proxy fqdn>:<port>
 
 [alias]
-	ss = status -s
+	ss = status -s -uno
     adu = add -u
