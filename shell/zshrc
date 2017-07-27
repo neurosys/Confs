@@ -54,9 +54,9 @@ then
 fi
 
 
-if [ -f ${modules_folder}/.local_aliases ]
+if [ -f ~/.local_aliases ]
 then
-    . ${modules_folder}/.local_aliases
+    . ~/.local_aliases
 fi
 
 # Would you like to use another custom folder than $ZSH/custom?

@@ -40,9 +40,9 @@ then
 fi
 
 # Various local aliases, that have meaning only on this specific PC
-if [ -f ${confs_folder}/.local_aliases ]
+if [ -f ~/.local_aliases ]
 then
-    . ${confs_folder}/.local_aliases
+    . ~/.local_aliases
 fi
 
 
