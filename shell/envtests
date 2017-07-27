@@ -2,6 +2,8 @@
 if [[ "$(uname)" == CYGWIN* ]]
 then
     is_cygwin=1
+else
+    is_cygwin=0
 fi
 
 if [ $TMUX ] && [ $TMUX_PANE ]
