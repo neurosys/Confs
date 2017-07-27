@@ -77,12 +77,13 @@ ZSH_CUSTOM=${modules_folder}/zsh/
 
 if [[ $is_cygwin -eq 1 ]]
 then
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp git git-extras k jira vim-interaction bgnotify mvn screen)
     ZSH_THEME="myjtriley"
+    #ZSH_THEME="candy"
 else
     ZSH_THEME="myjtriley"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize rand-quote cp sudo vim-interaction bgnotify k git git-extras jira)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify k git git-extras jira mvn)
 fi
 
 bgnotify_treshold=1
