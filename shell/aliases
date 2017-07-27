@@ -31,6 +31,8 @@ alias wget='wget -nc --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2
 alias fworker='firefox -P Worker -no-remote &> /dev/null &'
 alias forganizer='firefox -P Organizer -no-remote &> /dev/null &'
 
+# Use compresion, and enable by default X11 forwarding
+alias ssh='ssh -C -X -Y'
 
 if [ $is_cygwin ]
 then
