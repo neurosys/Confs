@@ -28,3 +28,8 @@
 [alias]
 	ss = status -s -uno
     adu = add -u
+
+[pull]
+    rebase = true
+[branch]
+    autosetupmerge = always
