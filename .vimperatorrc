@@ -1,7 +1,10 @@
-"3.8.2 (created: 2014/02/13 23:52:43)
+"3.16.0 (created: 2017/02/01 00:55:15)
 
+map <lt>silent>J gT
+map <lt>silent>K gt
 nmap K gt
 nmap J gT
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
+"source! /home/camza/.vimperatorrc.local
 
 " vim: set ft=vimperator:
