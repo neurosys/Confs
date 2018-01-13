@@ -126,4 +126,6 @@ compinit
 # Cusotomize zsh-syntax-highlighting (get ride of the dark blue color, to turn it off, set it to none)
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan,bold'
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # vim:syn=sh
+
