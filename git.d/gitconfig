@@ -2,6 +2,32 @@
     name = NeuroSys
     email = bla-bla
 
+[core]
+        editor = vim
+
+[merge]
+        tool = kdiff3
+
+[mergetool "kdiff3"]
+        trustExitCode = false
+
+[diff]
+        guitool = kdiff3
+
+[difftool "kdiff3"]
+        trustExitCode = false
+
+[pull]
+    rebase = true
+
+[branch]
+    # git branch, git checkout -b imply --track option
+    autosetupmerge = always
+
+    # git branches should be rebased upon git pull
+    autosetuprebase = always
+
+
 [color]
     diff = auto
     status = auto
@@ -28,8 +54,10 @@
 [alias]
 	ss = status -s -uno
     adu = add -u
+	mg  = mergetool --no-prompt
 
-[pull]
-    rebase = true
-[branch]
-    autosetupmerge = always
+
+#=====================================
+
+
+
