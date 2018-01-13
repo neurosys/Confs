@@ -222,11 +222,43 @@ function mkscript()
     vim $1
 }
 
-alias py='python -q'
+ipy=$(which ipython)
+if [[ -x $ipy ]]
+then
+    alias py='ipython --no-banner'
+else
+    alias py='python -q'
+fi
 
-function dog()
-{
+
+dog() {
     highlight -l -O xterm256 --style pablo $1
+    # In order to list other highlight options, use highlight -w 
+    # Other themes that I liked
+    # pablo (for java files)
+    # zmrok 
+    # vampire
+    # tabula (xml looks awesome)
+
+# [Java]
+# andes
+# darkness
+    # leo
+    # molokai
+    # pablo
+
+# [xml]
+# andes
+    # molokai
+    # tabula
+
+# [Bash]
+# molokai 
+# darkness
+# darkslategray
+# leo
+# neon
+# pablo
 }
 
 # vim:syn=sh
