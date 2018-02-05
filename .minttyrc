@@ -1,13 +1,15 @@
 BoldAsFont=yes
 CursorType=block
-FontHeight=11
+FontHeight=14
 Columns=177
 Rows=52
 Scrollbar=none
 PgUpDnScroll=yes
-Font=Ubuntu Mono
+Font=Inconsolata for Powerline
 Transparency=medium
 CopyAsRTF=yes
 RightClickAction=paste
 ClicksTargetApp=yes
 FontIsBold=no
+BellType=0
+FontWeight=500
