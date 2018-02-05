@@ -222,7 +222,7 @@ function mkscript()
     vim $1
 }
 
-ipy=$(which ipython)
+ipy=$(which ipython &> /dev/null)
 if [[ -x $ipy ]]
 then
     alias py='ipython --no-banner'
