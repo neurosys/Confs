@@ -93,3 +93,38 @@
 #"amixer set Master playback 1+"
 "amixer -c1 sset Speaker 5%+"
     m:0x40 + c:86
+
+
+# Bindings from CentOS 7.4
+
+# -cX where X is the id of the sound card, the ids start from 0
+# the name after (Speaker or Master for example) can be obtained from
+# runing > amixer [-cX] controls
+# For example
+# % amixer controls
+# numid=4,iface=MIXER,name='Master Playback Switch'
+# numid=3,iface=MIXER,name='Master Playback Volume'
+# numid=2,iface=MIXER,name='Capture Switch'
+# numid=1,iface=MIXER,name='Capture Volume'
+# 
+# If only one sound card is present, -c0 is implicit
+
+
+#m:0x0 + c:121
+#"amixer -c1 sset Speaker toggle"
+# For some reason, toggle doesn't allways work with -cX
+# but if you leave out the -cX it will use the default sundcard so you may get the same thing
+#
+"amixer sset Master toggle"
+    XF86AudioMute
+
+#m:0x0 + c:122
+#"amixer -c1 sset Speaker 5%-"
+"amixer -c0 sset Master 5%-"
+    XF86AudioLowerVolume
+
+#m:0x0 + c:123
+#"amixer -c1 sset Speaker 5%+"
+"amixer -c0 sset Master 5%+"
+    XF86AudioRaiseVolume
+

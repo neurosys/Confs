@@ -2,6 +2,8 @@
     name = NeuroSys
     email = bla-bla
 
+    # In order to store the credentials:
+    # > git config credential.helper store
 [core]
         editor = vim
 
