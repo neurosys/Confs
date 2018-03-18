@@ -123,6 +123,6 @@
 (define-key global-map "\M-n" 'next-buffer)
 (define-key global-map "\M-p" 'previous-buffer)
 
-(add-to-list 'load-path "~/.emacs.d/evil") 
-(require 'evil)
-(evil-mode 1)
+;(add-to-list 'load-path "~/.emacs.d/evil") 
+;(require 'evil)
+;(evil-mode 1)
