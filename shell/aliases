@@ -54,6 +54,11 @@ else
     alias mc='mc -S gotar'
 fi
 
+if [ $is_cygwin ]
+then
+    alias cygwin='curl http://cygwin.org/setup-x86_64.exe --output /setup-x86_64.exe'
+fi
+
 alias trek='trek=$(ls -1 | head -n 1) ; $player "$trek"'
 alias rmtrek='rm "$trek"'
 #alias now='date +%Y-%m-%d_%H-%M-%S'
