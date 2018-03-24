@@ -1,15 +1,19 @@
 # In order to store the credentials into an repository
 # > git config credential.helper store
 [credential "http://github.com"]
+	name = NeuroSys
     username = neurosys
-
-[include]
-    path = ~/.git_local_accounts
+	email = you@example.com
 
 [user]
    name = NeuroSys
    username = neurosys
-   email = bla bla
+   email = you@example.com
+
+
+[include]
+    path = ~/.git_local_accounts
+
 
 [core]
         editor = vim
@@ -68,9 +72,3 @@
 
 
 #=====================================
-
-
-
-[user]
-	name = NeuroSys
-	email = you@example.com
