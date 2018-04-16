@@ -1,0 +1,10 @@
+
+which ssh-agent &> /dev/null
+is_ssh_agent_present=$?
+
+if [[ -z "$SSH_AUTH_SOCK" && $is_ssh_agent_present -eq 0 ]]
+then
+    eval $(ssh-agent -s)
+    trap "kill $SSH_AGENT_PID" 0
+fi
+

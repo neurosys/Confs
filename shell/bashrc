@@ -39,6 +39,11 @@ then
     . ${confs_folder}/aliases
 fi
 
+if [ -f ${confs_folder}/sshagent ]
+then
+    . ${confs_folder}/sshagent
+fi
+
 # Various local aliases, that have meaning only on this specific PC
 if [ -f ~/.local_aliases ]
 then

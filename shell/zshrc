@@ -53,6 +53,10 @@ then
     . ${modules_folder}/aliases
 fi
 
+if [ -f ${modules_folder}/sshagent ]
+then
+    . ${modules_folder}/sshagent
+fi
 
 if [ -f ~/.local_aliases ]
 then
