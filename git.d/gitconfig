@@ -70,5 +70,17 @@
     adu = add -u
 	mg  = mergetool --no-prompt
 
+    # Short, decorated log
+    # Optionsal --date=relative
+    ls = log --date=short --graph --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%C(cyan)%cd\\ %Creset%s%Cgreen\\ [%cn]" --decorate 
+
+    # Show a log with files changed in that commit
+    ll  = !git ls --name-only && 0
+
+    # Show a normal log with diff included
+    lld = log -p
+
+
+
 
 #=====================================
