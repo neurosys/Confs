@@ -5,56 +5,25 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+function sourceIfExists()
+{
+    local file=$1
+    if [[ -f $file ]]
+    then
+        . $file
+    fi
+}
+
 # Path to whom other paths are relative to
 #confs_folder=~/Confs/bash_files
 path_to_bashrc=$(readlink -f ~/.bashrc)
 confs_folder=$(dirname $path_to_bashrc)/
 
-# Set flags corresponding to whatever this system may or may not have
-if [ -f ${confs_folder}/envtests ]
-then
-    . ${confs_folder}/envtests
-fi 
-
-if [ -f ${confs_folder}/defines ]
-then
-    . ${confs_folder}/defines
-fi
-
-# Export various variables
-if [ -f ${confs_folder}/exports ]
-then
-    . ${confs_folder}/exports
-fi
-
-# Set a fancy prompt
-if [ -f ${confs_folder}/prompt ]
-then
-    . ${confs_folder}/prompt
-fi
-
-# Various aliases that I feel are useful on every platform
-if [ -f ${confs_folder}/aliases ]
-then
-    . ${confs_folder}/aliases
-fi
-
-if [ -f ${confs_folder}/sshagent ]
-then
-    . ${confs_folder}/sshagent
-fi
-
-# Various local aliases, that have meaning only on this specific PC
-if [ -f ~/.local_aliases ]
-then
-    . ~/.local_aliases
-fi
-
-
-# Print a status, but except the scp connections, otherwise scp transfers will fail
-if [ "$TERM" != "dumb" ] && [ -f ${confs_folder}/print_status ]
-then
-    . ${confs_folder}/print_status
-fi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+sourceIfExists ${confs_folder}/envtests
+sourceIfExists ${confs_folder}/defines
+sourceIfExists ${confs_folder}/exports
+sourceIfExists ${confs_folder}/prompt
+sourceIfExists ${confs_folder}/aliases
+#sourceIfExists ${confs_folder}/sshagent
+sourceIfExists ~/.local_aliases
+sourceIfExists ~/.fzf.bash
