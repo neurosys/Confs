@@ -22,6 +22,14 @@
 HIST_STAMPS="yyyy-mm-dd"
 #setopt APPEND_HISTORY
 
+function sourceIfExists()
+{
+    local file=$1
+    if [[ -f $file ]]
+    then
+        . $file
+    fi
+}
 
 
 # User configuration
@@ -33,35 +41,12 @@ path_to_conf_folder=$( readlink -f ~/.zshrc )
 modules_folder=$(dirname $path_to_conf_folder)
 
 
-if [ -f ${modules_folder}/envtests ]
-then
-    . ${modules_folder}/envtests
-fi
-
-if [ -f ${modules_folder}/defines ]
-then
-    . ${modules_folder}/defines
-fi
-
-if [ -f ${modules_folder}/exports ]
-then
-    . ${modules_folder}/exports
-fi
-
-if [ -f ${modules_folder}/aliases ]
-then
-    . ${modules_folder}/aliases
-fi
-
-if [ -f ${modules_folder}/sshagent ]
-then
-    . ${modules_folder}/sshagent
-fi
-
-if [ -f ~/.local_aliases ]
-then
-    . ~/.local_aliases
-fi
+sourceIfExists ${modules_folder}/envtests
+sourceIfExists ${modules_folder}/defines
+sourceIfExists ${modules_folder}/exports
+sourceIfExists ${modules_folder}/aliases
+#sourceIfExists ${modules_folder}/sshagent
+sourceIfExists ~/.local_aliases
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${modules_folder}/zsh/
@@ -93,7 +78,7 @@ fi
 bgnotify_treshold=1
 DISABLE_AUTO_UPDATE="false"
 export ZSH=${modules_folder}/zsh/oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+sourceIfExists $ZSH/oh-my-zsh.sh
 
 # oh-my zsh activates a shared history among the instances and I don't like that
 unset SHARE_HISTORY
@@ -125,6 +110,7 @@ compinit
 # Cusotomize zsh-syntax-highlighting (get ride of the dark blue color, to turn it off, set it to none)
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan,bold'
 
-[ $is_cygwin -eq 0 ] && [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ $is_cygwin -eq 0 ] && sourceIfExists ~/.fzf.zsh
+
 # vim:syn=sh
 
