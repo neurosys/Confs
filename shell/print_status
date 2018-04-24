@@ -1,14 +1,17 @@
 
-# Print a fortune
-if [ -f /usr/bin/fortune ] || [ -f /usr/games/fortune ]
+if [[ $is_cygwin -eq 0 ]]
 then
-    echo -e "${YELLOW}" ; fortune ; echo -e "${NOCOL}"
-fi
+    # Print a fortune
+    if [ -f /usr/bin/fortune ] || [ -f /usr/games/fortune ]
+    then
+        echo -e "${YELLOW}" ; fortune ; echo -e "${NOCOL}"
+    fi
 
-# Print the current TODO list from task
-if [ -f /usr/bin/task ]
-then
-    task list
+    # Print the current TODO list from task
+    if [ -f /usr/bin/task ]
+    then
+        task list
+    fi
 fi
 
 # vim:syn=sh
