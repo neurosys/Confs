@@ -81,7 +81,7 @@ ZSH_CUSTOM=${modules_folder}/zsh/
 
 if [[ $is_cygwin -eq 1 ]]
 then
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp git git-extras k jira vim-interaction bgnotify mvn screen)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize git git-extras mvn)
     ZSH_THEME="myjtriley"
     #ZSH_THEME="candy"
 else
@@ -105,11 +105,6 @@ then
     . ${modules_folder}/print_status
 fi
 
-#. ~/oh-my-zsh/plugins/z/z.sh
-. $ZSH/plugins/z/z.sh
-
-. ${modules_folder}/zsh/plugins/calc.plugin.zsh/calc.plugin.zsh
-
 # The following lines were added by compinstall
 
 #zstyle ':completion:*' completer _complete _ignored
@@ -130,6 +125,6 @@ compinit
 # Cusotomize zsh-syntax-highlighting (get ride of the dark blue color, to turn it off, set it to none)
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan,bold'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ $is_cygwin -eq 0 ] && [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # vim:syn=sh
 
