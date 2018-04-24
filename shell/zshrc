@@ -45,7 +45,6 @@ sourceIfExists ${modules_folder}/envtests
 sourceIfExists ${modules_folder}/defines
 sourceIfExists ${modules_folder}/exports
 sourceIfExists ${modules_folder}/aliases
-#sourceIfExists ${modules_folder}/sshagent
 sourceIfExists ~/.local_aliases
 
 # Would you like to use another custom folder than $ZSH/custom?
