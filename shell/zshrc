@@ -95,7 +95,7 @@ fi
 #zstyle :compinstall filename '/home/camza/.zshrc'
 #
 autoload -Uz compinit
-compinit
+compinit -u
 ## End of lines added by compinstall
 ## Lines configured by zsh-newuser-install
 #HISTFILE=~/.zsh-histfile
