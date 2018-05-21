@@ -31,11 +31,11 @@ else
 fi
 
 # In order for the git gui to work on CYGWIN
-if [ $is_cygwin ]
-then
-    export DISPLAY=:0.0
-fi
-
+#if [ $is_cygwin ]
+#then
+#    export DISPLAY=:0.0
+#fi
+#
 # Make minicom colorfull and use meta key instead of <C-a> as cmd prefix
 if [ ! $is_cygwin ] && [ -f /usr/bin/minicom ]
 then
