@@ -24,6 +24,5 @@ sourceIfExists ${confs_folder}/defines
 sourceIfExists ${confs_folder}/exports
 sourceIfExists ${confs_folder}/prompt
 sourceIfExists ${confs_folder}/aliases
-#sourceIfExists ${confs_folder}/sshagent
 sourceIfExists ~/.local_aliases
 sourceIfExists ~/.fzf.bash
