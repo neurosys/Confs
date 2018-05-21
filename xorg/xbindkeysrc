@@ -76,7 +76,8 @@
     m:0x40 + c:63
 
 # Volume Down (Fn + F2)
-"pamixer -d 5"
+# "pamixer -d 5"
+"amixer -c0 sset Master 1%-"
     m:0x0 + c:122
 
 # Volume Down Win + -
@@ -85,7 +86,8 @@
     m:0x40 + c:82
 
 # Volume Up (Fn + F3)
-"pamixer -i 5"
+#"pamixer -i 5"
+"amixer -c0 sset Master 1%+"
     m:0x0 + c:123
 
 
@@ -115,16 +117,38 @@
 # For some reason, toggle doesn't allways work with -cX
 # but if you leave out the -cX it will use the default sundcard so you may get the same thing
 #
-"amixer sset Master toggle"
+#
+
+
+# ============================================================================
+#                                   SOUND 
+# ============================================================================
+# MUTE / UNMUTE
+#"amixer sset Master toggle"
+"pamixer -t"
     XF86AudioMute
+    #m:0x0 + c:121
 
-#m:0x0 + c:122
+# VOLUME DOWN
 #"amixer -c1 sset Speaker 5%-"
-"amixer -c0 sset Master 5%-"
+#"amixer -c0 sset Master 1%-"
+#"amixer sset Master 1%-"
+"pamixer -d 1"
     XF86AudioLowerVolume
+    #m:0x0 + c:122
 
-#m:0x0 + c:123
+# VOLUME UP
 #"amixer -c1 sset Speaker 5%+"
-"amixer -c0 sset Master 5%+"
+#"amixer -c0 sset Master 1%+"
+#"amixer sset Master 1%+"
+"pamixer -i 1"
     XF86AudioRaiseVolume
+    #m:0x0 + c:123
 
+# ============================================================================
+#                              APPLICATIONS 
+# ============================================================================
+
+"gnome-calculator"
+    XF86Calculator
+    #m:0x0 + c:148
