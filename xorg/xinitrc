@@ -43,16 +43,32 @@ fi
 # > Providers: number : 2
 # > Provider 0: id: 0x7b cap: 0xb, Source Output, Sink Output, Sink Offload crtcs: 2 outputs: 4 associated providers: 0 name:Intel
 # > Provider 1: id: 0x55 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 6 outputs: 0 associated providers: 0 name:TURKS @ pci:0000:01:00.0
-xrandr --setprovideroffloadsink 0x55 0x7b
+#xrandr --setprovideroffloadsink 0x55 0x7b
 # use 'glxinfo | grep "OpenGL"' to identify the graphics used currently
 # Use DRI_PRIME=1 <cmd> to have the app started use the better card
-epxort DRI_PRIME=1
+#epxort DRI_PRIME=1
 
-# Fix two monitor setup
-#xrandr --output HDMI1 --auto --left-of LVDS1 --output LVDS1 --auto 
+if [[ -d /etc/X11/xorg.conf.d/ ]]
+then
+    # (Home)
+    grep -qRi "nvidia" /etc/X11
+    if [[ $? -eq 0 ]]
+    then
+        # Load nvidia proprietary driver
+        xrandr --setprovideroutputsource modesetting NVIDIA-0
+        xrandr --output eDP-1-1 --auto --right-of HDMI-1-1 --output HDMI-1-1 --auto
+    fi
+else
+    # (work)
+    exec xrandr --output VGA-1 --auto --right-of HDMI-1 --output HDMI-1 --auto
+fi
 
 # Set wallpaper
-#feh --bg-center ~/Pictures/wallhaven-280260.jpg
+which feh
+if [[ $? -eq 0 ]]
+then
+    feh --bg-center ~/Pictures/wallhaven-280260.jpg
+fi
 
 # Make Caps-Lock a new Ctrl
 setxkbmap -layout us -option ctrl:nocaps
@@ -62,7 +78,12 @@ setxkbmap -layout us -option ctrl:nocaps
 #transset 0.2
 
 # Enable volume keys
-xbindkeys
+which xbindkeys
+if [[ $? -eq 0 ]]
+then
+    xbindkeys
+fi
 
 #dwm
 i3 
+

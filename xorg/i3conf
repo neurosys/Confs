@@ -213,18 +213,15 @@ bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
 #        status_command i3status
 #}
 
-# Set up monitor position
-exec xrandr --output VGA-1 --auto --right-of HDMI-1 --output HDMI-1 --auto
-
-exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar.conf mon2
-exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar.conf mon1
+exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar_home.conf mon2
+exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar_home.conf mon1
 
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
 exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
+#exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
 
 #exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
