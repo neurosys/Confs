@@ -1,5 +1,5 @@
 background no
-font sans:size=12
+font sans:size=10
 #xftfont sans:size=10
 use_xft yes
 #xftalpha 0.9
@@ -23,9 +23,9 @@ draw_borders no
 draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
-alignment top_left
-gap_x 320
-gap_y 460
+alignment top_middle
+gap_x 3330
+gap_y 540
 no_buffers yes
 cpu_avg_samples 1
 uppercase no
@@ -39,17 +39,14 @@ color3 FFF
 
 TEXT
 ${color1}${font Oswald:size=10:bold}PROCESSES ${color2} ${hr 2}
-${color3}${font Open Sans:size=12}
+${color3}${font Open Sans:size=9}
 CPU Clock Speed: ${alignr}${freq_g} GHz
 Total Processes: ${alignr}$processes ($running_processes running)
 ${color3}CPU : ${cpu cpu0}% ${alignr}${color1}${cpubar cpu0 6,140}
 ${color3}CPU1: ${cpu cpu1}% ${alignr}${color1}${cpubar cpu1 6,140}
 ${color3}CPU2: ${cpu cpu2}% ${alignr}${color1}${cpubar cpu2 6,140}
 ${color3}CPU3: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
-${color3}CPU4: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu4 6,140}
-${color3}CPU5: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu5 6,140}
-${color3}CPU6: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu6 6,140}
-${color3}CPU7: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu7 6,140}
+#${color3}CPU4: ${cpu cpu3}% ${alignr}${color1}${cpubar cpu4 6,140}
 
 ${color3}Top Processes:
 ${font Open Sans:pixelsize=12}Name: $alignr${tab}PID${tab}CPU${tab}MEM      

@@ -28,9 +28,9 @@ default_shade_color 101010
 #alignment top_left # home
 alignment top_middle # work
 #alignment top_right
-gap_x 160 # work
-#gap_x 1100 # home
-gap_y 40
+#gap_x 160 # work
+gap_x 2100 # home
+gap_y 80
 no_buffers yes
 cpu_avg_samples 1
 uppercase no
@@ -51,24 +51,25 @@ ${color3}${font Open Sans:pixelsize=11}New York: ${alignr}${execp bash -c 'date 
 ${color3}${font Open Sans:pixelsize=11}Ottawa:   ${alignr}${execp bash -c 'date "+%H:%M" --date="5 hours ago"'} (GMT -5)${font}
 ${color3}${font Open Sans:pixelsize=11}Pune:     ${alignr}${execp bash -c 'date "+%H:%M" --date="2 hours 30 min"'} (GMT +x)${font}
 ${color3}${font Open Sans:pixelsize=11}Moscow:   ${alignr}${execp bash -c 'date "+%H:%M" --date="0 hour"'} (GMT +3)${font}
+${color3}${font Open Sans:pixelsize=11}Hennef:   ${alignr}${execp bash -c 'date "+%H:%M" --date="0 hour"'} (GMT +2)${font}
 ${hr 2} 
 
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/' -e 's;\\(\\<'$(date +%-d)'\\>\\);\${color red}\\1\${color3};'"}\
+${execp bash -c "cal -m | calformat -t '\${color red}' -te '\${color3}' --today $(date +%-d)"}\
 ${font}
 
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month') | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/'" }\
+${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 1 month') | calformat" }\
 ${font}
 
 
 ${color3}\
 ${font Liberation Mono for Powerline:pixelsize=18}\
 ${alignr}\
-${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 2 month') | sed -e 's/^\\([0-9 ]\\{15\\}\\)/\\1\${color1}/' -e 's/\$/\${color3}/'" }\
+${execp bash -c "cal -m $(date '+%d %m %Y' --date='15 2 month') | calformat" }\
 ${font}\
 
