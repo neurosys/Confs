@@ -1,0 +1,60 @@
+background no
+font sans:size=12
+#xftfont sans:size=10
+use_xft yes
+#xftalpha 0.9
+xftalpha 0.0
+update_interval 5
+imlib_cache_size 0
+total_run_times 0
+own_window yes
+own_window_type override
+#own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual true
+own_window_argb_value 180
+#own_window_colour 224466
+own_window_colour 000
+double_buffer yes
+minimum_size 225
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color 101010
+default_shade_color 101010
+default_outline_color green
+alignment top_left
+gap_x 630
+gap_y 200
+no_buffers yes
+cpu_avg_samples 1
+uppercase no
+border_inner_margin 15
+
+#colors
+color1 96A0DF
+color2 aaa
+#color3 ddd
+color3 FFF
+
+TEXT
+${color1}${font Oswald:size=10:bold}MEMORY ${color2} ${hr 2}
+
+${color3}${font Open Sans:pixessize=10}Ram: ${memperc}% ${alignr}${color1}${membar 5,140}
+${color3}${font Open Sans:pixelsize=10}${alignc 49}${mem} / ${memmax}
+${color3}${font Open Sans:pixelsize=10}Swap: ${swapperc}% ${alignr}${color1}${swapbar 5,140}
+${color3}${font Open Sans:pixelsize=10}${alignc 49}${swap} / ${swapmax}
+
+${color3}${font Open Sans:size=10}Top Processes:
+${font Open Sans:pixelsize=12}Name: $alignr RES         VIRT   MEM%
+${color3}${font Open Sans:size=12}${top_mem name 1} ${alignr} ${top_mem mem_res 1}    ${top_mem mem_vsize 1} ${top_mem mem 1}%
+${color3}${font Open Sans:size=12}${top_mem name 2} ${alignr} ${top_mem mem_res 2}    ${top_mem mem_vsize 2} ${top_mem mem 2}%
+${color3}${font Open Sans:size=12}${top_mem name 3} ${alignr} ${top_mem mem_res 3}    ${top_mem mem_vsize 3} ${top_mem mem 3}%
+${color3}${font Open Sans:size=12}${top_mem name 4} ${alignr} ${top_mem mem_res 4}    ${top_mem mem_vsize 4} ${top_mem mem 4}%
+${color3}${font Open Sans:size=12}${top_mem name 5} ${alignr} ${top_mem mem_res 5}    ${top_mem mem_vsize 5} ${top_mem mem 5}%
+${color3}${font Open Sans:size=12}${top_mem name 6} ${alignr} ${top_mem mem_res 6}    ${top_mem mem_vsize 6} ${top_mem mem 6}%
+${color3}${font Open Sans:size=12}${top_mem name 7} ${alignr} ${top_mem mem_res 7}    ${top_mem mem_vsize 7} ${top_mem mem 7}%
+${color3}${font Open Sans:size=12}${top_mem name 8} ${alignr} ${top_mem mem_res 8}    ${top_mem mem_vsize 8} ${top_mem mem 8}%
+${color3}${font Open Sans:size=12}${top_mem name 9} ${alignr} ${top_mem mem_res 9}    ${top_mem mem_vsize 9} ${top_mem mem 9}%
+${color3}${font Open Sans:size=12}${top_mem name 10} ${alignr} ${top_mem mem_res 10}    ${top_mem mem_vsize 10} ${top_mem mem 10}%
