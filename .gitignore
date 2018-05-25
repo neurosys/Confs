@@ -1,2 +1,11 @@
 
 shell/.local_aliases
+ranger/colorschemes/__pycache__/
+
+# Python compiled junk
+*.pyc
+*.pyo
+
+# Vim swap files
+*.swp
+*.swo
