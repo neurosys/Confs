@@ -1,7 +1,7 @@
 
 shell/.local_aliases
 ranger/colorschemes/__pycache__/
-ranger/colorschemes/__pycache__/__init__.py
+ranger/colorschemes/__init__.py
 
 # Python compiled junk
 *.pyc
