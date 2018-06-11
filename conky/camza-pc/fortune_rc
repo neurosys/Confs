@@ -25,8 +25,9 @@ draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
 default_outline_color green
-alignment top_middle
-gap_x 2900
+#alignment top_middle
+alignment top_right
+gap_x 7900
 gap_y 140
 no_buffers yes
 cpu_avg_samples 1

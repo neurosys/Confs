@@ -23,8 +23,9 @@ draw_borders no
 draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
-alignment top_middle
-gap_x 3330
+#alignment top_middle
+alignment top_right
+gap_x 8330
 gap_y 540
 no_buffers yes
 cpu_avg_samples 1

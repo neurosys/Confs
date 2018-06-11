@@ -25,11 +25,11 @@ draw_borders no
 draw_graph_borders yes
 default_color 101010
 default_shade_color 101010
-#alignment top_left # home
-alignment top_middle # work
-#alignment top_right
+alignment top_left # home
+#alignment top_middle # work
+alignment top_right
 #gap_x 160 # work
-gap_x 2100 # home
+gap_x 7100 # home
 gap_y 80
 no_buffers yes
 cpu_avg_samples 1
