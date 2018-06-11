@@ -27,7 +27,7 @@ default_shade_color 101010
 default_outline_color green
 #alignment top_middle
 alignment top_right
-gap_x 7900
+gap_x 7860
 gap_y 140
 no_buffers yes
 cpu_avg_samples 1
