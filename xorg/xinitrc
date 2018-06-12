@@ -57,6 +57,7 @@ then
         # Load nvidia proprietary driver
         xrandr --setprovideroutputsource modesetting NVIDIA-0
         xrandr --output eDP-1-1 --auto --right-of HDMI-1-1 --output HDMI-1-1 --auto
+        #xrandr --output eDP-1-1 --off --output HDMI-1-1 --auto
     fi
 else
     # (work)
