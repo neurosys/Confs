@@ -1,0 +1,17 @@
+
+# Interval to send empty packets too keep  the connection alive
+ServerAliveInterval 60
+# Number of keep alives packages sent, for which no reply has been received,
+# until considering the session closed
+ServerAliveCountMax 10
+
+Compression yes
+ForwardX11 yes
+ForwardX11Trusted yes
+
+#Host <host alias>
+#   Hostname <ip or FQDN>
+#   Port <now what this could be?>
+#   User <user to be used>
+#   IdentityFile <path to a private key to be used>
+

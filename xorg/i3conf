@@ -142,13 +142,13 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-#bindsym $mod+q workspace q
-#bindsym $mod+w workspace w
-#bindsym $mod+e workspace e
+bindsym $mod+q workspace q
+bindsym $mod+w workspace w
+bindsym $mod+e workspace e
 #bindsym $mod+r workspace r
 #bindsym $mod+t workspace t
-#bindsym $mod+y workspace y
-#bindsym $mod+u workspace u
+bindsym $mod+y workspace y
+bindsym $mod+u workspace u
 #bindsym $mod+i workspace i
 #bindsym $mod+o workspace o
 #bindsym $mod+p workspace p
@@ -165,13 +165,13 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-#bindsym $mod+Shift+q move container to workspace q
-#bindsym $mod+Shift+w move container to workspace w
-#bindsym $mod+Shift+e move container to workspace e
+bindsym $mod+Shift+q move container to workspace q
+bindsym $mod+Shift+w move container to workspace w
+bindsym $mod+Shift+e move container to workspace e
 #bindsym $mod+Shift+r move container to workspace r
 #bindsym $mod+Shift+t move container to workspace t
-#bindsym $mod+Shift+y move container to workspace y
-#bindsym $mod+Shift+u move container to workspace u
+bindsym $mod+Shift+y move container to workspace y
+bindsym $mod+Shift+u move container to workspace u
 #bindsym $mod+Shift+i move container to workspace i
 #bindsym $mod+Shift+o move container to workspace o
 #bindsym $mod+Shift+p move container to workspace p
@@ -192,7 +192,7 @@ client.background       #ffffff
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -240,16 +240,18 @@ bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
 exec xrandr --output HDMI-1 --auto --left-of HDMI-2 --output HDMI-2 --auto --left-of VGA-1 --output VGA-1 --auto
 
 
-exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
-exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
-exec_always --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
+exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
+exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
+exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
 
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
+#exec --no-starup-id compton --config /home/camza/.config/compton.conf
+#exec_always --no-startup-id compton -m 0.3
 exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
-#exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
 
 #exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
