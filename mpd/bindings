@@ -1,0 +1,57 @@
+
+# Space pause/play
+def_key "space"
+  pause
+
+def_key "k"
+  scroll_up
+
+def_key "j"
+  scroll_down
+
+def_key "J"
+  select_item
+  scroll_down
+
+def_key "K"
+  select_item
+  scroll_up
+
+def_key "ctrl-j"
+  move_selected_items_down
+
+def_key "ctrl-k"
+  move_selected_items_up
+
+def_key "g"
+  move_home
+
+def_key "G"
+  move_end
+
+def_key "l"
+  enter_directory
+
+def_key "l"
+  show_lyrics
+
+def_key "h"
+  jump_to_parent_directory
+
+def_key "insert"
+  select_item
+
+def_key "enter"
+  toggle_output
+
+def_key "enter"
+  run_action
+
+def_key "enter"
+  play_item
+
+def_key "enter"
+  add_item_to_playlist
+
+def_key "d"
+  delete_playlist_items
