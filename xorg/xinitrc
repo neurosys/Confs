@@ -74,6 +74,13 @@ fi
 # Make Caps-Lock a new Ctrl
 setxkbmap -layout us -option ctrl:nocaps
 
+# Disable error bell
+xset -b
+
+# Don't turn of the monitor
+xset -dpms
+xset s off
+
 # Prepare support for transparency
 #xcompmgr &
 #transset 0.2
