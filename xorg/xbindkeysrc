@@ -152,3 +152,25 @@
 "gnome-calculator"
     XF86Calculator
     #m:0x0 + c:148
+    
+"mpc toggle"
+    XF86AudioPlay
+    #m:0x0 + c:172
+    
+"mpc next"
+    XF86AudioNext
+    #m:0x0 + c:171
+
+"mpc prev"
+    XF86AudioPrev
+    #m:0x0 + c:173
+
+# Toggle single song mode
+"mpc repeat"
+    XF86AudioStop
+    #m:0x0 + c:174
+
+# Mail button
+# ""
+#   Xf86Mail
+#   m:0x0 + c163
