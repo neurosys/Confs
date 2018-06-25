@@ -266,4 +266,7 @@ dog() {
 # pablo
 }
 
+alias mci='mvn clean install -DskipTests'
+alias mcit='mvn clean install'
+
 # vim:syn=sh
