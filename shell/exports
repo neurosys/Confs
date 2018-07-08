@@ -45,4 +45,10 @@ fi
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# Needed in order to have qt applications configurable using qt5ct
+# Without this configuration on GTK systems fonts tend to be very small
+# Use qt5ct to configure Qt apps (don't forget to save the configuration)
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0 
+
 # vim:syn=sh
