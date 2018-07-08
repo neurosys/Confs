@@ -166,6 +166,8 @@ function up() {
 alias ggs='git status -s'
 alias ggc='git adu ; git commit -m '
 
+alias mci='mvn clean install -DskipTests'
+
 
 # ======================================================================================
 #     ============== Experimental plugins from common-alias (oh-my-zsh) ============
