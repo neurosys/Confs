@@ -77,8 +77,11 @@
     # Show a log with files changed in that commit
     ll  = !git ls --name-only && 0
 
-    # Show a normal log with diff included
+    # Show a normal log with diff included (-p means patch)
     lld = log -p
+
+    # adding -p would transform it to log -p
+    wc = whatchanged
 
 
 
