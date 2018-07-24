@@ -152,6 +152,10 @@ bindsym $mod+u workspace u
 #bindsym $mod+i workspace i
 #bindsym $mod+o workspace o
 #bindsym $mod+p workspace p
+bindsym $mod+z workspace z
+bindsym $mod+x workspace x
+bindsym $mod+a workspace a
+bindsym $mod+s workspace s
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -175,6 +179,10 @@ bindsym $mod+Shift+u move container to workspace u
 #bindsym $mod+Shift+i move container to workspace i
 #bindsym $mod+Shift+o move container to workspace o
 #bindsym $mod+Shift+p move container to workspace p
+bindsym $mod+Shift+x move container to workspace x
+bindsym $mod+Shift+z move container to workspace z
+bindsym $mod+Shift+a move container to workspace a
+bindsym $mod+Shift+s move container to workspace s
 
 # Colors
 # class                 border  backgr. text    indicator child_border
