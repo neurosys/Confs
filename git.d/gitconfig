@@ -10,6 +10,9 @@
    username = neurosys
    email = you@example.com
 
+[pager]
+    # Don't show the list of branches in a pager
+	branch = false
 
 [include]
     path = ~/.git_local_accounts
