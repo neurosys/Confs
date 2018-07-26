@@ -92,6 +92,11 @@ then
     xbindkeys
 fi
 
+# Testing: enable gnome-keyring at X11 startup
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 #dwm
 i3 
 
