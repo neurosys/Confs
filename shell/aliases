@@ -167,6 +167,7 @@ alias ggs='git status -s'
 alias ggc='git adu ; git commit -m '
 
 alias mci='mvn clean install -DskipTests'
+alias mct='mvn clean install'
 
 
 # ======================================================================================
