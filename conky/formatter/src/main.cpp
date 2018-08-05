@@ -23,7 +23,7 @@ std::string months[] = {
     "July",
     "August",
     "September",
-    "Octomber",
+    "October",
     "November",
     "December"
 };
