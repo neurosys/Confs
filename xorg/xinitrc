@@ -92,6 +92,12 @@ then
     xbindkeys
 fi
 
+which guake
+if [[ $? -eq 0 ]]
+then
+    guake
+fi
+
 # Testing: enable gnome-keyring at X11 startup
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
