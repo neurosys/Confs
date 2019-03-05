@@ -44,7 +44,8 @@ bindsym $mod+Shift+Return exec st
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run
+bindsym $mod+p exec dmenu_run -l 50
+bindsym $mod+shift+p exec i3-dmenu-desktop
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -259,7 +260,9 @@ exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
+exec_always --no-startup-id guake
+exec_always --no-startup-id tusk
 
 #exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
