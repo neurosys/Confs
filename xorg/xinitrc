@@ -99,4 +99,5 @@ export SSH_AUTH_SOCK
 
 #dwm
 i3 
+#gnome-session
 
