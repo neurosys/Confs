@@ -272,4 +272,9 @@ dog() {
 alias mci='mvn clean install -DskipTests'
 alias mcit='mvn clean install'
 
+alias sctl='systemctl'
+
+alias pacs='pacman -Ss'
+alias ipacs='sudo pacman -S'
+
 # vim:syn=sh
