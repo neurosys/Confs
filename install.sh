@@ -31,6 +31,8 @@ link_or_fail        $PWD/tmux/tmux.conf.local       ~/.tmux.conf.local $backup_f
 
 link_or_fail        $PWD/git.d/gitconfig            ~/.gitconfig       $backup_folder
 
+link_or_fail        $PWD/tigrc                      ~/.tigrc           $backup_folder
+
 link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_folder
 link_or_fail        $PWD/xorg/xbindkeysrc           ~/.xbindkeysrc     $backup_folder
 link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_folder
