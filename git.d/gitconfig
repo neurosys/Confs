@@ -86,6 +86,11 @@
     # adding -p would transform it to log -p
     wc = whatchanged
 
+    # --date=short
+    # --date=relative
+    l = log --pretty=format:"%C(yellow)%h\\ %C(green)%cn\\ %C(cyan)%cd%Creset\\ %s" --date=relative
+    
+
 
 
 
