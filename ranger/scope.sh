@@ -112,7 +112,7 @@ handle_mime() {
     local mimetype="${1}"
     case "${mimetype}" in
         # Text
-        text/* | */xml)
+        text/* | */xml | application/json)
             # Syntax highlight
             if [[ "$( stat --printf='%s' -- "${FILE_PATH}" )" -gt "${HIGHLIGHT_SIZE_MAX}" ]]; then
                 exit 2
@@ -125,6 +125,7 @@ handle_mime() {
                 local highlight_format='ansi'
             fi
             [[ "$mimetype" == "application/xml" ]] && HIGHLIGHT_STYLE="tabula"
+            [[ "$mimetype" == "application/json" ]] && HIGHLIGHT_STYLE="tabula"
             [[ "$mimetype" == "text/plain" ]]      && HIGHLIGHT_STYLE="pablo"
             [[ "$mimetype" == "text/x-c"   ]]      && HIGHLIGHT_STYLE="molokai" # Java / C++
             [[ "$mimetype" == "text/x-python" ]]   && HIGHLIGHT_STYLE="pablo" 
