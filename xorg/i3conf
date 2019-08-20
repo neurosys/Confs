@@ -262,7 +262,7 @@ exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 # Set background using feh (use _always so feh is run each time you reload configuration)
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
-exec_always --no-startup-id guake
-exec_always --no-startup-id tusk
+exec_always --no-startup-id guake -e tmux
+#exec_always --no-startup-id tusk
 
 #exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
