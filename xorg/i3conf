@@ -123,13 +123,13 @@ bindsym $mod+bracketright workspace next
 bindsym $mod+shift+comma move workspace to output left
 
 # Move window to right output (monitor) TODO this is untested
-bindsym $mod+shift+dot move workspace to output right
+bindsym $mod+shift+period move workspace to output right
 
 # Focus left monitor
 bindsym $mod+comma focus output left
 
 # Focus right monitor
-bindsym $mod+dot focus output right
+bindsym $mod+period focus output right
 
 # switch to workspace
 bindsym $mod+1 workspace 1
