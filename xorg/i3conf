@@ -29,6 +29,10 @@ floating_modifier $mod
 new_window 1pixel
 smart_borders on
 
+# Don't allow new windows to steal focus
+# smart|urgent|focus|none
+focus_on_window_activation none
+
 gaps inner 7
 gaps outer 7
 
