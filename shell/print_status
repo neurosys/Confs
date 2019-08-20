@@ -8,10 +8,10 @@ then
     fi
 
     # Print the current TODO list from task
-    if [ -f /usr/bin/task ]
-    then
-        task list
-    fi
+    #if [ -f /usr/bin/task ]
+    #then
+    #    task list
+    #fi
 fi
 
 # vim:syn=sh
