@@ -238,6 +238,18 @@ else
     alias py='python -q'
 fi
 
+# Extract an audio from a video file and convert it to mp3 format
+function extractMp3()
+{
+    # $1 input file
+    # $2 output file
+    # -i      - input file
+    # -acodec - output codec
+    # -aq 4   - audio quality
+    # -vn     - ignore the video track
+    ffmpeg -i $1 -vn -acodec libmp3lame -aq 4 $2
+}
+
 
 dog() {
     highlight -l -O xterm256 --style pablo $1
