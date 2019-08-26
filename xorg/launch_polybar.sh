@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-nr_of_monitors=$(xrandr | grep connected | wc -l)
+nr_of_monitors=$(xrandr | grep "\<connected\>" | wc -l)
 
 if [[ $nr_of_monitors -eq 2 ]]
 then

@@ -265,12 +265,12 @@ bar {
 
 # Set up monitor position
 #exec xrandr --output VGA-1 --auto --right-of HDMI-1 --output HDMI-1 --auto
-exec xrandr --output HDMI-1 --auto --left-of HDMI-2 --output HDMI-2 --auto --left-of VGA-1 --output VGA-1 --auto
+#exec xrandr --output HDMI-1 --auto --left-of HDMI-2 --output HDMI-2 --auto --left-of VGA-1 --output VGA-1 --auto
 
-exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
+#exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
+#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
+#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
+#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
 
 
 # Enable transparency using compton (see ~/.config/compton for configuration)

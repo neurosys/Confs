@@ -22,6 +22,7 @@ function launcher()
 }
 
 screen_width=$(get_screen_width)
+echo "Screen width found at: $screen_width"
 
 case $screen_width in
     "1920")
@@ -30,6 +31,9 @@ case $screen_width in
         conky -a tr -x 60 -dq -c calendar_rc
         ;;
     "3840")
+        conky -a tr -x 60 -dq -c calendar_rc
+        ;;
+    "5760")
         conky -a tr -x 60 -dq -c calendar_rc
         ;;
 esac
