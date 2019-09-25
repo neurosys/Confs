@@ -24,14 +24,16 @@
 
 [merge]
         tool = kdiff3
+        #tool = vimdiff
+        #tool = meld
 
-[mergetool "kdiff3"]
+[mergetool]
         trustExitCode = false
 
 [diff]
         guitool = kdiff3
 
-[difftool "kdiff3"]
+[difftool]
         trustExitCode = false
 
 [pull]
