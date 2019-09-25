@@ -69,9 +69,10 @@ then
     ZSH_THEME="myjtriley"
     #ZSH_THEME="candy"
 else
-    ZSH_THEME="myjtriley"
+    ZSH_THEME="myjtrileygit"
+    #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify k git git-extras jira mvn taskwarrior)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify k git git-extras jira mvn ng tig vscode taskwarrior)
 fi
 
 bgnotify_treshold=1
