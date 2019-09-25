@@ -35,7 +35,7 @@ function my_git_info()
     local branch=$(git_current_branch)
     if [[ -n $branch ]]
     then
-        echo "%{$fg_bold[white]%}% $(git_current_branch)%{$fg_bold[cyan]%}[%{$fg_bold[white]%}$(git_prompt_short_sha)%{$fg_bold[cyan]%}] $(parse_git_dirty)"
+        echo "%{$reset_color%}%{$fg[white]%}% $(git_current_branch)%{$fg[cyan]%}[%{$fg[white]%}$(git_prompt_short_sha)%{$fg[cyan]%}] $(parse_git_dirty)"
     else
         echo ""
     fi
