@@ -153,20 +153,20 @@
     XF86Calculator
     #m:0x0 + c:148
     
-"mpc toggle"
+"playerctl -p spotify play-pause"
     XF86AudioPlay
     #m:0x0 + c:172
     
-"mpc next"
+"playerctl -p spotify next"
     XF86AudioNext
     #m:0x0 + c:171
 
-"mpc prev"
+"playerctl -p spotify previous"
     XF86AudioPrev
     #m:0x0 + c:173
 
 # Toggle single song mode
-"mpc repeat"
+"playerctl -p spotify stop"
     XF86AudioStop
     #m:0x0 + c:174
 
