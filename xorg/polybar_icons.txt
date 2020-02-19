@@ -1,0 +1,52 @@
+; Documentation about fonts https://github.com/polybar/polybar/wiki/Fonts
+; Font Awesome glyphs 
+; grep the output of fc-list for the font name and use the output after the filename
+; the part from above pass it as parameter to fc-match to ensure it's correct
+; and that the font can be identified
+;
+; You can view the selected glyphs in gnome-char-map
+; From View check:
+; - "By Unicode Block" and
+; - "Show only glyphs from this font"
+; Select font "Font Awesome"
+; Go to section "Private Use Area"
+;
+; Facebook 
+; Notebook 
+; Notes    
+; Calendar 
+; Checkbox 
+; Image    
+; Settings 
+; Folder (filled closed) 
+; Folder (outline closed) 
+; Folder (filled open) 
+; Folder (outline open) 
+; Github 
+; Github 
+; Email 
+; Game controller 
+; Text bubble (outline) 
+; Text bubbles (outline) 
+; Text bubble 
+; Source code 
+; Command prompt 
+; Firefox 
+; Chrome 
+; Spring 
+; Document 
+; Document 
+; Document 
+; PDF 
+; Word document 
+; Excel 
+; Calendar 
+; Windows 
+; Tux 
+; Skype 
+; Spotify 
+; Laptop 
+; Network 
+; Thunder 
+; Signal strength strong 
+; Musical note 
