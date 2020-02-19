@@ -81,10 +81,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+i split h
+bindsym $mod+shift+backslash split h
 
 # split in vertical orientation
-bindsym $mod+o split v
+bindsym $mod+backslash split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+shift+f fullscreen toggle
@@ -150,13 +150,20 @@ bindsym $mod+e workspace e
 #bindsym $mod+t workspace t
 bindsym $mod+y workspace y
 bindsym $mod+u workspace u
-#bindsym $mod+i workspace i
-#bindsym $mod+o workspace o
+bindsym $mod+i workspace i
+bindsym $mod+o workspace o
 #bindsym $mod+p workspace p
 bindsym $mod+z workspace z
 bindsym $mod+x workspace x
 bindsym $mod+a workspace a
 bindsym $mod+s workspace s
+
+# New testing workspaces
+bindsym $mod+n workspace n
+bindsym $mod+d workspace d
+bindsym $mod+g workspace g
+bindsym $mod+v workspace v
+bindsym $mod+b workspace b
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -177,13 +184,19 @@ bindsym $mod+Shift+e move container to workspace e
 #bindsym $mod+Shift+t move container to workspace t
 bindsym $mod+Shift+y move container to workspace y
 bindsym $mod+Shift+u move container to workspace u
-#bindsym $mod+Shift+i move container to workspace i
-#bindsym $mod+Shift+o move container to workspace o
+bindsym $mod+Shift+i move container to workspace i
+bindsym $mod+Shift+o move container to workspace o
 #bindsym $mod+Shift+p move container to workspace p
 bindsym $mod+Shift+x move container to workspace x
 bindsym $mod+Shift+z move container to workspace z
 bindsym $mod+Shift+a move container to workspace a
 bindsym $mod+Shift+s move container to workspace s
+
+bindsym $mod+Shift+n move container to workspace n
+bindsym $mod+Shift+d move container to workspace d
+bindsym $mod+Shift+g move container to workspace g
+bindsym $mod+Shift+v move container to workspace v
+bindsym $mod+Shift+b move container to workspace b
 
 # Colors
 # class                 border  backgr. text    indicator child_border
@@ -232,7 +245,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+semicolon exec --no-startup-id i3lock -t -i ~/Pictures/Wallpapers/SatanProtects.png 
 
 # Insert current timestamp as it would be entered from keyboard
-bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
+# bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -244,13 +257,13 @@ bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
 #        status_command i3status
 #}
 
-bar {
-        tray_output DP-1 # eDP-1 HDMI-1 DP-1
-        position top
-        font pango: Liberation Mono for Powerline 12
-        separator_symbol "|"
-        status_command i3blocks -c ~/.config/i3blocks/config
-}
+#bar {
+#        tray_output DP-1 # eDP-1 HDMI-1 DP-1
+#        position top
+#        font pango: Liberation Mono for Powerline 12
+#        separator_symbol "|"
+#        status_command i3blocks -c ~/.config/i3blocks/config
+#}
 
 bar {
         position bottom
@@ -267,7 +280,7 @@ bar {
 #exec xrandr --output VGA-1 --auto --right-of HDMI-1 --output HDMI-1 --auto
 #exec xrandr --output HDMI-1 --auto --left-of HDMI-2 --output HDMI-2 --auto --left-of VGA-1 --output VGA-1 --auto
 
-#exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
+exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
