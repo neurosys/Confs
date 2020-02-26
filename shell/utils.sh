@@ -36,7 +36,7 @@ function link_or_fail()
 {
     if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]
     then
-        echo "Not enough params for link_or_fail"
+        echo "ERROR: Not enough params for link_or_fail"
         return
     fi
 
@@ -53,6 +53,19 @@ function link_or_fail()
     then
         echo "$file installed in $dest"
     else
-        echo "Failed to link $file in $dest"
+        echo "ERROR: Failed to link $file in $dest"
     fi
 }
+
+function append() {
+    destination=$1
+    file=$2
+    if [ ! -f $file ]
+    then
+        echo "ERROR: No souch file '$file'"
+        return
+    fi
+    cat $file >> $destination
+}
+
+
