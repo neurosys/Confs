@@ -96,6 +96,10 @@
     # --date=short
     # --date=relative
     l = log --pretty=format:"%C(yellow)%h\\ %C(green)%cn\\ %C(cyan)%cd%Creset\\ %s" --date=relative
+
+    # Show the heat map of a project (which is are the most edited files)
+    code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10"
+    cc = "!git code-changes"
     
 
 
