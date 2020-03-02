@@ -198,17 +198,6 @@ bindsym $mod+Shift+g move container to workspace g
 bindsym $mod+Shift+v move container to workspace v
 bindsym $mod+Shift+b move container to workspace b
 
-# Colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #444444 #444444 #ffffff #2e9ef4   #285577
-client.focused_inactive #888800 #222222 #ffffff #484e50   #5f676a
-client.unfocused        #000000 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-client.background       #ffffff
-
-
 # reload the configuration file
 #bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -243,6 +232,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+semicolon exec --no-startup-id i3lock -t -i ~/Pictures/Wallpapers/SatanProtects.png 
+
+# Colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #444444 #444444 #ffffff #2e9ef4   #285577
+client.focused_inactive #888800 #222222 #ffffff #484e50   #5f676a
+client.unfocused        #000000 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+
 
 # Insert current timestamp as it would be entered from keyboard
 # bindsym $mod+Shift+i exec --no-startup-id ~/.bin/xdt
@@ -279,7 +280,7 @@ bar {
 # Set up monitor position
 #exec xrandr --output VGA-1 --auto --right-of HDMI-1 --output HDMI-1 --auto
 #exec xrandr --output HDMI-1 --auto --left-of HDMI-2 --output HDMI-2 --auto --left-of VGA-1 --output VGA-1 --auto
-exec xrandr --output HDMI-2 --auto --left-of HDMI-1 --output HDMI-1 --auto --left-of VGA-1 --output VGA-1 --auto
+#exec xrandr --output HDMI-2 --auto --left-of HDMI-1 --output HDMI-1 --auto --left-of VGA-1 --output VGA-1 --auto
 
 
 exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
