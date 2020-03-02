@@ -69,3 +69,43 @@ function append() {
 }
 
 
+# $1 file destination
+# $2 source dir for file parts
+# $3 [optional] the hostname for which to generate
+#
+# The function will iterate from 00_*.cfg to 99_*.cfg and try to append all
+# parts to the destination If there are more parts for an index, it will choose
+# the one for which the hostname is in the name, ignoring the rest
+function assembleFile() {
+    destination="$1"
+    sourceDir="$2"
+    hostname=$3
+
+    if [ -z "$hostname" ]
+    then
+        hostname=$(hostname)
+    fi
+
+    cat /dev/null >  "$destination"
+
+    for i in {00..99}
+    do
+        files=$(ls -1 ${sourceDir}/${i}_*.cfg 2> /dev/null )
+        nrFiles=$(echo "$files" | wc -l)
+        configPart=
+        if [ $nrFiles -eq 1 ]
+        then
+            configPart="$files"
+        elif [ $nrFiles -gt 1 ]
+        then
+            configPart=$(echo "$files" | grep $hostname)
+        fi
+        
+        if [ -n "$configPart" ]
+        then
+            echo "$configPart" 
+            cat  "$configPart" >> "$destination"
+        fi
+    done
+}
+
