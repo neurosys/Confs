@@ -25,6 +25,18 @@ interval = 200
 exec = ~/.bin/widgets/lastcommit.sh ~/work/snip2
 tail = false
 
+# Mouse behavior
+click-left = echo "Ana are mere" > ~/.myconfig/xorg/polybar.d/debug.txt
+click-middle = echo middle %counter%
+click-right = echo right %counter%
+double-click-left = echo double left %counter%
+double-click-middle = echo double middle %counter%
+double-click-right = echo double right %counter%
+
+scroll-up = echo scroll up %counter%
+scroll-down = echo scroll down %counter%
+
+
 [bar/mon1]
 monitor = ${env:MONITOR:eDP-1-1}
 width = 100%
