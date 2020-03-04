@@ -28,7 +28,7 @@ tail = false
 # Mouse behavior
 click-left = echo "Ana are mere" > ~/.myconfig/xorg/polybar.d/debug.txt
 click-middle = echo middle %counter%
-click-right = echo right %counter%
+click-right = ~/.bin/widgets/calendar.sh
 double-click-left = echo double left %counter%
 double-click-middle = echo double middle %counter%
 double-click-right = echo double right %counter%
