@@ -131,7 +131,10 @@ function light() {
         "off")
             sudo tee $magick_place <<< 20
             ;;
-        ".")
+        "max")
+            sudo tee $magick_place <<< 1300
+            ;;
+        "set")
             sudo tee $magick_place <<< $2
             ;;
     esac
