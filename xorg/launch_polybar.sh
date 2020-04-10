@@ -21,4 +21,6 @@ if [[ $nr_of_monitors -eq 1 ]]
 then
     echo "Dementor"
     polybar -c ~/.myconfig/xorg/polybar.d/polybar_dementor.txt mon1 &
+    polybar -c ~/.myconfig/xorg/polybar.d/polybar_dementor.txt mon2 &
+    polybar -c ~/.myconfig/xorg/polybar.d/polybar_dementor.txt mon3 &
 fi
