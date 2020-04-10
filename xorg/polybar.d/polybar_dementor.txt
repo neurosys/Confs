@@ -22,7 +22,7 @@ alert = #bd2c40
 [module/gitrepo-monitor]
 type = custom/script
 interval = 200
-exec = ~/.bin/widgets/lastcommit.sh ~/work/snip2
+exec = ~/.bin/widgets/lastcommit.sh /opt/work/tus/tracking/
 tail = false
 
 [bar/mon1]
@@ -85,7 +85,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/mon2]
-monitor = ${env:MONITOR:HDMI-1-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -111,7 +111,8 @@ module-margin-right = 2
 font-0 = FontAwesome:style=Regular
 ;font-0 = fixed:pixelsize=10;1
 font-1 = Unifont:fontformat=bdf:size=8:antialias=false;0
-font-2 = Wuncon Siji:fontformat=pcf:size=10
+;font-2 = Wuncon Siji:fontformat=pcf:size=10
+font-2 = Siji:style=Regular
 
 modules-left = i3
 #modules-center = mpd
@@ -135,6 +136,60 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/mon3]
+monitor = ${env:MONITOR:DP-1}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FontAwesome:style=Regular
+;font-0 = fixed:pixelsize=10;1
+font-1 = Unifont:fontformat=bdf:size=8:antialias=false;0
+;font-2 = Wuncon Siji:fontformat=pcf:size=10
+font-2 = Siji:style=Regular
+
+modules-left = i3
+#modules-center = mpd
+#modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = volume xbacklight memory cpu temperature date powermenu battery 
+
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
 
 [module/xwindow]
 type = internal/xwindow
