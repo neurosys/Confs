@@ -115,6 +115,7 @@ font-1 = Unifont:fontformat=bdf:size=8:antialias=false;0
 font-2 = Siji:style=Regular
 
 modules-left = i3
+modules-center = gitrepo-monitor
 #modules-center = mpd
 #modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = volume xbacklight memory cpu temperature date powermenu battery 
@@ -168,6 +169,7 @@ font-1 = Unifont:fontformat=bdf:size=8:antialias=false;0
 font-2 = Siji:style=Regular
 
 modules-left = i3
+modules-center = gitrepo-monitor
 #modules-center = mpd
 #modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = volume xbacklight memory cpu temperature date powermenu battery 
