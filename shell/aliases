@@ -292,4 +292,10 @@ alias sctl='systemctl'
 alias pacs='pacman -Ss'
 alias ipacs='sudo pacman -S'
 
+function cdf() {
+    local fullTarget=$1
+    local targetFolder=$(dirname $fullTarget)
+    cd $targetFolder
+}
+
 # vim:syn=sh
