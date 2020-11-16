@@ -10,6 +10,8 @@ function launchPolybar()
     done
 }
 
+killall polybar
+
 nr_of_monitors=$(xrandr | grep "\<connected\>" | wc -l)
 
 launchPolybar $(hostname) $nr_of_monitors
