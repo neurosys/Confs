@@ -157,13 +157,26 @@
     XF86AudioPlay
     #m:0x0 + c:172
     
+"playerctl -p spotify play-pause"
+    m:0x40 + c:110
+    Mod4 + Home
+
 "playerctl -p spotify next"
     XF86AudioNext
     #m:0x0 + c:171
 
+"playerctl -p spotify next"
+    m:0x40 + c:112
+    Mod4 + Prior
+
+
 "playerctl -p spotify previous"
     XF86AudioPrev
     #m:0x0 + c:173
+
+"playerctl -p spotify previous"
+    m:0x40 + c:118
+    Mod4 + Insert
 
 # Toggle single song mode
 "playerctl -p spotify stop"
