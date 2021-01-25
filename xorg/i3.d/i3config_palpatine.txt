@@ -269,20 +269,9 @@ client.background       #ffffff
 #        status_command i3blocks -c ~/.config/i3blocks/config
 #}
 
-bar {
-        position bottom
-        # output HDMI-1
-        # dock|hide|invisible
-        mode hide
-        font pango: Liberation Mono for Powerline 12
-        separator_symbol "|"
-        workspace_buttons no
-        status_command i3blocks -c ~/.config/i3blocks/config2
-}
 
 
-
-exec --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
+exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
@@ -307,3 +296,13 @@ exec_always --no-startup-id guake -e tmux
 #exec_always --no-startup-id tusk
 
 exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
+
+assign [class="(?i)^.* Mozilla Firefox$"] o
+assign [class="(?i)^Spotify Premium$"] y
+assign [class="(?i)^.* Microsoft Teams$"] e
+assign [class="(?i)^Synergy 1 Basic$"] 2
+
+exec  "i3-msg 'workspace o ; exec /usr/bin/firefox'"
+exec  "i3-msg 'workspace y ; exec /usr/bin/spotify'"
+exec  "i3-msg 'workspace e ; exec /usr/bin/teams'"
+exec  "i3-msg 'workspace 2 ; exec /usr/bin/synergy'"
