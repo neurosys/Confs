@@ -4,7 +4,7 @@
 ; the part from above pass it as parameter to fc-match to ensure it's correct
 ; and that the font can be identified
 ;
-; You can view the selected glyphs in gnome-char-map
+; You can view the selected glyphs in gnome-char-map (gucharmap)
 ; From View check:
 ; - "By Unicode Block" and
 ; - "Show only glyphs from this font"
@@ -51,3 +51,5 @@
 ; Signal strength strong 
 ; Musical note 
 ; Vivaldi 
+
+; Icons on FontAwesome start at U+F000
