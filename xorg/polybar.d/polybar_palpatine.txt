@@ -49,37 +49,17 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-#font-0 = fixed:pixelsize=10;1
-#font-1 = Unifont:fontformat=truetype:size=8:antialias=false;0
-#font-0 = Unifont:fontformat=bdf:size=8:antialias=false;
-#font-1 = Unifont:fontformat=bdf:size=8:antialias=false;
-#font-2 = siji:pixelsize=10;1
-
 font-0 = FontAwesome:style=Regular
-#font-0 = fixed:pixelsize=10;1
 font-1 = Unifont:style=Medium
-#font-2 = Wuncon Siji:fontformat=pcf:size=10
-font-2 = Siji:style=Regular
+font-2 = Roboto Mono for Powerline:style=Regular
 
 modules-left = i3
 modules-center = gitrepo-monitor
-#modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = volume memory cpu temperature date powermenu 
+modules-right = spotify volume memory cpu date
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -110,27 +90,14 @@ module-margin-right = 2
 
 font-0 = FontAwesome:style=Regular
 font-1 = Unifont:style=Medium
-font-2 = Siji:style=Regular
+font-2 = Roboto Mono for Powerline:style=Regular
 
 modules-left = i3
-#modules-center = mpd
-#modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = volume memory cpu temperature date powermenu 
+modules-right = spotify volume memory cpu date
 
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -139,22 +106,6 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -184,6 +135,7 @@ label-urgent-padding = 2
 label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
+
 
 [module/i3]
 type = internal/i3
@@ -225,16 +177,27 @@ label-active-font = 2
 strip-wsnumbers = true
 
 ; Various administration, command line
+#ws-icon-0  = 10;
+#ws-icon-1  = 1;
+#ws-icon-2  = 2;
+#ws-icon-3  = 3;
+#ws-icon-4  = 4;
+#ws-icon-5  = 5;
+#ws-icon-6  = 6;
+#ws-icon-7  = 7;
+#ws-icon-8  = 8;
+#ws-icon-9  = 9;
+
 ws-icon-0  = 10;
-ws-icon-1  = 1;
-ws-icon-2  = 2;
-ws-icon-3  = 3;
-ws-icon-4  = 4;
-ws-icon-5  = 5;
-ws-icon-6  = 6;
-ws-icon-7  = 7;
-ws-icon-8  = 8;
-ws-icon-9  = 9;
+ws-icon-1  = 1;1
+ws-icon-2  = 2;2
+ws-icon-3  = 3;3
+ws-icon-4  = 4;4
+ws-icon-5  = 5;5
+ws-icon-6  = 6;6
+ws-icon-7  = 7;7
+ws-icon-8  = 8;8
+ws-icon-9  = 9;9
 
 ; Connectivity Workspace, icon a thunder
 ws-icon-10 = q;
@@ -287,23 +250,10 @@ ws-icon-25 = o;
 
 ws-icon-default = ◊
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -311,48 +261,10 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
-
-[module/wlan]
-type = internal/network
-interface = net1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = enp4s0
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -364,8 +276,6 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
@@ -377,7 +287,6 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -400,25 +309,6 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
-
 [module/powermenu]
 type = custom/menu
 
@@ -426,9 +316,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = X
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -447,6 +337,13 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/spotify]
+type = custom/script
+format-prefix-foreground = ${colors.foreground-alt}
+exec = ~/.bin/extractSpotifySong.sh
+tail = true
+interval = 3
 
 [settings]
 screenchange-reload = true
