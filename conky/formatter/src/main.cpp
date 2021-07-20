@@ -14,23 +14,52 @@ std::string weekend_color_end   = "${color3}";
 std::string today_color_start   = "${color red}";
 std::string today_color_end     = "${color3}";
 
-std::string months[] = {
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-};
+//#define __RO__ 1
 
-std::string days_m = "Mo Tu We Th Fr Sa Su";
-std::string days_s = "Su Mo Tu We Th Fr Sa";
+#ifdef __RO__
+    std::string months[] = {
+        "Ianuarie",
+        "Februarie",
+        "Martie",
+        "Aprilie",
+        "Mai",
+        "Iunie",
+        "Iulie",
+        "August",
+        "Septembrie",
+        "Octombrie",
+        "Noiembrie",
+        "Decembrie"
+    };
+    std::string days_m = "Lu Ma Mi Jo Vi Sb Du";
+    std::string days_s = "Du Lu Ma Mi Jo Vi Sb";
+    std::string sunday_name = "Du";
+#else
+    std::string months[] = {
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    };
+    std::string days_m = "Mo Tu We Th Fr Sa Su";
+    std::string days_s = "Su Mo Tu We Th Fr Sa";
+    std::string sunday_name = "Su";
+#endif
+
+static inline void rtrim(std::string &s) {
+    s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
+                return !std::isspace(ch);
+                }).base(), s.end());
+}
+
 
 std::vector<std::string>
 Split(std::string line, std::string separator, bool empty_tokens = false)
@@ -168,9 +197,10 @@ void ProcessInput()
     
     if (std::getline(std::cin, line))
     {
+        rtrim(line);
         if (line == days_m || line == days_s)
         {
-            if (line.find("Su", 0) == 0)
+            if (line.find(sunday_name, 0) == 0)
             {
                 sunday_first = true;
             }
