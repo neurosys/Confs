@@ -238,7 +238,7 @@ if [[ -x $ipy ]]
 then
     alias py='ipython --no-banner'
 else
-    alias py='python -q'
+    alias py='python3 -q'
 fi
 
 # Extract an audio from a video file and convert it to mp3 format
