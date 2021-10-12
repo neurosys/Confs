@@ -36,6 +36,7 @@ ForwardX11Trusted yes
 #           >>> git remote add origin ssh://git@github.com/<username>/<proj path>
 #               MAKE SURE TO ACTUALLY USE *git* as username
 #     6. Set up the tracking branch
+#           >> git pull
 #           >> git branch --set-upstream-to=origin/master
 
 #Host <host alias>
