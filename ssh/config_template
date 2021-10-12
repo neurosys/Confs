@@ -9,6 +9,35 @@ Compression yes
 ForwardX11 yes
 ForwardX11Trusted yes
 
+# Generate the key for github:
+#     >>> ssh-keygen -t ed25519 -C "catalin.amza@ionos.com"
+#
+#     Load the key
+#     >>> ssh-add ~/.ssh/github-ionos-catalin.amza
+#
+#     To load the keys into the ssh agent
+#     >>> eval "$(ssh-agent -s)"
+#
+#     Test the login (ACTUALLY USE *git* AS USERNAME!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+#     >>> ssh -Tv git@github.com
+#
+#
+# How to set up multiple identities per host
+#     For sites like github where you may need multiple accounts for the same server
+# 
+#     1. Generate the keys
+#     2. Set up a host profile in .ssh/config
+#     3. A the "Host" entry name it something like myghithub instead of the normal (don't worry, it will be replaced 
+#           by the value from "Hostname" when you use it)
+#     4. Load the keys (see above) and test them (also above)
+#     5. If you don't have any repos checked out then you're fine otherwise go to next step
+#     5. Replace your origin:
+#           >>> git remote remove origin
+#           >>> git remote add origin ssh://git@github.com/<username>/<proj path>
+#               MAKE SURE TO ACTUALLY USE *git* as username
+#     6. Set up the tracking branch
+#           >> git branch --set-upstream-to=origin/master
+
 #Host <host alias>
 #   Hostname <ip or FQDN>
 #   Port <now what this could be?>
