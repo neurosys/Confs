@@ -38,6 +38,15 @@ ForwardX11Trusted yes
 #     6. Set up the tracking branch
 #           >> git pull
 #           >> git branch --set-upstream-to=origin/master
+#
+#
+# How to set up ssh authentication with certificate
+#
+#   1. Generate the key to use (maybe don't use a password here)
+#       >>> ssh-keygen -t rsa
+#   2. Create an entry in ~/.ssh/config as the one below for the machine
+#   3. Copy the key public key to the machine you intend to use it
+#       >>> ssh-copy-id -i <public key file>
 
 #Host <host alias>
 #   Hostname <ip or FQDN>
