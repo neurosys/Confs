@@ -36,6 +36,9 @@ case $screen_width in
     "5760")
         conky -a tr -x 60 -dq -c calendar_rc
         ;;
+    "5120")
+        conky -a tr -x 60 -dq -c calendar_rc
+        ;;
 esac
 
 
