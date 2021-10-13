@@ -55,7 +55,7 @@ font-2 = Roboto Mono for Powerline:style=Regular
 
 modules-left = i3
 modules-center = gitrepo-monitor
-modules-right = spotify volume memory cpu date
+modules-right = spotify volume memory cpu mydate
 
 tray-position = right
 tray-padding = 2
@@ -93,7 +93,7 @@ font-1 = Unifont:style=Medium
 font-2 = Roboto Mono for Powerline:style=Regular
 
 modules-left = i3
-modules-right = spotify volume memory cpu date
+modules-right = spotify volume memory cpu mydate
 
 
 tray-position = right
@@ -266,6 +266,14 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
+[module/mydate]
+type = custom/script
+exec = ~/.bin/widgets/calendar.sh time
+tail = true
+interval = 10
+click-left = exec ~/.bin/widgets/calendar.sh -x 2300
+click-right = exec ~/.bin/widgets/calendar.sh -x 2300
+
 [module/date]
 type = internal/date
 interval = 5
@@ -273,7 +281,7 @@ interval = 5
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
+time = %H:%M   %Y-%m-%d 
 time-alt = %H:%M:%S
 
 format-underline = #0a6cf5
@@ -290,7 +298,7 @@ label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
-click-right = exec pavucontrol-qt
+click-right = exec pavucontrol-qt --tab 3
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -344,6 +352,11 @@ format-prefix-foreground = ${colors.foreground-alt}
 exec = ~/.bin/extractSpotifySong.sh
 tail = true
 interval = 3
+
+click-left = exec playerctl -p spotify play-pause
+;click-right = exec playerctl -p spotify loop (None | Track | Playlist)
+scroll-up = exec playerctl -p spotify previous
+scroll-down = exec playerctl -p spotify next
 
 [settings]
 screenchange-reload = true
