@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <ctype.h>
 
 bool highlight_weekend = true;
 bool highlight_today   = true;
@@ -125,6 +126,21 @@ bool CheckMonth(std::string *line)
     return false;
 }
 
+bool IsLineComprisedOfEmptySpaces(std::string &line) {
+    //std::cout << "Line 1 = '" << line << "'" << std::endl;
+    int size = line.length();
+    for (int i = 0; i < size; i++) {
+        char x = line[i];
+        //std::cout << "Line 2 idx = " << i << "x = '" << x << "'(" << (int)x << ") isspace = " << isspace(x) << std::endl;
+        if (isspace(x) == 0) {
+            //std::cout << "Line 3" << std::endl;
+            return false;
+        }
+    }
+    //std::cout << "Line 4 = '" << line << "'" << std::endl;
+    return true;
+}
+
 void ProcessInput()
 {
     std::string line;
@@ -171,9 +187,13 @@ void ProcessInput()
 
     while (std::getline(std::cin, line))
     {
+        if (IsLineComprisedOfEmptySpaces(line)) {
+            continue;
+        }
         std::vector<std::string> tokens = SplitByColumns(line, 2, 1);
         HiglightWeek(tokens, today);
     }
+    std::cout << std::endl;
 }
 
 int main(int argc, char* argv[])
