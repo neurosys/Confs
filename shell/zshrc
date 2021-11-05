@@ -82,7 +82,7 @@ sourceIfExists $ZSH/oh-my-zsh.sh
 
 # oh-my zsh activates a shared history among the instances and I don't like that
 unset SHARE_HISTORY
-
+setopt histignorespace
 
 # Print a status, but except the scp connections, otherwise scp transfers will fail
 if [ "$TERM" != "dumb" ] && [ -f ${modules_folder}/print_status ]
