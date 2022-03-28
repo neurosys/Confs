@@ -298,4 +298,11 @@ function cdf() {
     cd $targetFolder
 }
 
+alias jsonpretty='python3 -m json.tool'
+
+# Do a lint check over go files
+alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
+
+
+
 # vim:syn=sh

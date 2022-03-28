@@ -1,18 +1,27 @@
+# Git stash
+#   git stash [save <name>]
+#   git stash list
+#   git stash [apply <idx from $(git stash list)>
+#   git stash drop <idx from $(git stash list)>
+#   git stash clear # Removes everything from stash
+
+
+
 # In order to store the credentials into an repository
 # > git config credential.helper store
-[credential "http://github.com"]
-    name = NeuroSys
-    username = neurosys
-    email = you@example.com
+
+[url "git@github.com:ionos-cloud"]
+    insteadOf = "https://github.com/ionos-cloud"
 
 [user]
    name = NeuroSys
    username = neurosys
-   email = you@example.com
+   email = notrealemail@example.com
 
 [pager]
     # Don't show the list of branches in a pager
     branch = false
+    tag = true
 
 [include]
     path = ~/.git_local_accounts
@@ -20,16 +29,18 @@
 
 [core]
     editor = vim
+    # Use less as a pager -x4 is for the number of spaces
     pager = less -x4
+    #pager = view -
 
     # Use lf as line ending
     eol = lf
     autocrlf = input
 
 [merge]
-    tool = kdiff3
+    #tool = kdiff3
     #tool = vimdiff
-    #tool = meld
+    tool = meld
 
 [mergetool]
     trustExitCode = false
@@ -56,7 +67,9 @@
     status = auto
     branch = auto
     interactive = auto
-    ui = true
+    # Detect if the terminal supports colors and don't 
+    ui = auto
+    # If using vim as pager (view) it has its own syntax highlight
     pager = true
 
     #ui = always
@@ -67,9 +80,12 @@
     added = green
     changed = red bold
     untracked = magenta bold
+    header = white
 
 [color "branch"]
     remote = yellow
+    local = green
+    unmerged = red bold
 
 #[http]
 #    proxy = http://<usr>:<pwd>@<proxy fqdn>:<port>
@@ -79,6 +95,9 @@
     adu = add -u
 	mg  = mergetool --no-prompt
     s = status
+
+    co = checkout
+    com = commit
 
     # Short, decorated log
     # Optionsal --date=relative

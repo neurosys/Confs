@@ -31,7 +31,6 @@ function sourceIfExists()
     fi
 }
 
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -72,8 +71,16 @@ else
     ZSH_THEME="myjtrileygit"
     #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify git git-extras ng tig systemd pj fzf golang docker kubectl minikube)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify git git-extras ng tig systemd pj fzf golang docker kubectl minikube taskwarrior)
 fi
+
+#function precmd () 
+#{
+#    if [[ -n "$MYTITLE" ]]
+#    then
+#        print -Pn "\e]0;$MYTITLE\a"
+#    fi
+#}
 
 bgnotify_treshold=1
 DISABLE_AUTO_UPDATE="false"
