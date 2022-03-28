@@ -183,6 +183,11 @@
     XF86AudioStop
     #m:0x0 + c:174
 
+"/home/neurosys/.bin/xdt"
+    # Win+F9
+    #m:0x50 + c:75
+    Release + Mod2 + Mod4 + F9
+
 # Mail button
 # ""
 #   Xf86Mail

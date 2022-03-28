@@ -14,6 +14,7 @@
 ; Facebook 
 ; Notebook 
 ; Notes    
+; Vim      
 ; Calendar 
 ; Checkbox 
 ; Image    
@@ -29,10 +30,12 @@
 ; Text bubble (outline) 
 ; Text bubbles (outline) 
 ; Text bubble 
+; Discord 
 ; Source code 
 ; Command prompt 
 ; Firefox 
 ; Chrome 
+; Brave  
 ; Spring 
 ; Document 
 ; Document 
@@ -51,5 +54,7 @@
 ; Signal strength strong 
 ; Musical note 
 ; Vivaldi 
+; Integrated circuit 
+; Postgres 
 
 ; Icons on FontAwesome start at U+F000

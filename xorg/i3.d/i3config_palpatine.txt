@@ -38,8 +38,9 @@ gaps outer 7
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Shift+Return exec gnome-terminal -e tmux
-bindsym $mod+Ctrl+Return exec gnome-terminal
+#bindsym $mod+Shift+Return exec gnome-terminal -- tmux
+bindsym $mod+Shift+Return exec kitty 
+bindsym $mod+Ctrl+Return exec gnome-terminal 
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -277,7 +278,9 @@ exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
 
-exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
+#exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
+exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
+
 exec_always --no-startup-id xcompmgr 
 exec_always --no-startup-id transset 0.2
 
@@ -297,6 +300,9 @@ exec_always --no-startup-id guake -e tmux
 #exec_always --no-startup-id tusk
 
 exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
+
+exec_always --no-startup-id synergys -f --no-tray --debug INFO --name palpatine -c ~/.SynergysCfg --address :24800 --serial-key 7B76313B62617369633B636174616C696E206
+
 
 assign [class="(?i)^.* Mozilla Firefox$"] o
 assign [class="(?i)^Spotify Premium$"] y
