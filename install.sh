@@ -37,6 +37,9 @@ link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_f
 link_or_fail        $PWD/xorg/xbindkeysrc           ~/.xbindkeysrc     $backup_folder
 link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_folder
 
+mkdir -p ~/.config/kitty/
+link_or_fail        $PWD/xorg/kitty.conf            ~/.config/kitty/kitty.conf         $backup_folder
+
 link_or_fail        $PWD/.emacs                     ~/.emacs           $backup_folder
 link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_folder
 link_or_fail        $PWD/.vimperatorrc              ~/.vimperatorrc    $backup_folder
