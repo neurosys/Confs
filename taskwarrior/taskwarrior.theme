@@ -1,0 +1,90 @@
+rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
+
+# Legend
+# - `task color` to show all the color options
+# - `task color rgb050` to show how a color combination would look like
+#
+# rgb550 => Bright yellow
+# rgb013 => Dark blue
+# rgb015 => Bright blue
+# rgb001 => Very dark blue
+# rgb050 => Lime
+# rgb505 => Purple
+
+# General decoration
+
+# Header of the task listing, or calendar
+color.label=rgb050
+color.label.sort=
+color.alternate=on gray2
+color.header=rgb550
+color.footnote=rgb013
+color.warning=bold red
+color.error=white on red
+color.debug=rgb013
+
+# Task state
+color.completed=
+color.deleted=
+color.active=rgb045 on rgb015
+color.recurring=rgb115
+color.scheduled=on rgb012
+color.until=
+color.blocked=white on rgb001
+color.blocking=white on rgb002
+
+# Project
+color.project.none=
+color.project.Learn=rgb505
+color.project.Questions=rgb550
+
+# Priority
+color.uda.priority.H=rgb035
+color.uda.priority.L=rgb015
+color.uda.priority.M=rgb025
+
+# Tags
+color.tag.next=rgb550
+color.tag.none=
+color.tag.Personal=rgb005
+color.tag.Someday=color7
+color.tagged=
+
+# Due
+color.due.today=color252
+color.due=color249
+color.overdue=color255
+
+# Report: burndown
+color.burndown.done=on gray4
+color.burndown.pending=on rgb004
+color.burndown.started=on rgb015
+
+# Report: history
+color.history.add=color0 on rgb015
+color.history.delete=color0 on rgb035
+color.history.done=color0 on rgb025
+
+# Report: summary
+color.summary.background=on rgb001
+color.summary.bar=on rgb114
+
+# Command: calendar
+#color.calendar.due.today=color0 on color252
+color.calendar.due=color0 on color249
+color.calendar.holiday=color255 on rgb013
+color.calendar.overdue=color0 on color255
+#color.calendar.today=color0 on rgb115
+color.calendar.today=color255 on rgb505
+color.calendar.weekend=on color235
+color.calendar.weeknumber=rgb015
+
+# Command: sync
+color.sync.added=gray4
+color.sync.changed=rgb015
+color.sync.rejected=rgb004
+
+# Command: undo
+color.undo.after=rgb035
+color.undo.before=rgb013
+
