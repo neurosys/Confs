@@ -88,7 +88,13 @@ function httphere()
         port=$1
     fi
 
-    pyversion=$( python --version 2>&1 )
+    if [[ -f /usr/bin/python3 ]]
+    then
+        python3 -m http.server $port
+        return
+    fi
+
+    pyversion=$(python --version 2>&1 )
 
     echo "$pyversion"
 
@@ -99,7 +105,7 @@ function httphere()
     else
         echo "Not what I was expecting"
         # python 3
-        python -m http.server $port
+        python3 -m http.server $port
     fi
 }
 
@@ -298,11 +304,10 @@ function cdf() {
     cd $targetFolder
 }
 
-alias jsonpretty='python3 -m json.tool'
-
 # Do a lint check over go files
 alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
 
+alias tt='task calendar'
 
 
 # vim:syn=sh
