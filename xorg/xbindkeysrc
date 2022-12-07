@@ -124,10 +124,11 @@
 #                                   SOUND 
 # ============================================================================
 # MUTE / UNMUTE
+#"pamixer -t"
 #"amixer sset Master toggle"
-"pamixer -t"
+"pulsemixer --toggle-mute"
+    m:0x0 + c:121
     XF86AudioMute
-    #m:0x0 + c:121
 
 # VOLUME DOWN
 #"amixer -c1 sset Speaker 5%-"
