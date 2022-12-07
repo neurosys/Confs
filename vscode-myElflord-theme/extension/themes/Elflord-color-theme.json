@@ -1,0 +1,276 @@
+{
+    // The scope in every section can be found by presing Ctrl+Shift+p an typing in the textbox:
+    // "Developer: Inspect Editor Tokens ans Scopes" Use the "textmate scopes"
+	"name": "myElflord",
+	"colors": {
+		// Editor
+		"editor.background": "#000000",
+		"editor.foreground": "#00ffff",
+		// Activity Bar
+		"activityBarBadge.background": "#007acc",
+		"activityBar.background": "#000000",
+		// Status Bar 
+		"statusBar.background": "#7f7f7f",
+		"statusBar.foreground": "#ffffff",
+		"statusBarItem.remoteBackground": "#7f7f7f",
+		"statusBarItem.remoteForeground": "#ffffff",
+		// Sidebar
+		"sideBar.background": "#000000",
+		"sideBar.foreground": "#ffffff",
+		"sideBarSectionHeader.background": "#000000",
+		"sideBarSectionHeader.foreground": "#ffffff",
+		"sideBarTitle.foreground": "#00ffff",
+		// Line Numbers
+		"editorLineNumber.foreground": "#7f7f7f",
+		"editorLineNumber.activeForeground": "#00ffff",
+		// Cursor
+		"editorCursor.background": "#000000",
+		"editorCursor.foreground": "#ffffff",
+		// Title Bar
+		"titleBar.activeBackground": "#000000",
+		"titleBar.activeForeground": "#ffffff",
+		// Tabs
+		"editorGroupHeader.tabsBackground": "#7f7f7f",
+		"tab.inactiveBackground": "#7f7f7f",
+		"tab.inactiveForeground": "#ffffff",
+		// Buttons
+		"button.background": "#ffffff",
+		"button.foreground": "#000000"
+	},
+	"tokenColors": [
+		{
+			"name": "markdown.h4",
+			"scope": [
+				"heading.4.markdown"
+			],
+			"settings": {
+				"foreground": "#FFF000"
+			}
+		},
+		{
+			"name": "markdown.h3",
+			"scope": [
+				"heading.3.markdown"
+			],
+			"settings": {
+				"foreground": "#00AFFF"
+			}
+		},
+		{
+			"name": "markdown.h2",
+			"scope": [
+				"heading.2.markdown"
+			],
+			"settings": {
+				"foreground": "#00FF00"
+			}
+		},
+		{
+			"name": "markdown.h1",
+			"scope": [
+				"heading.1.markdown"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
+			"name": "markdown.code",
+			"scope": [
+				"meta.embedded.block",
+				"markup.inline.raw.string.markdown"
+			],
+			"settings": {
+				"foreground": "#FFFFFF"
+			}
+		},
+		{
+			"name": "Terraform.resource.keyword",
+			"scope": [
+                "entity.name.type.terraform"
+			],
+			"settings": {
+				"foreground": "#FFF000"
+			}
+		},
+		{
+			"name": "Docker.resource.keyword",
+			"scope": [
+                "keyword.other.special-method.dockerfile"
+			],
+			"settings": {
+				"foreground": "#FFF000"
+			}
+		},
+		{
+			"name": "Yaml.Name.Tag",
+			"scope": [
+                "entity.name.tag.yaml"
+			],
+			"settings": {
+				"foreground": "#00FFFF"
+			}
+		},
+		{
+			"name": "Yaml.Name.Separator",
+			"scope": [
+                "punctuation.separator.key-value.mapping.yaml",
+                "punctuation.definition.block.sequence.item.yaml"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
+			"name": "Yaml.Value",
+			"scope": [
+                "string.unquoted.plain.out.yaml"
+			],
+			"settings": {
+				"foreground": "#00AFFF"
+			}
+		},
+		{
+			"name": "Strings",
+			"scope": [
+                "string.quoted",
+                "string.unquoted.heredoc.expanded.shell"
+			],
+			"settings": {
+				"foreground": "#FF00FF"
+			}
+		},
+		{
+			"name": "Numbers",
+			"scope": [
+                "constant.numeric"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": [
+				"comment",
+                "punctuation.definition.comment"
+			],
+			"settings": {
+				"foreground": "#80a0ff"
+			}
+		},
+		{
+			"name": "Conditional",
+			"scope": [
+				"keyword.control"
+			],
+			"settings": {
+				"foreground": "#ffffff"
+			}
+		},
+        {
+            "name": "Operator",
+            "scope": [
+                "keyword.operator"
+            ],
+			"settings": {
+				"foreground": "#ff0000"
+			}
+        },
+        {
+            "name": "Types",
+            "scope": [
+                "storage.type"
+            ],
+			"settings": {
+				"foreground": "#87ffaf"
+			}
+        },
+        {
+            "name": "Keywords",
+            "scope": [
+                "keyword.function.go",
+                "keyword.const.go",
+                "keyword.var",
+                "keyword.import.go",
+                "keyword.package.go",
+                "keyword.type.go",
+                "keyword.interface.go",
+                "keyword.struct.go",
+                "constant.language.go",
+                "support.function.builtin.go"
+            ],
+            "settings": {
+				"foreground": "#ffff00"
+            }
+        },
+		{
+			"name": "Type",
+			"scope": [
+				"meta.type"
+			],
+			"settings": {
+				"foreground": "#60ff60"
+			}
+		},
+		{
+			"name": "FunctionCall",
+			"scope": [
+				"support.function"
+			],
+			"settings": {
+				"foreground": "#FFFFFF"
+			}
+		},
+		{
+			"name": "FunctionNameDefinition",
+			"scope": [
+				"entity.name.function"
+			],
+			"settings": {
+				"foreground": "#FFFFFF"
+			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": [
+				"punctuation.other.comma",
+				"punctuation.other.period",
+				"punctuation.other.colon",
+				"punctuation.definition.bracket.square",
+				"punctuation.definition.end.bracket.round",
+				"punctuation.definition.end.bracket.curly",
+				"punctuation.definition.begin.bracket.round",
+				"punctuation.definition.begin.bracket.curly",
+				"punctuation.definition.begin.bracket.curly.go",
+				"punctuation.definition.end.bracket.curly.go",
+				"punctuation.definition.begin.bracket.round.go",
+				"punctuation.definition.end.bracket.round.go",
+                "keyword.operator.assignment",
+                "keyword.operator.address"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
+			"name": "Search",
+			"scope": [
+				"entity.name.function.search"
+			],
+			"settings": {
+				"foreground": "#ffff00"
+			}
+		},
+		{
+			"name": "Todo",
+			"scope": [
+				"meta.todo"
+			],
+			"settings": {
+				"foreground": "#ffff00"
+			}
+		}
+	]
+}
+		
