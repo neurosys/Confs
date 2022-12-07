@@ -44,10 +44,11 @@ color.uda.priority.L=rgb015
 color.uda.priority.M=rgb025
 
 # Tags
+color.tag.urgent=rgb500
 color.tag.next=rgb550
 color.tag.none=
-color.tag.Personal=rgb005
-color.tag.Someday=color7
+color.tag.personal=rgb055
+color.tag.someday=color7
 color.tagged=
 
 # Due
