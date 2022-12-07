@@ -1,6 +1,7 @@
 {
     // The scope in every section can be found by presing Ctrl+Shift+p an typing in the textbox:
     // "Developer: Inspect Editor Tokens ans Scopes" Use the "textmate scopes"
+    // maybe take a look at this theme editor here: https://themes.vscode.one/edit/local/
 	"name": "myElflord",
 	"colors": {
 		// Editor
