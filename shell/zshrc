@@ -72,7 +72,7 @@ else
     ZSH_THEME="myjtrileygit"
     #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig vscode systemd fzf golang docker kubectl helm taskwarrior)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig systemd fzf golang docker kubectl helm taskwarrior)
 fi
 
 bgnotify_treshold=1
