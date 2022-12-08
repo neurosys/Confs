@@ -95,6 +95,15 @@
 			}
 		},
 		{
+			"name": "Terraform.resource.constants",
+			"scope": [
+                "constant.language.hcl"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
 			"name": "Docker.resource.keyword",
 			"scope": [
                 "keyword.other.special-method.dockerfile"
