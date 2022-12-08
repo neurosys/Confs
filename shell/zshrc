@@ -60,7 +60,7 @@ ZSH_CUSTOM=${modules_folder}/zsh/
 # sudo                    - Presc Esc-Esc to run the last command with sudo as prefix
 # vim-interaction         - Open a file in an already running gvim session (run as callvim or simply v)
 # calc                    - Allows simple calculator on command line (run as = <operations>) requires bc
-# bgnotify                - ???
+# bgnotify                - When you don't have the terminal focused, it notifies you about processes that finished (task X finished 1m 22s)
 # common-aliases          - Useful set of aliases (needs to soak)
 
 if [[ $is_cygwin -eq 1 ]]
@@ -72,7 +72,7 @@ else
     ZSH_THEME="myjtrileygit"
     #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize cp sudo vim-interaction bgnotify k git git-extras jira mvn ng tig vscode systemd spring pj fzf taskwarrior golang docker kubectl helm taskwarrior)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig vscode systemd fzf golang docker kubectl kubectx helm taskwarrior)
 fi
 
 bgnotify_treshold=1

@@ -35,13 +35,23 @@ function my_git_info()
     local branch=$(git_current_branch)
     if [[ -n $branch ]]
     then
-        echo "%{$reset_color%}%{$fg[white]%}% $(git_current_branch)%{$fg[cyan]%}[%{$fg[white]%}$(git_prompt_short_sha)%{$fg[cyan]%}] $(parse_git_dirty)"
+        echo "%{$reset_color%}%{$fg[white]%}% $(git_current_branch)%{$fg[cyan]%}[%{$fg[white]%}$(git_prompt_short_sha)%{$fg[cyan]%}] $(parse_git_dirty)%{$reset_color%}"
     else
         echo ""
     fi
 }
 
-PROMPT='%{$fg_bold[white]%}%?$(retcode) %{$fg_bold[cyan]%}%D{%H:%M:%S}%{$fg_bold[green]%} %{$fg_bold[white]%}%n%{$fg[magenta]%}@%{$fg_bold[white]%}%m %{$fg_bold[green]%}%d $(my_git_info)
+function my_kubernetes()
+{
+    ctx=$(kubectl config current-context)
+    ns=$(kubens -c)
+    if [[ -n $ctx ]]
+    then
+        echo "%{$fg[cyan]%}%{$bg[black]%}<$ctx:$ns>%{$reset_color%}"
+    fi
+}
+
+PROMPT='%{$fg_bold[white]%}%?$(retcode) %{$fg_bold[cyan]%}%D{%H:%M:%S}%{$fg_bold[green]%} %{$fg_bold[white]%}%n%{$fg[magenta]%}@%{$fg_bold[white]%}%m %{$fg_bold[green]%}%d $(my_git_info) $(my_kubernetes)
 %{$fg_bold[yellow]%}%% %{$reset_color%}'
 
 
