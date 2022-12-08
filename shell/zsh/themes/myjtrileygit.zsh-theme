@@ -43,6 +43,16 @@ function my_git_info()
 
 function my_kubernetes()
 {
+    which kubectl &> /dev/null
+    if [[ $? -ne 0 ]]
+    then
+        return
+    fi
+    which kubens &> /dev/null
+    if [[ $? -ne 0 ]]
+    then
+        return
+    fi
     ctx=$(kubectl config current-context)
     ns=$(kubens -c)
     if [[ -n $ctx ]]
