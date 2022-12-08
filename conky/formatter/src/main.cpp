@@ -14,40 +14,40 @@ std::string weekend_color_end   = "${color3}";
 std::string today_color_start   = "${color red}";
 std::string today_color_end     = "${color3}";
 
-//#define __RO__ 1
+#define __RO__ 1
 
 #ifdef __RO__
     std::string months[] = {
-        "Ianuarie",
-        "Februarie",
-        "Martie",
-        "Aprilie",
-        "Mai",
-        "Iunie",
-        "Iulie",
-        "August",
-        "Septembrie",
-        "Octombrie",
-        "Noiembrie",
-        "Decembrie"
+        "ianuarie",
+        "februarie",
+        "martie",
+        "aprilie",
+        "mai",
+        "iunie",
+        "iulie",
+        "august",
+        "septembrie",
+        "octombrie",
+        "noiembrie",
+        "decembrie"
     };
     std::string days_m = "Lu Ma Mi Jo Vi Sb Du";
     std::string days_s = "Du Lu Ma Mi Jo Vi Sb";
     std::string sunday_name = "Du";
 #else
     std::string months[] = {
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
     };
     std::string days_m = "Mo Tu We Th Fr Sa Su";
     std::string days_s = "Su Mo Tu We Th Fr Sa";
@@ -141,12 +141,20 @@ HiglightWeek(std::vector<std::string> tokens, std::string today)
     std::cout << std::endl;
 }
 
+std::string toLower(std::string s) {
+    std::transform(s.begin(), s.end(), s.begin(),
+       [](unsigned char c){ return std::tolower(c); }
+    );
+    return s;
+}
+
 bool CheckMonth(std::string *line)
 {
+    std::string lowerCaseLine = toLower(*line);
     // Check to see if we got one of the months
     for (int i = 0 ; i < 12 ; i++)
     {
-        int rez = line->find(months[i]);
+        int rez = lowerCaseLine.find(months[i]);
         if (rez != -1)
         {
             return true;
