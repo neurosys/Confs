@@ -53,8 +53,8 @@ function my_kubernetes()
     then
         return
     fi
-    ctx=$(kubectl config current-context)
-    ns=$(kubens -c)
+    ctx=$(kubectl config current-context 2&>1 | grep -v "error")
+    ns=$(kubens -c 2&>1 | grep -v "error")
     if [[ -n $ctx ]]
     then
         echo " %{$fg[cyan]%}%{$bg[black]%}<$ctx:$ns>%{$reset_color%}"
