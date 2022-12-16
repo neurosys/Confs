@@ -57,7 +57,7 @@ function my_kubernetes()
     ns=$(kubens -c 2>&1 | grep -v "error")
     if [[ -n $ctx ]]
     then
-        echo " %{$fg[cyan]%}%{$bg[black]%}<$ctx:$ns>%{$reset_color%}"
+        echo " %{$fg[cyan]%}<$ctx:$ns>%{$reset_color%}"
     fi
 }
 
