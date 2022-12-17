@@ -1,0 +1,13 @@
+[module/spotify]
+type = custom/script
+format-prefix-foreground = ${colors.foreground-alt}
+exec = ~/.bin/extractSpotifySong.sh
+tail = true
+interval = 3
+
+click-left = exec playerctl -p spotify play-pause
+;click-right = exec playerctl -p spotify loop (None | Track | Playlist)
+scroll-up = exec playerctl -p spotify previous
+scroll-down = exec playerctl -p spotify next
+
+; vim:ft=dosini

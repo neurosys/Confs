@@ -1,0 +1,81 @@
+[module/i3]
+type = internal/i3
+
+#Only show workspaces defined on the same output as the bar
+#
+# Useful if you want to show monitor specific workspaces
+# on different bars
+#
+# Default: false
+pin-workspaces = true
+
+# Show urgent workspaces regardless of whether the workspace is actually hidden 
+# by pin-workspaces.
+#
+# Default: false
+show-urgent = false
+
+# This will split the workspace name on ':'
+# Default: false
+#strip-wsnumbers = true
+
+# Sort the workspaces by index instead of the default
+# sorting that groups the workspaces by output
+# Default: false
+index-sort = true
+
+# Create click handler used to focus workspace
+# Default: true
+enable-click = false
+
+# Create scroll handlers used to cycle workspaces
+# Default: true
+enable-scroll = true
+
+# Wrap around when reaching the first/last workspace
+# Default: true
+wrapping-scroll = false
+
+# Set the scroll cycle direction 
+# Default: true
+reverse-scroll = false
+
+# Use fuzzy (partial) matching on labels when assigning 
+# icons to workspaces
+# Example: code;♚ will apply the icon to all workspaces 
+# containing 'code' in the label
+# Default: false
+fuzzy-match = true
+
+format = <label-state> <label-mode>
+
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+# focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = ${colors.background-alt}                                                                                                                                                                                  
+label-focused-padding = 2
+
+# unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+# visible = Active workspace on unfocused monitor
+label-visible = %icon%
+#label-visible-background = ${self.label-focused-background}
+#label-visible-underline = ${self.label-focused-underline}
+#label-visible-padding = ${self.label-focused-padding}
+
+# urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-active-font = 2
+
+strip-wsnumbers = true
+
+; vim:ft=dosini

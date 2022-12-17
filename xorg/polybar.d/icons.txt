@@ -1,0 +1,75 @@
+; Various administration, command line
+#ws-icon-0  = 10;
+#ws-icon-1  = 1;
+#ws-icon-2  = 2;
+#ws-icon-3  = 3;
+#ws-icon-4  = 4;
+#ws-icon-5  = 5;
+#ws-icon-6  = 6;
+#ws-icon-7  = 7;
+#ws-icon-8  = 8;
+#ws-icon-9  = 9;
+
+ws-icon-0  = 10;
+ws-icon-1  = 1;1
+ws-icon-2  = 2;2
+ws-icon-3  = 3;3
+ws-icon-4  = 4;4
+ws-icon-5  = 5;5
+ws-icon-6  = 6;6
+ws-icon-7  = 7;7
+ws-icon-8  = 8;8
+ws-icon-9  = 9;9
+
+; Connectivity Workspace, icon a thunder
+ws-icon-10 = q;
+
+; Web activity Workspace, icon Reddit alien
+ws-icon-11 = w;
+
+; Messenger workspace, icon Chat Bubble
+ws-icon-12 = e;
+
+; Music workspace, icon A musical note
+ws-icon-13 = y;
+
+; Filesystem workspace, icon an closed folder
+ws-icon-14 = a;
+
+; Filesystem workspace icon open folder
+ws-icon-15 = s;
+
+; Email workspace, icon an envelope
+ws-icon-16 = z;
+
+; Windows remote desktop, icon a PC
+ws-icon-17 = x;
+
+; Notes and wikis (Tusk, Vimwiki, Zim, Ice, Otter-browser)
+ws-icon-18 = u;
+
+
+; Web Crhomium
+ws-icon-19 = i;
+
+; Source code
+ws-icon-20 = n;
+
+; Document excel
+ws-icon-21 = d;
+
+; Graphics (gimp, mypaint)
+ws-icon-22 = g;
+
+; Paperclip
+ws-icon-23 = v;
+
+; Books Documents PDFs
+ws-icon-24 = b;
+
+; Firefox
+ws-icon-25 = o;
+
+ws-icon-default = ◊
+
+; vim:ft=dosini

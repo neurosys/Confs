@@ -1,0 +1,9 @@
+[module/mydate]
+type = custom/script
+exec = ~/.bin/widgets/calendar.sh time
+tail = true
+interval = 10
+click-left = exec ~/.bin/widgets/calendar.sh -x 2300
+click-right = exec ~/.bin/widgets/calendar.sh -x 2300
+
+; vim:ft=dosini

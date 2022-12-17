@@ -6,7 +6,7 @@ function launchPolybar()
     nrMonitors=$2
     for i in $(seq 1 $nrMonitors)
     do
-        polybar -c ~/.myconfig/xorg/polybar.d/polybar_${hostname}.txt "mon${i}" &
+        polybar -c ~/.myconfig/xorg/polybar.d/polybar_${hostname}.txt "mon${i}" & disown
     done
 }
 
