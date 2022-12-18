@@ -8,3 +8,4 @@ screenchange-reload = true
 compositing-background = over
 compositing-foreground = over
 
+; vim:ft=dosini

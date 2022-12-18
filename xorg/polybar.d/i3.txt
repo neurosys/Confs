@@ -17,7 +17,7 @@ show-urgent = false
 
 # This will split the workspace name on ':'
 # Default: false
-#strip-wsnumbers = true
+strip-wsnumbers = true
 
 # Sort the workspaces by index instead of the default
 # sorting that groups the workspaces by output
@@ -26,7 +26,7 @@ index-sort = true
 
 # Create click handler used to focus workspace
 # Default: true
-enable-click = false
+enable-click = true
 
 # Create scroll handlers used to cycle workspaces
 # Default: true
@@ -45,7 +45,7 @@ reverse-scroll = false
 # Example: code;♚ will apply the icon to all workspaces 
 # containing 'code' in the label
 # Default: false
-fuzzy-match = true
+fuzzy-match = false
 
 format = <label-state> <label-mode>
 
@@ -65,9 +65,9 @@ label-unfocused-padding = 2
 
 # visible = Active workspace on unfocused monitor
 label-visible = %icon%
-#label-visible-background = ${self.label-focused-background}
+label-visible-background = ${self.label-focused-background}
 #label-visible-underline = ${self.label-focused-underline}
-#label-visible-padding = ${self.label-focused-padding}
+label-visible-padding = ${self.label-focused-padding}
 
 # urgent = Workspace with urgency hint set
 label-urgent = %icon%
@@ -75,7 +75,5 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-active-font = 2
-
-strip-wsnumbers = true
 
 ; vim:ft=dosini

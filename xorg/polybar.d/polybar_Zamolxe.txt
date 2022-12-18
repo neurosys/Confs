@@ -25,8 +25,13 @@ include-file = ~/.myconfig/xorg/polybar.d/cpu.txt
 include-file = ~/.myconfig/xorg/polybar.d/memory.txt
 include-file = ~/.myconfig/xorg/polybar.d/volume.txt
 #include-file = ~/.myconfig/xorg/polybar.d/power.txt
+include-file = ~/.myconfig/xorg/polybar.d/date.txt
+include-file = ~/.myconfig/xorg/polybar.d/mycalendar.txt
+
 
 include-file = ~/.myconfig/xorg/polybar.d/settings.txt
 include-file = ~/.myconfig/xorg/polybar.d/spotify.txt
 
 include-file = ~/.myconfig/xorg/polybar.d/global-wm.txt
+
+; vim:ft=dosini

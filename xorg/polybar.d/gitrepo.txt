@@ -4,3 +4,4 @@
 #exec = ~/.bin/widgets/lastcommit.sh /opt/work/tus/tracking/
 #tail = false
 
+; vim:ft=dosini
