@@ -1,0 +1,11 @@
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "RAM "
+format-prefix-foreground = ${colors.foreground-alt}
+#format-underline = #4bffdc
+label = %percentage_used%%
+
+include-file = ~/.myconfig/xorg/polybar.d/date.txt
+include-file = ~/.myconfig/xorg/polybar.d/mycalendar.txt
+

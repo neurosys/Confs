@@ -1,0 +1,6 @@
+#[module/gitrepo-monitor]
+#type = custom/script
+#interval = 200
+#exec = ~/.bin/widgets/lastcommit.sh /opt/work/tus/tracking/
+#tail = false
+

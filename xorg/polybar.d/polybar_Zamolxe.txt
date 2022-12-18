@@ -1,11 +1,7 @@
 include-file = ~/.myconfig/xorg/polybar.d/monitor.txt
 include-file = ~/.myconfig/xorg/polybar.d/colors.txt
 
-#[module/gitrepo-monitor]
-#type = custom/script
-#interval = 200
-#exec = ~/.bin/widgets/lastcommit.sh /opt/work/tus/tracking/
-#tail = false
+# include-file = ~/.myconfig/xorg/polybar.d/gitrepo.txt
 
 [bar/mon1]
 inherit = default/monitor
@@ -19,117 +15,18 @@ monitor = ${env:MONITOR:HDMI-1-0}
 inherit = default/monitor
 monitor = ${env:MONITOR:DP-1}
 
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
+include-file = ~/.myconfig/xorg/polybar.d/title.txt
+#include-file = ~/.myconfig/xorg/polybar.d/filesystem.txt
 
 ## Other stuff :-)
 include-file = ~/.myconfig/xorg/polybar.d/i3.txt
 include-file = ~/.myconfig/xorg/polybar.d/icons.txt
+include-file = ~/.myconfig/xorg/polybar.d/cpu.txt
+include-file = ~/.myconfig/xorg/polybar.d/memory.txt
+include-file = ~/.myconfig/xorg/polybar.d/volume.txt
+#include-file = ~/.myconfig/xorg/polybar.d/power.txt
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = "CPU "
-format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #f90000
-label = %percentage:2%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = "RAM "
-format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #4bffdc
-label = %percentage_used%%
-
-include-file = ~/.myconfig/xorg/polybar.d/date.txt
-include-file = ~/.myconfig/xorg/polybar.d/mycalendar.txt
-
-[module/volume]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
-
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-click-right = exec pavucontrol-qt --tab 3
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = X
-label-open-foreground = ${colors.secondary}
-label-close = cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;
-compositing-background = over
-compositing-foreground = over
-
+include-file = ~/.myconfig/xorg/polybar.d/settings.txt
 include-file = ~/.myconfig/xorg/polybar.d/spotify.txt
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
+include-file = ~/.myconfig/xorg/polybar.d/global-wm.txt
