@@ -39,7 +39,7 @@ focus_on_window_activation none
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Shift+Return exec gnome-terminal -- tmux
-bindsym $mod+Shift+Return exec st -e tmux 
+bindsym $mod+Shift+Return exec st 
 bindsym $mod+Ctrl+Return exec gnome-terminal 
 
 # kill focused window
@@ -283,8 +283,8 @@ exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
 
-exec_always --no-startup-id xcompmgr 
-exec_always --no-startup-id transset 0.2
+#exec_always --no-startup-id xcompmgr 
+#exec_always --no-startup-id transset 0.2
 
 exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 
@@ -293,7 +293,7 @@ exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 # Enable transparency using compton (see ~/.config/compton for configuration)
 #exec --no-starup-id compton --config /home/camza/.config/compton.conf
 #exec_always --no-startup-id compton -m 0.3
-exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
+#exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
