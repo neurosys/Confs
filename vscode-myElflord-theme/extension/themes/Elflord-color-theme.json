@@ -11,9 +11,9 @@
 		"activityBarBadge.background": "#007acc",
 		"activityBar.background": "#000000",
 		// Status Bar 
-		"statusBar.background": "#7f7f7f",
+		"statusBar.background": "#404040",
 		"statusBar.foreground": "#ffffff",
-		"statusBarItem.remoteBackground": "#7f7f7f",
+		"statusBarItem.remoteBackground": "#202020",
 		"statusBarItem.remoteForeground": "#ffffff",
 		// Sidebar
 		"sideBar.background": "#181818",
