@@ -5,7 +5,7 @@
 	"name": "myElflord",
 	"colors": {
 		// Editor
-		"editor.background": "#000000",
+		"editor.background": "#202020",
 		"editor.foreground": "#00ffff",
 		// Activity Bar
 		"activityBarBadge.background": "#007acc",
@@ -16,7 +16,7 @@
 		"statusBarItem.remoteBackground": "#7f7f7f",
 		"statusBarItem.remoteForeground": "#ffffff",
 		// Sidebar
-		"sideBar.background": "#000000",
+		"sideBar.background": "#181818",
 		"sideBar.foreground": "#ffffff",
 		"sideBarSectionHeader.background": "#000000",
 		"sideBarSectionHeader.foreground": "#ffffff",
@@ -31,8 +31,9 @@
 		"titleBar.activeBackground": "#000000",
 		"titleBar.activeForeground": "#ffffff",
 		// Tabs
-		"editorGroupHeader.tabsBackground": "#7f7f7f",
-		"tab.inactiveBackground": "#7f7f7f",
+		"editorGroupHeader.tabsBackground": "#000000",
+		"editorGroupHeader.tabsForeground": "#000000",
+		"tab.inactiveBackground": "#404040",
 		"tab.inactiveForeground": "#ffffff",
 		// Buttons
 		"button.background": "#ffffff",
