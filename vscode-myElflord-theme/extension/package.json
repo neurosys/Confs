@@ -1,11 +1,11 @@
 {
 	"name": "vscode-myelflord",
-	"author": "dylan-brackett",
-	"publisher": "dylan-brackett",
+	"author": "neurosys-brackett",
+	"publisher": "neurosys-brackett",
 	"displayName": "vscode-myelflord",
 	"description": "My port of the myElflord theme from VIM.",
 	"version": "1.0.1",
-	"repository": "https://github.com/dylan-brackett/vscode-elflord",
+	"repository": "https://github.com/neurosys/Confs/vscode",
 	"engines": {
 		"vscode": "^1.68.0"
 	},
