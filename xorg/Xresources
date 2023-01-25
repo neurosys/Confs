@@ -1,4 +1,5 @@
 ! After editing please run xrdb -merge ~/.Xresources to update the current configuration
+! Others say to run `xrdb -load` or `xrdb`
 XTerm*background: black
 XTerm*foreground: white
 XTerm*pointerColor: red
@@ -7,8 +8,8 @@ XTerm*loginShell: true
 XTerm*scrollBar: false
 XTerm*scrollKey: true
 XTerm*saveLines: 99999
-XTerm*faceName: Liberation Mono for Powerline
-XTerm*faceSize: 12
+XTerm*faceName: xft:Liberation Mono for Powerline:normal:size=14
+! XTerm*faceSize: 12
 
 URxvt.depth: 32
 ! The numbers in square paranthesis, represent the opacity in percents
@@ -25,3 +26,7 @@ dzen2.font: xft:lemon:pixelsize=8:antialias=false:hinting=true
 ! dzen2.letterSpace: -3
 ! dzen2.foreground: white
 ! dzen2.background: black
+
+Sxiv.background: #000000
+Sxiv.foreground: #A0A0A0
+Sxiv.font: xft:Liberation Mono for Powerline:normal:size=12
