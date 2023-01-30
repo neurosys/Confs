@@ -26,8 +26,7 @@ link_or_fail        $PWD/shell/bash_profile         ~/.bash_profile    $backup_f
 link_or_fail        $PWD/shell/zshrc                ~/.zshrc           $backup_folder
 link_or_fail        $PWD/shell/zsh/oh-my-zsh        ~/.oh-my-zsh       $backup_folder
 
-link_or_fail        $PWD/tmux/tmux.conf             ~/.tmux.conf       $backup_folder
-link_or_fail        $PWD/tmux/tmux.conf.local       ~/.tmux.conf.local $backup_folder
+link_or_fail        $PWD/tmux/new_tmux.conf         ~/.tmux.conf       $backup_folder
 
 link_or_fail        $PWD/git.d/gitconfig            ~/.gitconfig       $backup_folder
 
