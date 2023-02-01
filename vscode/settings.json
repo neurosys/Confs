@@ -1,0 +1,21 @@
+{
+    "editor.fontFamily": "Fira Code SemiBold",
+    "editor.fontSize": 15,
+    "editor.cursorStyle": "block",
+    "redhat.telemetry.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": false,
+    "debug.console.fontFamily": "Ubuntu Mono",
+    "debug.console.fontSize": 18,
+    "tabnine.experimentalAutoImports": true,
+    "workbench.colorTheme": "myElflord",
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "editor.tabSize": 2,
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 1,
+    "[Log]": {
+        "editor.fontSize": 14
+    }
+}
