@@ -1,12 +1,19 @@
 
-if [ $is_cygwin ]
+#if [ $is_cygwin ]
+#then
+#    # In windows we have to make sure system32 is not before /bin in PATH
+#    #export PATH=/bin:/usr/bin:$PATH:$HOME/.local/bin:$HOME/bin
+#    export PATH=$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:/usr/local/bin:/usr/bin:$PATH
+#else
+#    export PATH=$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+#fi
+
+# without this, subshells would have the paths doubled for each layer of shell they are
+tmpPATH=$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin
+echo $PATH | grep -q "$tmpPATH"
+if [[ $? -ne 0 ]]
 then
-    # In windows we have to make sure system32 is not before /bin in PATH
-    #export PATH=/bin:/usr/bin:$PATH:$HOME/.local/bin:$HOME/bin
-    export PATH=$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:/usr/local/bin:/usr/bin:$PATH
-else
-    #export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-    export PATH=$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:/usr/local/bin:$PATH
+    export PATH="$tmpPATH:$PATH"
 fi
 
 #if [ $is_cygwin ]
