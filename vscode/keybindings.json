@@ -18,5 +18,5 @@
     {
         "key": "alt+f1",
         "command": "-editor.action.showAccessibilityHelp"
-    }
+    },
 ]

@@ -1,21 +1,67 @@
 {
-    "editor.fontFamily": "Fira Code SemiBold",
-    "editor.fontSize": 15,
+    "editor.fontFamily": "DejaVu Sans Mono",
+    "editor.fontSize": 14,
     "editor.cursorStyle": "block",
     "redhat.telemetry.enabled": false,
     "go.toolsManagement.autoUpdate": true,
     "editor.minimap.enabled": false,
     "editor.fontLigatures": false,
-    "debug.console.fontFamily": "Ubuntu Mono",
-    "debug.console.fontSize": 18,
+    "debug.console.fontFamily": "DejaVu Sans Mono",
+    "debug.console.fontSize": 14,
     "tabnine.experimentalAutoImports": true,
     "workbench.colorTheme": "myElflord",
     "git.autofetch": true,
-    "window.zoomLevel": 1,
-    "editor.tabSize": 2,
+    "window.zoomLevel": 2,
+    "editor.tabSize": 4,
     "terminal.integrated.fontSize": 14,
     "window.zoomLevel": 1,
     "[Log]": {
         "editor.fontSize": 14
-    }
+    },
+    "circleci.API-token": "b95960269ade30d29087602a893bb018018d89f7",
+
+    "go.showGlobalVariables": true,
+    "go.fillStruct": true,
+    "go.playground": false,
+
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["go.fill.struct"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["B"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": [ "references-view.showCallHierarchy" ]
+        },
+        {
+            "before": ["<leader>", "<space>"],
+            "commands": [ ":nohls" ]
+        },
+        {
+            "before": ["<leader>", "Escape"],
+            "commands": [ "workbench.action.toggleSidebarVisibility" ]
+        }
+    ]
 }
