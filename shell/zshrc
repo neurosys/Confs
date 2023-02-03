@@ -45,6 +45,7 @@ sourceIfExists ${modules_folder}/envtests
 sourceIfExists ${modules_folder}/defines
 sourceIfExists ${modules_folder}/exports
 sourceIfExists ${modules_folder}/aliases
+sourceIfExists ${modules_folder}/ls_colors
 sourceIfExists ~/.local_aliases
 
 # Would you like to use another custom folder than $ZSH/custom?
