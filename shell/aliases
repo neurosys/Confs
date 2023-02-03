@@ -147,6 +147,11 @@ function light() {
 
 }
 
+if [[ -f /usr/bin/nvim ]]
+then
+    alias vim='nvim'
+fi
+
 # Increase/decrease backlight of monitor
 if [[ -f /usr/bin/xbacklight ]]
 then
