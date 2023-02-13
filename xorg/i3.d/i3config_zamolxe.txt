@@ -157,8 +157,8 @@ bindsym $mod+0 workspace 
 bindsym $mod+Shift+0 move container to workspace 
 bindsym $mod+e workspace 
 bindsym $mod+Shift+e move container to workspace 
-bindsym $mod+y workspace 
-bindsym $mod+Shift+y move container to workspace 
+bindsym $mod+y workspace ♬
+bindsym $mod+Shift+y move container to workspace ♬
 bindsym $mod+u workspace 
 bindsym $mod+Shift+u move container to workspace 
 bindsym $mod+i workspace 
@@ -253,44 +253,54 @@ bar {
 
 
 
-#exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
-#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
-#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
-#exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
+# exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
+# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
+# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
+# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
 
-#exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
-#exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
-exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+# exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
+# exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
 
+# 3 Monitors (laptop on the left)
+# exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
-#exec_always --no-startup-id xcompmgr 
-#exec_always --no-startup-id transset 0.2
+# 2 Monitors (laptop is off)
+exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
+# Just the laptop
+# exec_always --no-startup-id xrandr --output eDP-1 --off
+
+# exec_always --no-startup-id xcompmgr 
+# exec_always --no-startup-id transset 0.2
+
+# Turn off Caps Lock and convert it to left ctrl
 exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 
+# Repet keys at a much faster rate
+exec_always --no-startup-id xset r rate 200 30
 
+exec_always --no-startup-id xbindkeys
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
-#exec --no-starup-id compton --config /home/camza/.config/compton.conf
-#exec_always --no-startup-id compton -m 0.3
-#exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
+# exec --no-starup-id compton --config /home/camza/.config/compton.conf
+# exec_always --no-startup-id compton -m 0.3
+# exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
-exec_always --no-startup-id guake -e tmux
-
-exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
-
-#exec_always --no-startup-id synergys -f --no-tray --debug INFO --name palpatine -c ~/.SynergysCfg --address :24800 --serial-key 7B76313B62617369633B636174616C696E206
+# exec_always --no-startup-id guake -e tmux
 
 
-#assign [class="(?i)^.* Mozilla Firefox$"] o
-#assign [class="(?i)^Spotify Premium$"] y
-#assign [class="(?i)^.* Microsoft Teams$"] e
-#assign [class="(?i)^Synergy 1 Basic$"] 2
+# exec_always --no-startup-id synergys -f --no-tray --debug INFO --name palpatine -c ~/.SynergysCfg --address :24800 --serial-key 7B76313B62617369633B636174616C696E206
 
-#exec_always  "i3-msg 'workspace o; exec /home/bin/firefox'"
-#exec_always  "i3-msg 'workspace y; exec /home/bin/spotify'"
-#exec_always  "i3-msg 'workspace e; exec /home/bin/teams'"
-#exec_always  "i3-msg 'workspace 2; exec /home/bin/synergy'"
+
+# assign [class="(?i)^.* Mozilla Firefox$"] o
+# assign [class="(?i)^Spotify Premium$"] y
+# assign [class="(?i)^.* Microsoft Teams$"] e
+# assign [class="(?i)^Synergy 1 Basic$"] 2
+
+# exec_always  "i3-msg 'workspace o; exec /home/bin/firefox'"
+# exec_always  "i3-msg 'workspace y; exec /home/bin/spotify'"
+# exec_always  "i3-msg 'workspace e; exec /home/bin/teams'"
+# exec_always  "i3-msg 'workspace 2; exec /home/bin/synergy'"
