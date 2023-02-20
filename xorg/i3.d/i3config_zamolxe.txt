@@ -286,6 +286,12 @@ exec_always --no-startup-id xbindkeys
 # exec_always --no-startup-id compton -m 0.3
 # exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
+# How to set this up on other devices
+# Look for something touchpad related in the output of `xinput`
+# use the full name to list the properties via `xinput list-props "MSFT0001:01 04F3:31AD Touchpad"` and then:
+exec_always --no-startup-id xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "libinput Tapping Enabled" 1
+
+
 # Set background using feh (use _always so feh is run each time you reload configuration)
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
