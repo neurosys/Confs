@@ -40,7 +40,7 @@ focus_on_window_activation none
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Shift+Return exec gnome-terminal -- tmux
 bindsym $mod+Shift+Return exec kitty 
-bindsym $mod+Shift+Return exec gnome-terminal
+bindsym $mod+Control+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -265,12 +265,12 @@ bar {
 # exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
 # 2 Monitors (laptop is off)
-exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+#exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
 # Just the laptop
-# exec_always --no-startup-id xrandr --output eDP-1 --off
+exec_always --no-startup-id xrandr --output eDP-1 --auto
 
-# exec_always --no-startup-id xcompmgr 
+exec_always --no-startup-id xcompmgr 
 # exec_always --no-startup-id transset 0.2
 
 # Turn off Caps Lock and convert it to left ctrl
