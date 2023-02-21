@@ -10,13 +10,8 @@
 # In order to store the credentials into an repository
 # > git config credential.helper store
 
-#[url "git@github.com:ionos-cloud"]
-#    insteadOf = "https://github.com/ionos-cloud"
-
-[user]
-   name = NeuroSys
-   username = neurosys
-   email = notrealemail@example.com
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
 
 [pager]
     # Don't show the list of branches in a pager
