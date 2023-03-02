@@ -135,3 +135,5 @@
 #   (notice there are three dots)
 #   Shows the commits that are in A or in B, but not in both
 #   Otherwords: It will show the commits in A and B, until the diverging point
+[safe]
+	directory = *
