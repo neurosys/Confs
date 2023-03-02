@@ -67,4 +67,3 @@ context.work.read=+work
 context.work.write=+work
 context.personal.read=+personal
 context.personal.write=+personal
-context=work

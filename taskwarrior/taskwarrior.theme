@@ -48,6 +48,8 @@ color.tag.urgent=rgb500
 color.tag.next=rgb550
 color.tag.none=
 color.tag.personal=rgb055
+color.tag.work=rgb505
+color.tag.shop=rgb550
 color.tag.someday=color7
 color.tagged=
 
