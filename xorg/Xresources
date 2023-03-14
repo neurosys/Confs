@@ -10,6 +10,9 @@ XTerm*scrollKey: true
 XTerm*saveLines: 99999
 XTerm*faceName: xft:Liberation Mono for Powerline:normal:size=14
 ! XTerm*faceSize: 12
+xterm*VT100.Translations: #override \
+        Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+        Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 URxvt.depth: 32
 ! The numbers in square paranthesis, represent the opacity in percents
