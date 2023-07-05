@@ -44,11 +44,15 @@ link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_f
 link_or_fail        $PWD/.vimperatorrc              ~/.vimperatorrc    $backup_folder
 link_or_fail        $PWD/.minttyrc                  ~/.minttyrc        $backup_folder
 
-backup_if_exists    ~/.fetchmailrc                                     $backup_folder
-cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
+#backup_if_exists    ~/.fetchmailrc                                     $backup_folder
+#cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
 
-backup_if_exists    ~/.muttrc                                          $backup_folder
-cp                  $PWD/mail_template/muttrc       ~/.muttrc
+#backup_if_exists    ~/.muttrc                                          $backup_folder
+#cp                  $PWD/mail_template/muttrc       ~/.muttrc
 
-backup_if_exists    ~/.msmtprc                                         $backup_folder
-cp                  $PWD/mail_template/msmtprc      ~/.msmtprc
+#backup_if_exists    ~/.msmtprc                                         $backup_folder
+#cp                  $PWD/mail_template/msmtprc      ~/.msmtprc
+
+link_or_fail        $PWD/taskwarrior/taskrc          ~/.taskrc          $backup_folder
+
+cp                  $PWD/.ideavimrc                  ~/.ideavimrc
