@@ -10,3 +10,6 @@ ranger/colorschemes/__init__.py
 # Vim swap files
 *.swp
 *.swo
+
+# VSCode ignore binary extensions
+*.vsix
