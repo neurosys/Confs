@@ -1,4 +1,5 @@
 {
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "editor.fontFamily": "DejaVu Sans Mono",
     "editor.fontSize": 14,
     "editor.cursorStyle": "block",
