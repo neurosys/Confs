@@ -1,140 +1,20 @@
-# For the benefit of emacs users: -*- shell-script -*-
-###########################
-# xbindkeys configuration #
-###########################
-#
-# Version: 1.8.6
-#
-# If you edit this file, do not forget to uncomment any lines
-# that you change.
-# The pound(#) symbol may be used anywhere for comments.
-#
-# To specify a key, you can use 'xbindkeys --key' or
-# 'xbindkeys --multikey' and put one of the two lines in this file.
-#
-# The format of a command line is:
-#    "command to start"
-#       associated key
-#
-#
-# A list of keys is in /usr/include/X11/keysym.h and in
-# /usr/include/X11/keysymdef.h
-# The XK_ is not needed.
-#
-# List of modifier:
-#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
-#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
-#
+##############################
+#           VOLUME           #
+##############################
 
-# The release modifier is not a standard X modifier, but you can
-# use it if you want to catch release events instead of press events
-
-# By defaults, xbindkeys does not pay attention with the modifiers
-# NumLock, CapsLock and ScrollLock.
-# Uncomment the lines above if you want to pay attention to them.
-
-#keystate_numlock = enable
-#keystate_capslock = enable
-#keystate_scrolllock= enable
-
-# Examples of commands:
-
-#"xbindkeys_show" 
-#  control+shift + q
-#
-## set directly keycode (here control + f with my keyboard)
-#"xterm"
-#  c:41 + m:0x4
-#
-## specify a mouse button
-#"xterm"
-#  control + b:2
-#"xterm -geom 50x20+20+20"
-#   Shift+Mod2+alt + s
-#
-## set directly keycode (here control+alt+mod2 + f with my keyboard)
-#"xterm"
-#  alt + c:0x29 + m:4 + mod2
-#
-## Control+Shift+a  release event starts rxvt
-#"rxvt"
-#  release+control+shift + a
-#
-## Control + mouse button 2 release event starts rxvt
-#"rxvt"
-#  Control + b:2 + Release
-
-
-# Lenovo E520 (model circa 2011)
-# Volume Mute (Fn + F1)
-"pamixer -t"
-    m:0x0 + c:121
-
-# Toggle Volume Win + *
-#"amixer set Master toggle"
-"amixer -c1 sset Speaker toggle"
-    m:0x40 + c:63
-
-# Volume Down (Fn + F2)
-# "pamixer -d 5"
-"amixer -c0 sset Master 1%-"
-    m:0x0 + c:122
-
-# Volume Down Win + -
-#"amixer set Master playback 1-"
-"amixer -c1 sset Speaker 5%-"
-    m:0x40 + c:82
-
-# Volume Up (Fn + F3)
-#"pamixer -i 5"
-"amixer -c0 sset Master 1%+"
-    m:0x0 + c:123
-
-
-# Volume Up Win + +
-#"amixer set Master playback 1+"
-"amixer -c1 sset Speaker 5%+"
-    m:0x40 + c:86
-
-
-# Bindings from CentOS 7.4
-
-# -cX where X is the id of the sound card, the ids start from 0
-# the name after (Speaker or Master for example) can be obtained from
-# runing > amixer [-cX] controls
-# For example
-# % amixer controls
-# numid=4,iface=MIXER,name='Master Playback Switch'
-# numid=3,iface=MIXER,name='Master Playback Volume'
-# numid=2,iface=MIXER,name='Capture Switch'
-# numid=1,iface=MIXER,name='Capture Volume'
-# 
-# If only one sound card is present, -c0 is implicit
-
-
-#m:0x0 + c:121
-#"amixer -c1 sset Speaker toggle"
-# For some reason, toggle doesn't allways work with -cX
-# but if you leave out the -cX it will use the default sundcard so you may get the same thing
-#
-#
-
-
-# ============================================================================
-#                                   SOUND 
-# ============================================================================
 # MUTE / UNMUTE
 #"pamixer -t"
 #"amixer sset Master toggle"
 "pulsemixer --toggle-mute"
-    m:0x0 + c:121
     XF86AudioMute
+    #m:0x0 + c:121
 
 # VOLUME DOWN
 #"amixer -c1 sset Speaker 5%-"
 #"amixer -c0 sset Master 1%-"
 #"amixer sset Master 1%-"
-"pamixer -d 1"
+#"pamixer -d 1"
+"pulsemixer --change-volume -3"
     XF86AudioLowerVolume
     #m:0x0 + c:122
 
@@ -142,54 +22,54 @@
 #"amixer -c1 sset Speaker 5%+"
 #"amixer -c0 sset Master 1%+"
 #"amixer sset Master 1%+"
-"pamixer -i 1"
+#"pamixer -i 1"
+"pulsemixer --change-volume +3"
     XF86AudioRaiseVolume
     #m:0x0 + c:123
-
-# ============================================================================
-#                              APPLICATIONS 
-# ============================================================================
-
-"gnome-calculator"
-    XF86Calculator
-    #m:0x0 + c:148
     
-"playerctl -p spotify play-pause"
-    XF86AudioPlay
-    #m:0x0 + c:172
-    
-"playerctl -p spotify play-pause"
-    m:0x40 + c:110
-    Mod4 + Home
-
-"playerctl -p spotify next"
-    XF86AudioNext
-    #m:0x0 + c:171
-
-"playerctl -p spotify next"
-    m:0x40 + c:112
-    Mod4 + Prior
-
-
-"playerctl -p spotify previous"
-    XF86AudioPrev
-    #m:0x0 + c:173
-
-"playerctl -p spotify previous"
-    m:0x40 + c:118
-    Mod4 + Insert
+##############################
+#          SPOTIFY           #
+##############################
 
 # Toggle single song mode
 "playerctl -p spotify stop"
     XF86AudioStop
     #m:0x0 + c:174
 
-"/home/neurosys/.bin/xdt"
-    # Win+F9
-    #m:0x50 + c:75
-    Release + Mod2 + Mod4 + F9
+"playerctl -p spotify previous"
+    XF86AudioPrev
+    #m:0x0 + c:173
+
+"playerctl -p spotify next"
+    XF86AudioNext
+    #m:0x0 + c:171
+
+    
+"playerctl -p spotify play-pause"
+    XF86AudioPlay
+    #m:0x0 + c:172
+
+
+##############################
+#          UTILITIES         #
+##############################
+
+# Print Screen
+"bash -c 'mkdir -p ~/Pictures/Screenshots/ && import ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'"
+    Print
+    #m:0x0 + c:107
+    
+"gnome-calculator"
+    XF86Calculator
+    #m:0x0 + c:148
 
 # Mail button
 # ""
 #   Xf86Mail
 #   m:0x0 + c163
+
+#"/home/neurosys/.bin/xdt"
+#    # Win+F9
+#    #m:0x50 + c:75
+#    Release + Mod2 + Mod4 + F9
+
