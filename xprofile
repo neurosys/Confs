@@ -1,0 +1,2 @@
+# .xprofile allows you to execute commands at the beginign of the xsession before the window manager has been started
+GTK_THEME=Pax-GTK
