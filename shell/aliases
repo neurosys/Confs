@@ -264,6 +264,15 @@ function extractMp3()
     ffmpeg -i $1 -vn -acodec libmp3lame -aq 4 $2
 }
 
+function dcd()
+{
+    docker-compose down $*
+}
+
+function dcu()
+{
+    docker-compose up $*
+}
 
 dog() {
     highlight -l -O xterm256 --style pablo $1
@@ -314,5 +323,10 @@ alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
 
 alias tt='task calendar'
 
+# Kubernetes
+alias kd='kubectl describe'
+alias ke='kubectl explain'
+alias kl='kubectl logs'
+export dry='--dry-run=client -o yaml'
 
 # vim:syn=sh
