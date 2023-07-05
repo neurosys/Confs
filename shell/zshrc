@@ -63,17 +63,19 @@ ZSH_CUSTOM=${modules_folder}/zsh/
 # calc                    - Allows simple calculator on command line (run as = <operations>) requires bc
 # bgnotify                - When you don't have the terminal focused, it notifies you about processes that finished (task X finished 1m 22s)
 # common-aliases          - Useful set of aliases (needs to soak)
+#
+# extract                 - extract various archives
 
 if [[ $is_cygwin -eq 1 ]]
 then
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize git git-extras mvn taskwarrior)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize git git-extras taskwarrior)
     ZSH_THEME="myjtriley"
     #ZSH_THEME="candy"
 else
     ZSH_THEME="myjtrileygit"
     #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig systemd fzf golang docker kubectl helm taskwarrior)
+    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig systemd fzf golang docker docker-compose kubectl helm taskwarrior extract)
 fi
 
 bgnotify_treshold=1
