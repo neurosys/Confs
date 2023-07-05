@@ -1,1 +1,0 @@
-/home/camza/.myconfig/xorg/i3blocks_config2

@@ -153,27 +153,49 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+Shift+9 move container to workspace 9
 
-bindsym $mod+0 workspace 
-bindsym $mod+Shift+0 move container to workspace 
-bindsym $mod+e workspace 
-bindsym $mod+Shift+e move container to workspace 
-bindsym $mod+y workspace ♬
-bindsym $mod+Shift+y move container to workspace ♬
-bindsym $mod+u workspace 
-bindsym $mod+Shift+u move container to workspace 
-bindsym $mod+i workspace 
-bindsym $mod+Shift+i move container to workspace 
-bindsym $mod+o workspace 
-bindsym $mod+Shift+o move container to workspace 
-bindsym $mod+n workspace 
-bindsym $mod+Shift+n move container to workspace 
-bindsym $mod+d workspace 
-bindsym $mod+Shift+d move container to workspace 
-bindsym $mod+g workspace 
-bindsym $mod+Shift+g move container to workspace 
-bindsym $mod+b workspace 
-bindsym $mod+Shift+b move container to workspace 
+# This setup works for i3blocks but fails in polybar
+# bindsym $mod+0 workspace 
+# bindsym $mod+Shift+0 move container to workspace 
+# bindsym $mod+e workspace 
+# bindsym $mod+Shift+e move container to workspace 
+# bindsym $mod+y workspace ♬
+# bindsym $mod+Shift+y move container to workspace ♬
+# bindsym $mod+u workspace 
+# bindsym $mod+Shift+u move container to workspace 
+# bindsym $mod+i workspace 
+# bindsym $mod+Shift+i move container to workspace 
+# bindsym $mod+o workspace 
+# bindsym $mod+Shift+o move container to workspace 
+# bindsym $mod+n workspace 
+# bindsym $mod+Shift+n move container to workspace 
+# bindsym $mod+d workspace 
+# bindsym $mod+Shift+d move container to workspace 
+# bindsym $mod+g workspace 
+# bindsym $mod+Shift+g move container to workspace 
+# bindsym $mod+b workspace 
+# bindsym $mod+Shift+b move container to workspace 
 
+# Polybar setup
+bindsym $mod+0 workspace 0
+bindsym $mod+Shift+0 move container to workspace 0
+bindsym $mod+e workspace e
+bindsym $mod+Shift+e move container to workspace e
+bindsym $mod+y workspace y
+bindsym $mod+Shift+y move container to workspace y
+bindsym $mod+u workspace u
+bindsym $mod+Shift+u move container to workspace u
+bindsym $mod+i workspace i
+bindsym $mod+Shift+i move container to workspace i
+bindsym $mod+o workspace o
+bindsym $mod+Shift+o move container to workspace o
+bindsym $mod+n workspace n
+bindsym $mod+Shift+n move container to workspace n
+bindsym $mod+d workspace d
+bindsym $mod+Shift+d move container to workspace d
+bindsym $mod+g workspace g
+bindsym $mod+Shift+g move container to workspace g
+bindsym $mod+b workspace b
+bindsym $mod+Shift+b move container to workspace b
 
 
 # reload the configuration file
@@ -232,16 +254,16 @@ client.background       #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        position top
-        workspace_buttons yes
-        workspace_min_width 25
-        font pango: Liberation Mono for Powerline 12
-        #separator_symbol ""
-        separator_symbol "|"
-        #status_command i3status
-        status_command i3blocks -c ~/.config/i3blocks/config
-}
+#bar {
+#        position top
+#        workspace_buttons yes
+#        workspace_min_width 25
+#        font pango: Liberation Mono for Powerline 12
+#        #separator_symbol ""
+#        separator_symbol "|"
+#        #status_command i3status
+#        status_command i3blocks -c ~/.config/i3blocks/config
+#}
 
 #bar {
 #        tray_output DP-1 # eDP-1 HDMI-1 DP-1
@@ -253,25 +275,25 @@ bar {
 
 
 
-# exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
-# exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
+exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 
 # exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
 # exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
 
 # 3 Monitors (laptop on the left)
-# exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
 
 # 2 Monitors (laptop is off)
-exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+# exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+
+# Laptop + external hdmi monitor
+# exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto
 
 # Just the laptop
 # exec_always --no-startup-id xrandr --output eDP-1 --auto
 
 exec_always --no-startup-id xcompmgr 
-# exec_always --no-startup-id transset 0.2
+#exec_always --no-startup-id transset 0.9
 
 # Turn off Caps Lock and convert it to left ctrl
 exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
@@ -280,6 +302,8 @@ exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 exec_always --no-startup-id xset r rate 200 30
 
 exec_always --no-startup-id xbindkeys
+
+exec_always --no-startup-id xscreensaver
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
 # exec --no-starup-id compton --config /home/camza/.config/compton.conf
