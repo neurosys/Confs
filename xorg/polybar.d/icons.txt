@@ -36,8 +36,8 @@ ws-icon-13 = y;
 ; Filesystem workspace, icon an closed folder
 ws-icon-14 = a;
 
-; Filesystem workspace icon open folder
-ws-icon-15 = s;
+; Excel workspace (LibreOffice Calc, Gnumeric, etc), icon a spreadsheet
+ws-icon-15 = s;
 
 ; Email workspace, icon an envelope
 ws-icon-16 = z;
@@ -55,8 +55,8 @@ ws-icon-19 = i;
 ; Source code
 ws-icon-20 = n;
 
-; Document excel
-ws-icon-21 = d;
+; Filesystem workspace, icon an open folder
+ws-icon-21 = d;
 
 ; Graphics (gimp, mypaint)
 ws-icon-22 = g;

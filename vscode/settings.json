@@ -64,5 +64,12 @@
             "before": ["<leader>", "Escape"],
             "commands": [ "workbench.action.toggleSidebarVisibility" ]
         }
-    ]
+    ],
+    "editor.inlineSuggest.enabled": true,
+    "workbench.startupEditor": "none",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "cmake.configureOnOpen": false
 }

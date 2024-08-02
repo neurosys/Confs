@@ -40,6 +40,97 @@
 		"button.foreground": "#000000"
 	},
 	"tokenColors": [
+        {
+            "name": "cpp.colon-colon",
+            "scope": [
+                "punctuation.separator.namespace.access.cpp"
+            ],
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "name": "cpp.angle-brackets",
+            "scope": [
+                "punctuation.section.angle-brackets.begin.template.call.cpp",
+                "punctuation.section.angle-brackets.end.template.call.cpp"
+            ],
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "name": "cpp.semicol",
+            "scope": [
+                "punctuation.terminator.statement.cpp"
+            ],
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "name": "cpp.dot",
+            "scope": [
+                "punctuation.separator.dot-access.cpp",
+                "punctuation.separator.pointer-access.cpp",
+                "punctuation.separator.colon.range-based.cpp",
+                "punctuation.section.arguments.end.bracket.round.function.member.cpp",
+                "punctuation.section.arguments.begin.bracket.round.function.member.cpp",
+                "keyword.operator.bitwise.shift.cpp",
+                "punctuation.separator.delimiter.comma.cpp"
+            ],
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "name": "cpp.static",
+            "scope": [
+                "storage.modifier.static.cpp",
+                "storage.modifier.specifier.static.cpp"
+            ],
+            "settings": {
+                "foreground": "#87ffaf"
+            }
+        },
+        {
+            "name": "cpp.const",
+            "scope": [
+                "storage.modifier.specifier.const.cpp"
+            ],
+            "settings": {
+                "foreground": "#87ffaf"
+            }
+        },
+        {
+            "name": "cpp.using",
+            "scope": [
+                "storage.modifier.using.cpp",
+                "keyword.other.using.directive.cpp"
+            ],
+            "settings": {
+                "foreground": "#87ffaf"
+            }
+        },
+        {
+            "name": "cpp.bool_values",
+            "scope": [
+                "constant.language.true.cpp",
+                "constant.language.false.cpp"
+            ],
+            "settings": {
+                "foreground": "#87ffaf"
+            }
+        },
+        {
+            "name": "cpp.virtual",
+            "scope": [
+                "storage.modifier.specifier.functional.pre-parameters.virtual.cpp"
+            ],
+            "settings": {
+                "foreground": "#87ffaf"
+            }
+        },
 		{
 			"name": "markdown.h4",
 			"scope": [
@@ -113,6 +204,33 @@
 				"foreground": "#FFF000"
 			}
 		},
+        {
+            "name": "XmlText",
+            "scope": [
+                "text.xml"
+            ],
+			"settings": {
+				"foreground": "#FFFFFF"
+			}
+        },
+        {
+            "name": "XmlTag",
+            "scope": [
+                "entity.name.tag.localname.xml"
+            ],
+			"settings": {
+				"foreground": "#00FFFF"
+			}
+        },
+        {
+            "name": "XmlAttribute",
+            "scope": [
+                "entity.other.attribute-name.localname.xml"
+            ],
+			"settings": {
+				"foreground": "#00FF00"
+			}
+        },
 		{
 			"name": "Yaml.Name.Tag",
 			"scope": [

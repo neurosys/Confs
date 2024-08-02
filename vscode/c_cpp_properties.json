@@ -1,0 +1,35 @@
+// from: https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+{
+    "env": {
+        "myIncludePath": [
+            "${workspaceFolder}/**",
+            "/usr/include",
+            "/usr/local/include",
+            "/usr/include/eigen3"
+        ],
+        "myDefines": ["DEBUG"]
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${myIncludePath}"
+            ],
+            "defines": [
+                "${myDefines}"
+            ],
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++23",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "browse": {
+                "path": [
+                    "${myIncludePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}

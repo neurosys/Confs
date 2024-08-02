@@ -329,4 +329,10 @@ alias ke='kubectl explain'
 alias kl='kubectl logs'
 export dry='--dry-run=client -o yaml'
 
+# Valgrind
+alias vv='valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s'
+
+# Pcl
+alias pv='pcl_viewer -multiview'
+
 # vim:syn=sh
