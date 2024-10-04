@@ -46,6 +46,7 @@
 ; Calendar 
 ; Windows 
 ; Tux 
+; Branch 
 ; Skype 
 ; Spotify 
 ; Laptop 
