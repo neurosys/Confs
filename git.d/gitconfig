@@ -10,8 +10,18 @@
 # In order to store the credentials into an repository
 # > git config credential.helper store
 
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+#[includeIf "gitdir:~/learn/test_git_includeif/"]
+#    path = ~/learn/gitcfg-learn
+
+# When `go mod tidy` fails and says something along: 
+#       "fatal: could not read Username for 'https://github.com': terminal prompts disabled
+# Run this line to fix it
+# go env -w GOPRIVATE="github.com/<my-company>/*"
+#
+
+#[url "git@github.com:/path/to/repo"]
+#    insteadOf = https://github.com/path/to/repo
+
 
 [pager]
     # Don't show the list of branches in a pager
@@ -89,6 +99,7 @@
     ss = status -sb -uno
     adu = add -u
 	mg  = mergetool --no-prompt
+    mt  = mergetool --no-prompt
     s = status
 
     co = checkout
@@ -137,3 +148,4 @@
 #   Otherwords: It will show the commits in A and B, until the diverging point
 [safe]
 	directory = *
+
