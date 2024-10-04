@@ -92,7 +92,8 @@ bindsym $mod+backslash split v
 bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+shift+m layout stacking
+# No stacking, it looks ugly
+#bindsym $mod+shift+m layout stacking
 # bindsym $mod+m layout tabbed
 bindsym $mod+Shift+space layout toggle split
 bindsym $mod+space layout tabbed
@@ -178,8 +179,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 # bindsym $mode+Prior
 
 
-bindsym $mod+minus [con_mark="scratch1"] scratchpad show
-bindsym $mod+Shift+minus mark "scratch1", move scratchpad
+bindsym $mod+asciitilde [con_mark="scratch1"] scratchpad show
+bindsym $mod+z mark "scratch1", move scratchpad
 
 
 # This setup works for i3blocks but fails in polybar
@@ -225,12 +226,14 @@ bindsym $mod+g workspace g
 bindsym $mod+Shift+g move container to workspace g
 bindsym $mod+b workspace b
 bindsym $mod+Shift+b move container to workspace b
+bindsym $mod+m workspace m
+bindsym $mod+Shift+m move container to workspace m
 
 
 # reload the configuration file
-#bindsym $mod+Shift+c reload
+# #bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+F5 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
