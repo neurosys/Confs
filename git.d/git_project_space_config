@@ -1,0 +1,10 @@
+[user]
+	email = spam.this.unlucky.dude@gmail.com
+	name = Nobody In Particular
+
+[include]
+    path = ~/.gitconfig
+
+#[url "git@github.com:/some/project/"]
+#    insteadOf = https://github.com/some/project
+

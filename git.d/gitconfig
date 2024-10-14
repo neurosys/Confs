@@ -149,3 +149,6 @@
 [safe]
 	directory = *
 
+#[user]
+#    email = unluky.spam.target@gmail.com
+#    name = Nobody In Particular
