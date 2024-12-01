@@ -27,6 +27,7 @@ font-2 = Roboto Mono for Powerline:style=Regular
 
 modules-left = i3
 #modules-center = gitrepo-monitor
+# modules-right = myApp battery spotify volume memory cpu mydate
 modules-right = battery spotify volume memory cpu mydate
 
 tray-position = right

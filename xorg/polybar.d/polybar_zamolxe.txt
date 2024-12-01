@@ -36,4 +36,6 @@ include-file = ~/.myconfig/xorg/polybar.d/spotify.txt
 include-file = ~/.myconfig/xorg/polybar.d/global-wm.txt
 include-file = ~/.myconfig/xorg/polybar.d/battery.txt
 
+include-file = ~/.myconfig/xorg/polybar.d/myApp.txt
+
 ; vim:ft=dosini
