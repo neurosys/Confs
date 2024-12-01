@@ -399,7 +399,20 @@
 			"settings": {
 				"foreground": "#ffff00"
 			}
-		}
+		},
+        {
+            "name": "RedTokensInJavascript",
+			"scope": [
+				"punctuation.separator.key-value.js",
+				"punctuation.separator.comma.js",
+				"punctuation.terminator.statement.js",
+				"punctuation.accessor.js"
+			],
+			"settings": {
+				"foreground": "#ff0000"
+			}
+        }
+
 	]
 }
 		
