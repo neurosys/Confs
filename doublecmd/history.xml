@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/neurosys/work/liberty/Data/Demo-5__/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-5__/data/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-5__/data/Demo-5/</Item>
+      <Item>/</Item>
+      <Item>/home/</Item>
+      <Item>/home/neurosys/</Item>
+      <Item>/home/neurosys/Desktop/</Item>
+      <Item>/media/neurosys/</Item>
+      <Item>/media/</Item>
+      <Item>/media/neurosys/68B6-D2D3/HPSCANS/</Item>
+      <Item>/home/neurosys/Documents/Acte-Cresa/</Item>
+      <Item>/home/neurosys/Documents/</Item>
+      <Item>/home/neurosys/Documents/Acte-Firma/</Item>
+      <Item>/home/neurosys/Documents/Cresa-Anul-II/</Item>
+      <Item>/home/neurosys/Documents/Cresa-Reinscriere/</Item>
+      <Item>/home/neurosys/Pictures/</Item>
+      <Item>/home/neurosys/Documents/MeetingRecordings/</Item>
+      <Item>/home/neurosys/Pictures/Screenshots/</Item>
+      <Item>/media/neurosys/68B6-D2D3/</Item>
+      <Item>/home/neurosys/Downloads/</Item>
+      <Item>/home/neurosys/Desktop/Inspiration/</Item>
+      <Item>/home/neurosys/Desktop/CrashTests/</Item>
+      <Item>/home/neurosys/learn/javascript/</Item>
+      <Item>/home/neurosys/learn/javascript/infoacademy/</Item>
+      <Item>/home/neurosys/learn/javascript/infoacademy/cap01/</Item>
+      <Item>/home/neurosys/learn/</Item>
+      <Item>/home/neurosys/work/</Item>
+      <Item>/home/neurosys/work/liberty/</Item>
+      <Item>/home/neurosys/work/liberty/Data/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Ceata-2024-11-14/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Ceata-2024-11-14/hawk-nest/</Item>
+      <Item>/home/neurosys/work/liberty/primary/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_3655/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_4169453/</Item>
+      <Item>/home/neurosys/work/liberty/primary/build/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_4019774/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_4006620/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-4/Demo-4/Camp/full_test_2/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-4/Demo-4/Camp/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-4/Demo-4/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-4/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_3540936/</Item>
+      <Item>/home/neurosys/work/liberty/primary/test_receiver/avia/pid_809793/</Item>
+      <Item>/home/neurosys/work/liberty/learn/experiments/playground/full_ceata/</Item>
+      <Item>/home/neurosys/work/liberty/Data/ceata_work/</Item>
+      <Item>/home/neurosys/work/liberty/learn/experiments/playground/</Item>
+      <Item>/home/neurosys/work/liberty/learn/experiments/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-4/Demo-4/Camp/test2_diff/</Item>
+      <Item>/home/neurosys/work/liberty/Data/Demo-5__/data/Demo-5/PCDs/</Item>
+    </Navigation>
+    <CommandLine>
+      <Item>kitty .</Item>
+      <Item>nemo .</Item>
+      <Item>easytag .</Item>
+      <Item>easytag</Item>
+      <Item>kitty </Item>
+    </CommandLine>
+    <FileMask>
+      <Item>cloud_bkp_capture_*.pcd</Item>
+      <Item>*_baseline_*.pcd</Item>
+      <Item>*_baseline_*</Item>
+      <Item>*</Item>
+      <Item>*_pid_7749_*</Item>
+      <Item>*_pid_5892_*</Item>
+      <Item>*_pid_4222_*</Item>
+      <Item>*_pid_30357_*</Item>
+      <Item>*_pid_15941_*</Item>
+      <Item>*_pid_13017_*</Item>
+      <Item>*_pid_12865_*</Item>
+      <Item>*_pid_12630_*</Item>
+      <Item>*_pid_10971_*</Item>
+      <Item>_pid_10971_</Item>
+      <Item>cloud_bkp_*.pcd</Item>
+      <Item>cloud_bkp_pid*.pcd</Item>
+      <Item>bkp_capture_pid_*.pcd</Item>
+      <Item>*.*</Item>
+    </FileMask>
+    <VolumeSize/>
+    <CreateDirectories>
+      <Item Tag="0">full_ceata</Item>
+      <Item Tag="0">Decont-2024-11-12</Item>
+      <Item Tag="0">Acte-Firma</Item>
+      <Item Tag="0">Parcare</Item>
+      <Item Tag="0">Serii</Item>
+      <Item Tag="0">Books</Item>
+      <Item Tag="0">MeetingRecordings</Item>
+      <Item Tag="0">GameDev-books</Item>
+      <Item Tag="0">Torrents</Item>
+      <Item Tag="0">Zamolxe</Item>
+      <Item Tag="0">artificial</Item>
+      <Item Tag="0">detections</Item>
+      <Item Tag="0">run_pid_7749</Item>
+      <Item Tag="0">run_pid_5892</Item>
+      <Item Tag="0">run_pid_4222</Item>
+      <Item Tag="0">run_pid_30357</Item>
+      <Item Tag="0">run_pid_15941</Item>
+      <Item Tag="0">run_pid_13017</Item>
+      <Item Tag="0">run_pid_12865</Item>
+      <Item Tag="0">run_pid_12630</Item>
+    </CreateDirectories>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <RenameNameMask>
+      <Item>[C] - [N]</Item>
+    </RenameNameMask>
+    <RenameExtMask>
+      <Item>[E]</Item>
+    </RenameExtMask>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
