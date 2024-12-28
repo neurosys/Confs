@@ -322,6 +322,7 @@ function cdf() {
 alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
 
 alias tt='task calendar'
+alias tw='timew'
 
 # Kubernetes
 alias kd='kubectl describe'

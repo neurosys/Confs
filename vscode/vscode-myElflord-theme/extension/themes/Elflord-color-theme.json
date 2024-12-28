@@ -406,13 +406,13 @@
 				"punctuation.separator.key-value.js",
 				"punctuation.separator.comma.js",
 				"punctuation.terminator.statement.js",
-				"punctuation.accessor.js"
+				"punctuation.accessor.js",
+                "constant.language.null.js"
 			],
 			"settings": {
 				"foreground": "#ff0000"
 			}
         }
-
 	]
 }
 		
