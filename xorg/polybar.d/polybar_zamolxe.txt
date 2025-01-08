@@ -19,6 +19,7 @@ include-file = ~/.myconfig/xorg/polybar.d/title.txt
 #include-file = ~/.myconfig/xorg/polybar.d/filesystem.txt
 
 ## Other stuff :-)
+include-file = ~/.myconfig/xorg/polybar.d/timew.txt
 include-file = ~/.myconfig/xorg/polybar.d/i3.txt
 include-file = ~/.myconfig/xorg/polybar.d/icons.txt
 include-file = ~/.myconfig/xorg/polybar.d/cpu.txt

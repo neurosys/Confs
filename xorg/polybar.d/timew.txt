@@ -1,0 +1,11 @@
+[module/timew]
+type = custom/script
+format-prefix-foreground = ${colors.foreground-alt}
+exec = ~/.bin/duration-timew.sh
+tail = false
+interval = 10
+
+click-left = exec ~/.bin/duration-timew.sh toggle
+click-right = exec ~/.bin/duration-timew.sh stop
+
+; vim:ft=dosini

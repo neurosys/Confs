@@ -87,7 +87,7 @@ skin=default
 
 [Layout]
 output_lines=0
-left_panel_size=91
+left_panel_size=115
 top_panel_size=0
 message_visible=false
 keybar_visible=false
@@ -140,6 +140,19 @@ permission_mode=false
 torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
+
+simple_swap=false
+
+[DiffView]
+show_symbols=false
+show_numbers=false
+tab_size=4
+diff_quality=0
+diff_ignore_tws=false
+diff_ignore_all_space=false
+diff_ignore_space_change=false
+diff_tab_expansion=false
+diff_ignore_case=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
