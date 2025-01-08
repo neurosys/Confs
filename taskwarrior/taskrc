@@ -62,11 +62,10 @@ uda.taskwarrior-tui.mark.indicator=✔
 #uda.taskwarrior-tui.task-report.reset-filter-on-esc=true
 #uda.taskwarrior-tui.context-menu.select-on-move=false
 
-news.version=3.3.0
+news.version=3.3.1
 context.work.read=+work
 context.work.write=+work
 context.personal.read=+personal
 context.personal.write=+personal
 context.thermo.read=project:thermo
 context.thermo.write=project:thermo
-context=thermo
