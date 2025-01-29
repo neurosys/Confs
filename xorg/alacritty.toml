@@ -1,0 +1,51 @@
+
+[terminal.shell]
+program = "/home/neurosys/.bin/tmx"
+args=["-L", "alacritty"]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+# 0.0 - 1.0 (0.0 full transparent, 1.0 full opaque)
+opacity = 0.7
+decorations_theme_variant = "Dark"
+
+[scrolling]
+history = 100000
+# how many lines to scroll at the same time
+multiplier = 3
+
+[font]
+size = 14
+# Use fc_list to list fonts
+normal = { family = "DejaVu Sans Mono for Powerline", style = "Book" }
+bold = { family = "DejaVu Sans Mono for Powerline", style = "Bold" }
+italic = { family = "DejaVu Sans Mono for Powerline", style = "Oblique" }
+bold_italic = { family = "DejaVu Sans Mono for Powerline", style = "Bold Oblique" }
+
+[colors]
+primary.foreground = "#FFFFFF"
+primary.background = "#000000"
+
+# normal.black = 
+normal.red = "#CC0403"
+normal.green = "#16CB00"
+normal.yellow = "#CECB00"
+normal.blue = "#0D73CC"
+normal.magenta = "#C81ECE"
+normal.cyan = "#0DCDCD"
+normal.white = "#DDDDDD"
+# 
+# bright.black = 
+bright.red = "#FF0000"
+bright.green = "#00FF00"
+bright.yellow = "#FFFF00"
+bright.blue = "#00AFFF"
+bright.magenta = "#FF00FF"
+bright.cyan = "#14FFFF"
+bright.white = "#FFFFFF"
+
+[selection]
+# Copy to clipboard on select (Ctrl+Shift+C otherwise)
+save_to_clipboard = true
