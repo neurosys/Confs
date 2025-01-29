@@ -38,6 +38,7 @@ link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_f
 
 mkdir -p ~/.config/kitty/
 link_or_fail        $PWD/xorg/kitty.conf            ~/.config/kitty/kitty.conf         $backup_folder
+link_or_fail        $PWD/xorg/alacritty.toml        ~/.config/alacritty/alacritty.toml $backup_folder
 
 link_or_fail        $PWD/.emacs                     ~/.emacs           $backup_folder
 link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_folder
