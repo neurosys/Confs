@@ -1,0 +1,4 @@
+# This file is for setting environment variables for the login session
+# This file is sourced by pam at login
+
+GTK_THEME=Nordic-bluish-accent

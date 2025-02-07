@@ -1,2 +1,3 @@
-
-GTK_THEME=Nordic-darker
+# This gets sourced usually from the display manager when launched via startx
+# and allows for setting environment variables for the entire X session.
+GTK_THEME=Nordic-bluish-accent
