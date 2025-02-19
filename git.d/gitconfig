@@ -9,6 +9,7 @@
 
 # In order to store the credentials into an repository
 # > git config credential.helper store
+#
 
 #[includeIf "gitdir:~/learn/test_git_includeif/"]
 #    path = ~/learn/gitcfg-learn
@@ -22,6 +23,11 @@
 #[url "git@github.com:/path/to/repo"]
 #    insteadOf = https://github.com/path/to/repo
 
+
+[user]
+   name = NeuroSys
+   username = neurosys
+   email = notrealemail@example.com
 
 [pager]
     # Don't show the list of branches in a pager
