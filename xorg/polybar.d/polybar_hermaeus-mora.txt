@@ -1,0 +1,42 @@
+include-file = ~/.myconfig/xorg/polybar.d/monitor.txt
+include-file = ~/.myconfig/xorg/polybar.d/colors.txt
+
+# include-file = ~/.myconfig/xorg/polybar.d/gitrepo.txt
+
+[bar/mon1]
+inherit = default/monitor
+monitor = ${env:MONITOR:eDP-1}
+
+[bar/mon2]
+inherit = default/monitor
+monitor = ${env:MONITOR:HDMI-1-0}
+
+[bar/mon3]
+inherit = default/monitor
+monitor = ${env:MONITOR:DP-1}
+
+include-file = ~/.myconfig/xorg/polybar.d/title.txt
+#include-file = ~/.myconfig/xorg/polybar.d/filesystem.txt
+
+## Other stuff :-)
+include-file = ~/.myconfig/xorg/polybar.d/timew.txt
+include-file = ~/.myconfig/xorg/polybar.d/i3.txt
+include-file = ~/.myconfig/xorg/polybar.d/icons.txt
+include-file = ~/.myconfig/xorg/polybar.d/cpu.txt
+include-file = ~/.myconfig/xorg/polybar.d/memory.txt
+#include-file = ~/.myconfig/xorg/polybar.d/memory-bar.txt
+include-file = ~/.myconfig/xorg/polybar.d/volume.txt
+#include-file = ~/.myconfig/xorg/polybar.d/power.txt
+include-file = ~/.myconfig/xorg/polybar.d/date.txt
+include-file = ~/.myconfig/xorg/polybar.d/mycalendar.txt
+
+
+include-file = ~/.myconfig/xorg/polybar.d/settings.txt
+include-file = ~/.myconfig/xorg/polybar.d/spotify.txt
+
+include-file = ~/.myconfig/xorg/polybar.d/global-wm.txt
+include-file = ~/.myconfig/xorg/polybar.d/battery.txt
+
+include-file = ~/.myconfig/xorg/polybar.d/myApp.txt
+
+; vim:ft=dosini
