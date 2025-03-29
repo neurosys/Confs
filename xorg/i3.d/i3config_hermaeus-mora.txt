@@ -353,7 +353,7 @@ exec_always --no-startup-id xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "li
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
 exec_always --no-startup-id alacritty
-exec_always --no-startup-id guake
+exec_always --no-startup-id guake -e tmx
 
 # exec_always --no-startup-id guake -e tmux
 
