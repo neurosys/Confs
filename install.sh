@@ -32,6 +32,9 @@ link_or_fail        $PWD/git.d/gitconfig            ~/.gitconfig       $backup_f
 
 link_or_fail        $PWD/tigrc                      ~/.tigrc           $backup_folder
 
+# Session variables (like the GTK theme)
+link_or_fail        $PWD/xorg/pam_environment       ~/.pam_environment $backup_folder
+
 link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_folder
 link_or_fail        $PWD/xorg/xbindkeysrc           ~/.xbindkeysrc     $backup_folder
 link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_folder
