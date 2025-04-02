@@ -97,7 +97,6 @@ bindsym $mod+shift+f fullscreen toggle
 # bindsym $mod+m layout tabbed
 bindsym $mod+Shift+space layout toggle split
 bindsym $mod+space layout tabbed
-#bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 #bindsym $mod+Shift+space floating toggle
@@ -229,6 +228,12 @@ bindsym $mod+b workspace b
 bindsym $mod+Shift+b move container to workspace b
 bindsym $mod+m workspace m
 bindsym $mod+Shift+m move container to workspace m
+bindsym $mod+t workspace t
+bindsym $mod+Shift+t move container to workspace t
+bindsym $mod+s workspace s
+bindsym $mod+Shift+s move container to workspace s
+bindsym $mod+w workspace w
+bindsym $mod+Shift+w move container to workspace w
 
 
 # reload the configuration file

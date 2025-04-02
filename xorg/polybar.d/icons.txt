@@ -25,9 +25,8 @@ ws-icon-9  = 9;
 ; Connectivity Workspace, icon a thunder
 ws-icon-10 = q;
 
-; Web activity Workspace, icon Reddit alien
-ws-icon-11 = w;
-
+; Light side
+ws-icon-11 = w;
 ; Messenger workspace, icon Chat Bubble
 ws-icon-12 = e;
 
@@ -37,8 +36,8 @@ ws-icon-13 = y;
 ; Filesystem workspace, icon an closed folder
 ws-icon-14 = a;
 
-; Excel workspace (LibreOffice Calc, Gnumeric, etc), icon a spreadsheet
-ws-icon-15 = s;
+; Dark side
+ws-icon-15 = s;
 
 ; Email workspace, icon an envelope
 ws-icon-16 = z;
@@ -73,6 +72,10 @@ ws-icon-25 = o;
 
 ; Tux
 ws-icon-26 = m;
+
+; Calendar
+ws-icon-27 = t;
+
 
 ws-icon-default = ◊
 
