@@ -340,4 +340,11 @@ alias pv='pcl_viewer -multiview'
 # ncdu
 alias ncdu='ncdu -e --confirm-quit --color dark'
 
+# If cal is actually ncal
+which cal &> /dev/null
+if [[ $? -eq 0 && -h $(which cal) ]]
+then
+    alias cal='ncal -bM'
+fi
+
 # vim:syn=sh
