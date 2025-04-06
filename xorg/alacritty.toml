@@ -1,7 +1,9 @@
 
-[terminal.shell]
+# [terminal]
+
+[shell]
 program = "/home/neurosys/.bin/tmx"
-args=["-L", "alacritty"]
+args = ["-L", "alacritty"]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
