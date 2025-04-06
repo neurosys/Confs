@@ -319,7 +319,7 @@ exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 # exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
 
 # 3 Monitors (laptop on the left)
-exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
+exec_always --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1-0 --output DP-1-0 --auto
 
 # 2 Monitors (laptop is off)
 # exec_always --no-startup-id xrandr --output eDP-1 --off --left-of HDMI-1-0 --output HDMI-1-0 --auto --left-of DP-1 --output DP-1 --auto
