@@ -121,7 +121,8 @@ then
 fi
 
 function light() {
-    magick_place=/sys/class/backlight/intel_backlight/brightness
+    #magick_place=/sys/class/backlight/intel_backlight/brightness
+    magick_place=/sys/class/backlight/nvidia_wmi_ec_backlight/brightness
     local light_level=$(cat $magick_place)
 
     case $1 in
