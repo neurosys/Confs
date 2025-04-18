@@ -1,2 +1,3 @@
-
+# This is a sample of .envrc that would be in a project root folder
+# to have the git configuration changed by the project
 export GIT_CONFIG_GLOBAL=~/work/local_git_config

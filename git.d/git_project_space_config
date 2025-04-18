@@ -1,3 +1,7 @@
+# This is a sample for git configuration that would sit in a project folder and
+# would be loaded via envrc exported variable
+# This config wuld then further load the ~/.gitconfig
+
 [user]
 	email = spam.this.unlucky.dude@gmail.com
 	name = Nobody In Particular
