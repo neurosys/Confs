@@ -11,6 +11,7 @@
 ; Select font "Font Awesome"
 ; Go to section "Private Use Area"
 ;
+; Bluetooth 
 ; Facebook 
 ; Notebook 
 ; Notes    
