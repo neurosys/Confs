@@ -41,7 +41,10 @@
 [core]
     editor = vim
     # Use less as a pager -x4 is for the number of spaces
-    pager = less -x4
+    # pager = less -x4
+
+    # delta is found in git-delta package on ubuntu
+    pager = delta
     #pager = view -
 
     # Use lf as line ending
