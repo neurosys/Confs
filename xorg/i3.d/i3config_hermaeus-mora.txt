@@ -351,7 +351,8 @@ exec_always --no-startup-id xscreensaver
 # How to set this up on other devices
 # Look for something touchpad related in the output of `xinput`
 # use the full name to list the properties via `xinput list-props "MSFT0001:01 04F3:31AD Touchpad"` and then:
-exec_always --no-startup-id xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "libinput Tapping Enabled" 1
+#exec_always --no-startup-id xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop "ASUP1205:00 093A:2008 Touchpad" "libinput Tapping Enabled" 1
 
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
