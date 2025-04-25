@@ -75,7 +75,30 @@ else
     ZSH_THEME="myjtrileygit"
     #ZSH_THEME="candy"
    #ZSH_THEME="random"
-    plugins=(zsh-syntax-highlighting colored-man-pages colorize sudo bgnotify git git-extras tig systemd fzf golang docker docker-compose kubectl helm taskwarrior extract)
+    plugins=(
+        zsh-syntax-highlighting
+        colored-man-pages
+        colorize
+        sudo # Press Esc-Esc to run the last command with sudo as prefix
+        bgnotify
+        git
+        git-extras
+        gitfast
+        tig
+        systemd
+        fzf
+        golang
+        docker
+        docker-compose
+        kubectl
+        helm
+        taskwarrior
+        extract
+        copyfile
+        cp # Use `cpv` to copy files and get progress bar (via rsync)
+        fasd # command line productivity booster use v j o to do... "stuff"???
+        isodate # Show date in iso-8601 format
+    )
 fi
 
 bgnotify_treshold=1
