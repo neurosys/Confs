@@ -49,6 +49,9 @@ link_or_fail        $PWD/.screenrc                  ~/.screenrc        $backup_f
 link_or_fail        $PWD/.vimperatorrc              ~/.vimperatorrc    $backup_folder
 link_or_fail        $PWD/.minttyrc                  ~/.minttyrc        $backup_folder
 
+mkdir -p ~/.config/zathura
+link_or_fail        $PWD/xorg/zathurarc             ~/.config/zathura/zathurarc $backup_folder
+
 #backup_if_exists    ~/.fetchmailrc                                     $backup_folder
 #cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
 
