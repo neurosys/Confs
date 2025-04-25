@@ -1,0 +1,25 @@
+
+# Invert colors
+map <C-i> recolor
+
+# Copy selected text to clipboard
+set selection-clipboard clipboard
+
+# Single column page
+map D set "first-page-column 1:1"
+
+# Side by side mode
+map <C-d> set "first-page-column 1:2"
+
+# To make zathura the default pdf reader run this
+# $ xdg-mime default org.pwmt.zathura.desktop application/pdf
+
+
+# Maximum zoom
+set zoom-max 3000
+
+# Minimum zoom
+set zoom-min 10
+
+# The amount of percent is zoomed in or out at teach cmd
+set zoom-step 10
