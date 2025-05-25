@@ -44,7 +44,8 @@
     # pager = less -x4
 
     # delta is found in git-delta package on ubuntu
-    pager = delta
+    # -n (show line numbers)
+    pager = delta -n
     #pager = view -
 
     # Use lf as line ending
