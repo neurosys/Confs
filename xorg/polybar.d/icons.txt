@@ -76,6 +76,15 @@ ws-icon-26 = m;
 ; Calendar
 ws-icon-27 = t;
 
+; Work Emails and environments
+; ws-icon-28 = 11;
+; ws-icon-29 = 12;
+; ws-icon-30 = 13;
+; ws-icon-31 = 14;
+ws-icon-28 = 11;::
+ws-icon-29 = 12;..
+ws-icon-30 = 13;::
+ws-icon-31 = 14;..
 
 ws-icon-default = ◊
 
