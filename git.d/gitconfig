@@ -54,7 +54,7 @@
 
 [merge]
     #tool = kdiff3
-    #tool = vimdiff
+    tool = vimdiff
     #tool = meld
 	conflictstyle = diff3
 
