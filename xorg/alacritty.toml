@@ -2,8 +2,9 @@
 # [terminal]
 
 [shell]
-program = "/home/neurosys/.bin/tmx"
-args = ["-L", "alacritty"]
+#program = "/home/neurosys/.bin/tmx"
+# args = ["-L", "alacritty"]
+program = "/bin/zsh"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
@@ -20,9 +21,13 @@ multiplier = 3
 
 [font]
 size = 14
-# Use fc_list to list fonts
-normal = { family = "DejaVu Sans Mono for Powerline", style = "Book" }
-bold = { family = "DejaVu Sans Mono for Powerline", style = "Bold" }
+# Use fc-list to list fonts
+# normal = { family = "DejaVu Sans Mono for Powerline", style = "Book" }
+# bold = { family = "DejaVu Sans Mono for Powerline", style = "Bold" }
+# italic = { family = "DejaVu Sans Mono for Powerline", style = "Oblique" }
+# bold_italic = { family = "DejaVu Sans Mono for Powerline", style = "Bold Oblique" }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
 italic = { family = "DejaVu Sans Mono for Powerline", style = "Oblique" }
 bold_italic = { family = "DejaVu Sans Mono for Powerline", style = "Bold Oblique" }
 
