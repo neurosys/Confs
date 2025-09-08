@@ -40,14 +40,6 @@ function sourceIfExists()
 path_to_conf_folder=$( readlink -f ~/.zshrc )
 modules_folder=$(dirname $path_to_conf_folder)
 
-
-sourceIfExists ${modules_folder}/envtests
-sourceIfExists ${modules_folder}/defines
-sourceIfExists ${modules_folder}/exports
-sourceIfExists ${modules_folder}/aliases
-sourceIfExists ${modules_folder}/ls_colors
-sourceIfExists ~/.local_aliases
-
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${modules_folder}/zsh/
 
@@ -100,6 +92,15 @@ else
         isodate # Show date in iso-8601 format
     )
 fi
+
+sourceIfExists ${modules_folder}/envtests
+sourceIfExists ${modules_folder}/defines
+sourceIfExists ${modules_folder}/exports
+sourceIfExists ${modules_folder}/aliases
+sourceIfExists ${modules_folder}/ls_colors
+sourceIfExists ~/.local_aliases
+
+
 
 bgnotify_treshold=1
 DISABLE_AUTO_UPDATE="false"
@@ -156,8 +157,14 @@ esac
 # pnpm end
 
 export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" && eval "$(pyenv init - zsh)"
 
+which eza &> /dev/null
+if [[ $? -eq 0 ]]
+then
+    unalias ll
+    alias ll='eza -lah --icons=always --git --git-repos --time-style +%Y-%m-%d_%H:%M:%S'
+
+fi
 
 # vim:syn=sh
