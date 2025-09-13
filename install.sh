@@ -38,6 +38,7 @@ link_or_fail        $PWD/xorg/pam_environment       ~/.pam_environment $backup_f
 link_or_fail        $PWD/xorg/Xresources            ~/.Xresources      $backup_folder
 link_or_fail        $PWD/xorg/xbindkeysrc           ~/.xbindkeysrc     $backup_folder
 link_or_fail        $PWD/xorg/xinitrc               ~/.xinitrc         $backup_folder
+link_or_fail        $PWD/xorg/keybboard             ~/.keyboard        $backup_folder
 
 mkdir -p ~/.config/kitty/
 link_or_fail        $PWD/xorg/kitty.conf            ~/.config/kitty/kitty.conf         $backup_folder
