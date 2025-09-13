@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=New SxIV with Rifle
+GenericName=Image Viewer
+Comment=Script that wraps nsxiv for image viewing
+MimeType=image/jpeg;image/png;image/gif;image/bmp;image/svg+xml;
+Exec=/home/neurosys/.mylocal/bin/nsxiv-rifle %F
+Icon=nsxiv
+Type=Application
+Terminal=false
+Categories=Utility;Development;TextEditor;
+StartupWMClass=nsxiv
+Keywords=image;picture;viewer;

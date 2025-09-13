@@ -1,0 +1,13 @@
+[Added Associations]
+application/x-compressed-tar=arqiver.desktop;org.gnome.FileRoller.desktop;
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
+text/csv=gvim.desktop;
+text/markdown=gvim.desktop;okularApplication_md.desktop;marktext_marktext.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+image/jpeg=nsxiv-rifle.desktop
+image/png=nsxiv-rifle.desktop
+image/bmp=nsxiv-rifle.desktop
+image/gif=nsxiv-rifle.desktop
+image/svg+xml=nsxiv-rifle.desktop

@@ -53,6 +53,10 @@ link_or_fail        $PWD/.minttyrc                  ~/.minttyrc        $backup_f
 mkdir -p ~/.config/zathura
 link_or_fail        $PWD/xorg/zathurarc             ~/.config/zathura/zathurarc $backup_folder
 
+# default apps for mime types (used with xdg-open)
+link_or_fail        $PWD/xorg/mimeapps.list         ~/.config/mimeapps.list     $backup_folder
+link_or_fail        $PWD/xorg/nsxiv-rifle.desktop   ~/.local/share/applications/nsxiv-rifle.desktop $backup_folder
+
 #backup_if_exists    ~/.fetchmailrc                                     $backup_folder
 #cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
 
