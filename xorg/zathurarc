@@ -2,6 +2,9 @@
 # Invert colors
 map <C-i> recolor
 
+# Start in dark mode
+# set recolor true
+
 # Copy selected text to clipboard
 set selection-clipboard clipboard
 
