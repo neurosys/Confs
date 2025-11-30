@@ -69,3 +69,8 @@ link_or_fail        $PWD/xorg/nsxiv-rifle.desktop   ~/.local/share/applications/
 link_or_fail        $PWD/taskwarrior/taskrc          ~/.taskrc          $backup_folder
 
 cp                  $PWD/.ideavimrc                  ~/.ideavimrc
+
+link_or_fail        $PWD/xprofile                    ~/.xprofile        $backup_folder
+
+link_or_fail        $PWD/yazi                        ~/.config/yazi     $backup_folder
+link_or_fail        $PWD/alacritty                   ~/.config/alacritty     $backup_folder
