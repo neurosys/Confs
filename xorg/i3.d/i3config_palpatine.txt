@@ -92,9 +92,11 @@ bindsym $mod+backslash split v
 bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+shift+m layout stacking
-bindsym $mod+m layout tabbed
-bindsym $mod+t layout toggle split
+# No stacking, it looks ugly
+#bindsym $mod+shift+m layout stacking
+# bindsym $mod+m layout tabbed
+bindsym $mod+Shift+space layout toggle split
+bindsym $mod+space layout tabbed
 
 # toggle tiling / floating
 #bindsym $mod+Shift+space floating toggle
@@ -102,7 +104,7 @@ bindsym $mod+f floating toggle
 
 # change focus between tiling / floating windows
 # TODO
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # Switch to last used workspace
 bindsym $mod+Tab   workspace back_and_forth
@@ -121,10 +123,10 @@ bindsym $mod+bracketleft workspace prev
 # Switch to next workspace
 bindsym $mod+bracketright workspace next
 
-# Move window to left output (monitor) TODO this is untested
+# Move window to left output (monitor)
 bindsym $mod+shift+comma move workspace to output left
 
-# Move window to right output (monitor) TODO this is untested
+# Move window to right output (monitor)
 bindsym $mod+shift+period move workspace to output right
 
 # Focus left monitor
@@ -135,75 +137,120 @@ bindsym $mod+period focus output right
 
 # switch to workspace
 bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-bindsym $mod+q workspace q
-bindsym $mod+w workspace w
-bindsym $mod+e workspace e
-#bindsym $mod+r workspace r
-#bindsym $mod+t workspace t
-bindsym $mod+y workspace y
-bindsym $mod+u workspace u
-bindsym $mod+i workspace i
-bindsym $mod+o workspace o
-#bindsym $mod+p workspace p
-bindsym $mod+z workspace z
-bindsym $mod+x workspace x
-bindsym $mod+a workspace a
-bindsym $mod+s workspace s
-
-# New testing workspaces
-bindsym $mod+n workspace n
-bindsym $mod+d workspace d
-bindsym $mod+g workspace g
-bindsym $mod+v workspace v
-bindsym $mod+b workspace b
-
-# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+2 workspace 2
 bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+3 workspace 3
 bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+4 workspace 4
 bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+5 workspace 5
 bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+6 workspace 6
 bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+7 workspace 7
 bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+8 workspace 8
 bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+9 workspace 9
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+q move container to workspace q
-bindsym $mod+Shift+w move container to workspace w
+# Special workspaces
+bindsym $mod+F1 workspace 11
+bindsym $mod+Shift+F1 move container to workspace 11
+bindsym $mod+F2 workspace 12
+bindsym $mod+Shift+F2 move container to workspace 12
+bindsym $mod+F3 workspace 13
+bindsym $mod+Shift+F3 move container to workspace 13
+bindsym $mod+F4 workspace 14
+bindsym $mod+Shift+F4 move container to workspace 14
+
+
+# bindsym $mod+plus 
+# bindsym $mode+equal
+# bindsym $mode+BackSpace
+# bindsym $mode+semicolon
+# bindsym $mode+colon
+# bindsym $mode+apostrophe "'"
+# bindsym $mode+quotedbl # '"'
+# bindsym $mode+grave # '`'
+# bindsym $mode+asciitilde # '~'
+# bindsym $mode+slash # '/'
+# bindsym $mode+question # '?'
+# bindsym $mode+F1 # F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12
+# bindsym $mode+Home
+# bindsym $mode+Up
+# bindsym $mode+End
+# bindsym $mode+Insert
+# bindsym $mode+Delete
+# bindsym $mode+Pause
+# bindsym $mode+Break
+# bindsym $mode+Next
+# bindsym $mode+Prior
+
+
+# bindsym $mod+asciitilde [title="alacrity"] scratchpad show
+bindsym $mod+asciitilde [con_mark="scratch1"] scratchpad show
+bindsym $mod+z mark "scratch1", move scratchpad
+
+
+# This setup works for i3blocks but fails in polybar
+# bindsym $mod+0 workspace 
+# bindsym $mod+Shift+0 move container to workspace 
+# bindsym $mod+e workspace 
+# bindsym $mod+Shift+e move container to workspace 
+# bindsym $mod+y workspace ♬
+# bindsym $mod+Shift+y move container to workspace ♬
+# bindsym $mod+u workspace 
+# bindsym $mod+Shift+u move container to workspace 
+# bindsym $mod+i workspace 
+# bindsym $mod+Shift+i move container to workspace 
+# bindsym $mod+o workspace 
+# bindsym $mod+Shift+o move container to workspace 
+# bindsym $mod+n workspace 
+# bindsym $mod+Shift+n move container to workspace 
+# bindsym $mod+d workspace 
+# bindsym $mod+Shift+d move container to workspace 
+# bindsym $mod+g workspace 
+# bindsym $mod+Shift+g move container to workspace 
+# bindsym $mod+b workspace 
+# bindsym $mod+Shift+b move container to workspace 
+
+# Polybar setup
+bindsym $mod+0 workspace 0
+bindsym $mod+Shift+0 move container to workspace 0
+bindsym $mod+e workspace e
 bindsym $mod+Shift+e move container to workspace e
-#bindsym $mod+Shift+r move container to workspace r
-#bindsym $mod+Shift+t move container to workspace t
+bindsym $mod+y workspace y
 bindsym $mod+Shift+y move container to workspace y
+bindsym $mod+u workspace u
 bindsym $mod+Shift+u move container to workspace u
+bindsym $mod+i workspace i
 bindsym $mod+Shift+i move container to workspace i
+bindsym $mod+o workspace o
 bindsym $mod+Shift+o move container to workspace o
-#bindsym $mod+Shift+p move container to workspace p
-bindsym $mod+Shift+x move container to workspace x
-bindsym $mod+Shift+z move container to workspace z
-bindsym $mod+Shift+a move container to workspace a
-bindsym $mod+Shift+s move container to workspace s
-
+bindsym $mod+n workspace n
 bindsym $mod+Shift+n move container to workspace n
+bindsym $mod+d workspace d
 bindsym $mod+Shift+d move container to workspace d
+bindsym $mod+g workspace g
 bindsym $mod+Shift+g move container to workspace g
-bindsym $mod+Shift+v move container to workspace v
+bindsym $mod+b workspace b
 bindsym $mod+Shift+b move container to workspace b
+bindsym $mod+m workspace m
+bindsym $mod+Shift+m move container to workspace m
+bindsym $mod+t workspace t
+bindsym $mod+Shift+t move container to workspace t
+bindsym $mod+s workspace s
+bindsym $mod+Shift+s move container to workspace s
+bindsym $mod+w workspace w
+bindsym $mod+Shift+w move container to workspace w
+
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+F5 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -273,7 +320,7 @@ client.background       #ffffff
 
 
 
-exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
+exec_always --no-startup-id /opt/myconfig/xorg/launch_polybar.sh
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon3
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon2
 #exec --no-startup-id polybar -c ~/.myconfig/xorg/polybar_work.conf mon1
@@ -282,35 +329,56 @@ exec_always --no-startup-id ~/.myconfig/xorg/launch_polybar.sh
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --auto --left-of DisplayPort-1 --output DisplayPort-1 --auto
 exec_always --no-startup-id xrandr --output DisplayPort-2 --set TearFree on --left-of DisplayPort-0 --output DisplayPort-0 --set TearFree on
 
-exec_always --no-startup-id xcompmgr 
-exec_always --no-startup-id transset 0.2
+# exec_always --no-startup-id xcompmgr 
+# exec_always --no-startup-id transset 0.2
 
+# Turn off Caps Lock and convert it to left ctrl
 exec_always --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 
+# Repet keys at a much faster rate
+exec_always --no-startup-id xset r rate 200 30
 
+exec_always --no-startup-id xbindkeys
+
+exec_always --no-startup-id xscreensaver
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
-#exec --no-starup-id compton --config /home/camza/.config/compton.conf
-#exec_always --no-startup-id compton -m 0.3
-exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
+# exec --no-starup-id compton --config /home/camza/.config/compton.conf
+# exec_always --no-startup-id compton -m 0.3
+# exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
+
+# How to set this up on other devices
+# Look for something touchpad related in the output of `xinput`
+# use the full name to list the properties via `xinput list-props "MSFT0001:01 04F3:31AD Touchpad"` and then:
+#exec_always --no-startup-id xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "libinput Tapping Enabled" 1
+#exec_always --no-startup-id xinput set-prop "ASUP1205:00 093A:2008 Touchpad" "libinput Tapping Enabled" 1
+#exec_always --no-startup-id xinput set-prop "ELAN06FA:00 04F3:327E Touchpad" "libinput Tapping Enabled" 1
+# Emulate middle click with two finger tap
+#exec_always --no-startup-id xinput set-prop "ASUP1205:00 093A:2008 Touchpad" "lbinput Middle Emulation Enabled" 1
+#exec_always --no-startup-id xinput set-prop "ELAN06FA:00 04F3:327E Touchpad" "lbinput Middle Emulation Enabled" 1
+
+
 
 # Set background using feh (use _always so feh is run each time you reload configuration)
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg --bg-scale ~/Pictures/Wallpapers/wallhaven-280260.jpg 
 
-exec_always --no-startup-id guake -e tmux
+exec --no-startup-id alacritty -e tmx
+exec --no-startup-id guake -e tmx
+
+#exec_always --no-startup-id guake -e tmux -L guake new -s System
 #exec_always --no-startup-id tusk
 
-exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
+#exec_always --no-starup-id xbindkeys -f ~/.xbindkeysrc
 
-exec_always --no-startup-id synergys -f --no-tray --debug INFO --name palpatine -c ~/.SynergysCfg --address :24800 --serial-key 7B76313B62617369633B636174616C696E206
+# exec_always --no-startup-id synergys -f --no-tray --debug INFO --name palpatine -c ~/.SynergysCfg --address :24800 --serial-key 7B76313B62617369633B636174616C696E206
 
 
-assign [class="(?i)^.* Mozilla Firefox$"] o
-assign [class="(?i)^Spotify Premium$"] y
-assign [class="(?i)^.* Microsoft Teams$"] e
-assign [class="(?i)^Synergy 1 Basic$"] 2
+#assign [class="(?i)^.* Mozilla Firefox$"] o
+#assign [class="(?i)^Spotify Premium$"] y
+#assign [class="(?i)^.* Microsoft Teams$"] e
+#assign [class="(?i)^Synergy 1 Basic$"] 2
 
-exec_always  "i3-msg 'workspace o; exec /home/bin/firefox'"
-exec_always  "i3-msg 'workspace y; exec /home/bin/spotify'"
-exec_always  "i3-msg 'workspace e; exec /home/bin/teams'"
-exec_always  "i3-msg 'workspace 2; exec /home/bin/synergy'"
+#exec_always  "i3-msg 'workspace o; exec /home/bin/firefox'"
+#exec_always  "i3-msg 'workspace y; exec /home/bin/spotify'"
+#exec_always  "i3-msg 'workspace e; exec /home/bin/teams'"
+#exec_always  "i3-msg 'workspace 2; exec /home/bin/synergy'"
