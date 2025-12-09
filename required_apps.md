@@ -30,6 +30,7 @@ w3m-img
 poppler-utils
 locate
 diffutils
+dysk
 
 taskwarrior
 timewarrior
@@ -52,6 +53,8 @@ double-commander
 
 neovim
 vim
+xxd
+bvi
 universal-ctags
 cscope
 <<<<<<< HEAD
@@ -142,3 +145,4 @@ mdadm
 xca
 >>>>>>> e888ae3 (Add more entries to the list of regularry used apps)
 
+https://github.com/dylanaraps/pure-bash-bible
