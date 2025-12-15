@@ -23,7 +23,7 @@ weekstart=monday
 #include /usr/share/doc/task/rc/dark-green-256.theme
 #include 
 ###include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-blue-256.theme # /usr/share/doc/task/rc/dark-blue-256.theme
-include ~/.myconfig/taskwarrior/taskwarrior.theme
+include /opt/myconfig/taskwarrior/taskwarrior.theme
 #include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-violets-256.theme # /usr/share/doc/task/rc/dark-violets-256.theme
 #include /usr/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/share/doc/task/rc/dark-gray-256.theme
@@ -62,7 +62,7 @@ uda.taskwarrior-tui.mark.indicator=✔
 #uda.taskwarrior-tui.task-report.reset-filter-on-esc=true
 #uda.taskwarrior-tui.context-menu.select-on-move=false
 
-news.version=3.3.1
+news.version=3.4.2
 context.work.read=+work
 context.work.write=+work
 context.personal.read=+personal
