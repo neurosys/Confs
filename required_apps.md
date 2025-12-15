@@ -11,7 +11,10 @@ eza
 nsxiv
 feh
 zsh
+jq
 stow
+xstow
+scooter
 mc
 htop
 btop
@@ -19,12 +22,12 @@ nerd-fonts
 ncdu
 curl
 wget
-jq
 tldr
 moreutils
 highlight
 w3m-img
 poppler-utils
+locate
 
 taskwarrior
 timewarrior
@@ -49,6 +52,7 @@ neovim
 vim
 universal-ctags
 cscope
+bvi
 
 git
 tig
@@ -64,8 +68,10 @@ lazydocker
 kubectl
 k9s
 kubectx
-k3s
+k3d
 kubeadm
+kuttl
+kind
 
 gcc
 g++
@@ -104,15 +110,21 @@ chromium
 firefox
 vivaldi
 brave
-
+joplin
+obsidian
+qownnotes
 
 
 gparted
 network-manager
 gpg
 ssh
+sshfs
+fdupes
+filezilla
 nmap
 strace
 wireshark
 tcpdump
+mdadm
 
