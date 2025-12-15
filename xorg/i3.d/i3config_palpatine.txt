@@ -327,7 +327,9 @@ exec_always --no-startup-id /opt/myconfig/xorg/launch_polybar.sh
 
 #exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --auto --left-of DisplayPort-1 --output DisplayPort-1 --auto
-exec_always --no-startup-id xrandr --output DisplayPort-2 --set TearFree on --left-of DisplayPort-0 --output DisplayPort-0 --set TearFree on
+#exec_always --no-startup-id xrandr --output DisplayPort-2 --set TearFree on --left-of DisplayPort-0 --output DisplayPort-0 --set TearFree on
+exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --above DisplayPort-2 --output DisplayPort-2 --auto --left-of DisplayPort-0 --output DisplayPort-0 --auto
+
 
 # exec_always --no-startup-id xcompmgr 
 # exec_always --no-startup-id transset 0.2
