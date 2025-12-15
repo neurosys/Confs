@@ -383,7 +383,7 @@ desc = "Open PowerShell here"
 
 [[mgr.prepend_keymap]]
 on = "i"
-run = 'shell "batcat --paging=always --theme \"Monokai Extended Bright\" \"$1\"" --block'
+run = 'shell "bat --paging=always --theme \"Monokai Extended Bright\" \"$1\"" --block'
 desc = "Preview selected file with bat"
 
 # Close input by once <Esc> press
