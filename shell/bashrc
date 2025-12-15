@@ -26,3 +26,4 @@ sourceIfExists ${confs_folder}/prompt
 sourceIfExists ${confs_folder}/aliases
 sourceIfExists ~/.local_aliases
 sourceIfExists ~/.fzf.bash
+. "$HOME/.cargo/env"
