@@ -57,20 +57,22 @@ link_or_fail        $PWD/xorg/zathurarc             ~/.config/zathura/zathurarc 
 link_or_fail        $PWD/xorg/mimeapps.list         ~/.config/mimeapps.list     $backup_folder
 link_or_fail        $PWD/xorg/nsxiv-rifle.desktop   ~/.local/share/applications/nsxiv-rifle.desktop $backup_folder
 
-#backup_if_exists    ~/.fetchmailrc                                     $backup_folder
+#backup_if_exists    ~/.fetchmailrc                                          $backup_folder
 #cp                  $PWD/mail_template/fetchmailrc  ~/.fetchmailrc
 
-#backup_if_exists    ~/.muttrc                                          $backup_folder
+#backup_if_exists    ~/.muttrc                                               $backup_folder
 #cp                  $PWD/mail_template/muttrc       ~/.muttrc
 
-#backup_if_exists    ~/.msmtprc                                         $backup_folder
+#backup_if_exists    ~/.msmtprc                                              $backup_folder
 #cp                  $PWD/mail_template/msmtprc      ~/.msmtprc
 
-link_or_fail        $PWD/taskwarrior/taskrc          ~/.taskrc          $backup_folder
+link_or_fail        $PWD/taskwarrior/taskrc          ~/.taskrc               $backup_folder
 
 cp                  $PWD/.ideavimrc                  ~/.ideavimrc
 
-link_or_fail        $PWD/xprofile                    ~/.xprofile        $backup_folder
+link_or_fail        $PWD/xprofile                    ~/.xprofile             $backup_folder
 
-link_or_fail        $PWD/yazi                        ~/.config/yazi     $backup_folder
-link_or_fail        $PWD/alacritty                   ~/.config/alacritty     $backup_folder
+link_or_fail        $PWD/yazi                        ~/.config/yazi          $backup_folder
+#link_or_fail        $PWD/alacritty                   ~/.config/alacritty     $backup_folder
+
+[[ ! -d ~/.myconfig ]] && ln -s $PWD                 ~/.myconfig
