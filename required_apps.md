@@ -15,6 +15,7 @@ jq
 stow
 xstow
 scooter
+ctop
 mc
 htop
 btop
