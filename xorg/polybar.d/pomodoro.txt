@@ -1,0 +1,53 @@
+[module/myPomodoro]
+type = custom/script
+
+
+#label = 
+exec = /home/neurosys/.bin/pomo-go
+tail = true
+interval = 1
+
+# Left click to start/pause
+# click-left = exec /usr/bin/xclock
+
+# Right click to reset
+# click-right = 
+
+# Scroll up/down to adjust time
+# scroll-up = exec playerctl -p spotify previous
+# scroll-down = exec playerc tl -p spotify next
+
+
+
+
+
+
+
+
+# format-volume = <label-volume> <bar-volume>
+# label-volume = VOL
+# label-volume-foreground = ${root.foreground}
+# 
+# format-muted-foreground = ${colors.foreground-alt}
+# label-muted = sound muted
+# 
+# click-right = exec pavucontrol-qt --tab 3
+# 
+# bar-volume-width = 10
+# bar-volume-foreground-0 = #55aa55
+# bar-volume-foreground-1 = #55aa55
+# bar-volume-foreground-2 = #55aa55
+# bar-volume-foreground-3 = #55aa55
+# bar-volume-foreground-4 = #55aa55
+# bar-volume-foreground-5 = #f5a70a
+# bar-volume-foreground-6 = #ff5555
+# bar-volume-gradient = false
+# bar-volume-indicator = |
+# bar-volume-indicator-font = 2
+# bar-volume-fill = ─
+# bar-volume-fill-font = 2
+# bar-volume-empty = ─
+# bar-volume-empty-font = 2
+# bar-volume-empty-foreground = ${colors.foreground-alt}
+
+; vim:ft=dosini
