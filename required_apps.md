@@ -19,7 +19,7 @@ ctop
 mc
 htop
 btop
-nerd-fonts
+nerd-fonts (fira mono)
 ncdu
 curl
 wget
@@ -29,6 +29,7 @@ highlight
 w3m-img
 poppler-utils
 locate
+diffutils
 
 taskwarrior
 timewarrior
@@ -53,7 +54,12 @@ neovim
 vim
 universal-ctags
 cscope
+<<<<<<< HEAD
 bvi
+||||||| parent of e888ae3 (Add more entries to the list of regularry used apps)
+=======
+vscode
+>>>>>>> e888ae3 (Add more entries to the list of regularry used apps)
 
 git
 tig
@@ -106,6 +112,8 @@ nemo
 gedit
 mousepad
 kate
+cheese
+calibre
 
 chromium
 firefox
@@ -127,5 +135,10 @@ nmap
 strace
 wireshark
 tcpdump
+<<<<<<< HEAD
 mdadm
+||||||| parent of e888ae3 (Add more entries to the list of regularry used apps)
+=======
+xca
+>>>>>>> e888ae3 (Add more entries to the list of regularry used apps)
 
