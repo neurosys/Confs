@@ -404,7 +404,7 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           spc            ralt menu rctl
 )
 
 ;; The first layer defined is the layer that will be active by default when
@@ -413,9 +413,9 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 (deflayer qwerty
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  lctl a    s    d    f    g    h    j    k    l    ;    '    ret
+  @cap a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           spc            ralt menu rctl
 )
 
 ;; The dvorak layer remaps the keys to the dvorak layout. There are several
@@ -533,13 +533,13 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   ;; to tap-hold-next and tap-hold-next-release, respectively. If you know
   ;; the underlying keyberon crate, tap-hold-press is the HoldOnOtherKeyPress
   ;; and tap-hold-release is the PermissiveHold configuration.
-  anm (tap-hold 200 200 a @num)   ;; tap: a      hold: numbers layer
-  oar (tap-hold 200 200 o @arr)   ;; tap: o      hold: arrows layer
-  ech (tap-hold 200 200 e @chr)   ;; tap: e      hold: chords layer
-  umc (tap-hold 200 200 u @msc)   ;; tap: u      hold: misc layer
-  grl (tap-hold 200 200 grv @lay) ;; tap: grave  hold: layers layer
-  .ms (tap-hold 200 200 . @mse)   ;; tap: .      hold: mouse layer
-  ifk (tap-hold 200 200 i @fks)   ;; tap: i      hold: fake keys layer
+  anm (tap-hold 200 200 a @num)    ;; tap: a               hold: numbers layer
+  oar (tap-hold 200 200 o @arr)    ;; tap: o               hold: arrows layer
+  ech (tap-hold 200 200 e @chr)    ;; tap: e               hold: chords layer
+  umc (tap-hold 200 200 u @msc)    ;; tap: u               hold: misc layer
+  grl (tap-hold 200 200 grv @lay)  ;; tap: grave           hold: layers layer
+  .ms (tap-hold 200 200 . @mse)    ;; tap: .               hold: mouse layer
+  ifk (tap-hold 200 200 i @fks)    ;; tap: i               hold: fake keys layer
 
   ;; There are additional variants of tap-hold-press and tap-hold-release that
   ;; activate the timeout action (the 5th parameter) when the action times out
