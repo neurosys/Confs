@@ -400,32 +400,44 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; If you are looking for other keys, the file src/keys/mod.rs should hopefully
 ;; provide some insight.
 (defsrc
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc Insert    Home      PageUp
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    Delete    End       PageDown
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt menu rctl
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                     ArrowUp
+  lctl lmet lalt           spc            ralt menu rctl                ArrowLeft ArrowDown ArrowRight  
 )
 
 ;; The first layer defined is the layer that will be active by default when
 ;; kanata starts up. This layer is the standard QWERTY layout except for the
 ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
 (deflayer qwerty
-  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @cap a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt menu rctl
+  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc  Insert    Home      PageUp    
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     Delete    End       PageDown  
+  @cap a    s    d    f    g    h    j    k    l    ;    '    ret                                      
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                      ArrowUp             
+  lctl lmet lalt           spc            ralt menu rctl                 ArrowLeft ArrowDown ArrowRight
+)
+
+(deflayer multimedia
+  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc  Insert    Home      PageUp     
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     Delete    End       PageDown   
+  @cap a    s    d    f    g    h    j    k    l    ;    '    ret                                       
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                      ArrowUp              
+  lctl lmet lalt           spc            ralt menu rctl                 ArrowLeft ArrowDown ArrowRight 
 )
 
 ;; The dvorak layer remaps the keys to the dvorak layout. There are several
 ;; tap-hold aliases configured on the left side.
 (deflayer dvorak
-  @grl 1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-  tab  '    ,    @.ms p    y    f    g    c    r    l    /    =    \
-  @cap @anm @oar @ech @umc @ifk d    h    t    n    s    -    ret
-  lsft ;    q    j    k    x    b    m    w    v    z    rsft
-  lctl lmet lalt           spc           @ralt rmet @rcl
+  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen
+  @grl 1    2    3    4    5    6    7    8    9    0    [    ]    bspc  Insert    Home      PageUp    
+  tab  '    ,    @.ms p    y    f    g    c    r    l    /    =    \     Delete    End       PageDown  
+  @cap @anm @oar @ech @umc @ifk d    h    t    n    s    -    ret                                      
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft                      ArrowUp             
+  lctl lmet lalt           spc           @ralt rmet @rcl                 ArrowLeft ArrowDown ArrowRight
 )
 
 ;; This is an alternative to deflayer and does not rely on defsrc.
@@ -574,7 +586,7 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   utk (tap-hold-tap-keys 200 200 u @msc (a o e))
 
   ;; tap for capslk, hold for lctl
-  cap (tap-hold 200 200 caps lctl)
+  cap (tap-hold 150 100 caps lctl)
 
   ;; Below is an alias for the `multi` action which executes multiple actions
   ;; in order but at the same time.
@@ -849,11 +861,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; behave as the key as defined by defsrc.
 (defalias src use-defsrc)
 (deflayer numbers
-  @src _    _    _    _    _    nlk  kp7  kp8  kp9  _    _    _    _
-  _    _    _    _    _    XX   _    kp4  kp5  kp6  -    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _ 
+  @src _    _    _    _    _    nlk  kp7  kp8  kp9  _    _    _    _       _   _   _
+  _    _    _    _    _    XX   _    kp4  kp5  kp6  -    _    _    _       _   _   _
   _    _    C-z  _    _    XX   _    kp1  kp2  kp3  +    _    _
-  _    C-z  C-x  C-c  C-v  XX   _    kp0  kp0  .    /    _
-  _    _    _              _              _    _    _
+  _    C-z  C-x  C-c  C-v  XX   _    kp0  kp0  .    /    _                     _
+  _    _    _              _              _    _    _                      _   _   _
 )
 
 ;; The `lrld` action stands for "live reload".
@@ -872,11 +885,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; in the configuration. E.g. in this example configuration, you would start on
 ;; the qwerty layer.
 (deflayer layers
-  _    @qwr @dvk lrld lrpv lrnx (lrld-num 1) _ _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  _    @qwr @dvk lrld lrpv lrnx (lrld-num 1) _ _    _    _    _    _    _     _  _  _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _          _  _  _
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _                       _
+  _    _    _              _              _    _    _                         _  _  _
 )
 
 (defalias
@@ -998,28 +1012,31 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; will only output `c`. There is a variant `rpt-any` which will repeat the
 ;; previous action and would work for that use case.
 (deflayer misc
-  _    _    _    _    _    _    _    _    _    @é   @è   _    ì #|random custom key for testing|#   _
-  _    _    @ab1 _    _    _    ins  @{   @}   [    ]    _    _    +
-  @cw  _    _    _    C-u  _    del  bspc esc  ret  _    _    _
-  @cwc C-z  C-x  C-c  C-v  _    _    _    @td  @os1 @os2 @os3
-  rpt rpt-any _            _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  _    _    _    _    _    _    _    _    _    @é   @è   _    ì #|random custom key for testing|#   _  _  _  _ 
+  _    _    @ab1 _    _    _    ins  @{   @}   [    ]    _    _    +                                   _  _  _ 
+  @cw  _    _    _    C-u  _    del  bspc esc  ret  _    _    _                                                
+  @cwc C-z  C-x  C-c  C-v  _    _    _    @td  @os1 @os2 @os3                                             _    
+  rpt rpt-any _            _              _    _    _                                                  _  _  _ 
 )
 
 
 (deflayer chords      ;; you can put list actions directly in deflayer but it's ugly, so prefer aliases.
-  _    _    _    _    _    _    _    _    _    _    @🙁  (unicode 😀) _    _
-  _    _    _    _    _    _    _    _    @csc @hpy @lch @tbm         _    _
-  _    @alp _    _    _    _    _    @ch1 @ch2 @ch4 @ch8 _            _
-  _    _    _    _    _    _    _    _    _    @csv _    _
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  _    _    _    _    _    _    _    _    _    _    @🙁  (unicode 😀) _    _  _  _  _ 
+  _    _    _    _    _    _    _    _    @csc @hpy @lch @tbm         _    _  _  _  _ 
+  _    @alp _    _    _    _    _    @ch1 @ch2 @ch4 @ch8 _            _               
+  _    _    _    _    _    _    _    _    _    @csv _    _                       _    
+  _    _    _              _              _    _    _                         _  _  _ 
 )
 
 (deflayer arrows
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    _    _    _    _    _    _    pgup up   pgdn _    _    _    _
-  _    _    _    _    _    _    home left down rght end  _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _    _  _  _
+  _    _    _    _    _    _    _    pgup up   pgdn _    _    _    _    _  _  _
+  _    _    _    _    _    _    home left down rght end  _    _                
+  _    _    _    _    _    _    _    _    _    _    _    _                 _   
+  _    _    _              _              _    _    _                   _  _  _
 )
 
 ;; In Windows, using mouse buttons on the kanata window seems to cause it to hang.
@@ -1045,11 +1062,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; One can also see mouse movement actions at the lower right side, with the
 ;; arrow unicode characters.
 (deflayer mouse
-  _    @mwu @mwd @mwl @mwr _    _    _    _    _    @ma↑ _    _    _
-  _    pgup bck  _    fwd  _    _    _    _    @ma← @ma↓ @ma→ _    _
-  _    pgdn mlft _    mrgt mmid _    mbck mfwd _    @ms↑ _    _
-  @fms _    mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    @mwu @mwd @mwl @mwr _    _    _    _    _    @ma↑ _    _    _   _  _  _ 
+  _    pgup bck  _    fwd  _    _    _    _    @ma← @ma↓ @ma→ _    _   _  _  _ 
+  _    pgdn mlft _    mrgt mmid _    mbck mfwd _    @ms↑ _    _                
+  @fms _    mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→             _    
+  _    _    _              _              _    _    _                  _  _  _ 
 )
 
 (defalias
@@ -1135,11 +1153,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; E.g. ralt+@lft will result in only left being pressed instead of ralt+left,
 ;; while ralt(hold)+tab+tab+tab still works as intended.
 (deflayer ralted
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    @lft @rlr @rgt _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   _  _  _ 
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   _  _  _ 
+  _    _    _    _    _    _    _    @lft @rlr @rgt _    _    _                
+  _    _    _    _    _    _    _    _    _    _    _    _                _    
+  _    _    _              _              _    _    _                  _  _  _ 
 )
 
 ;; Virtual key actions
@@ -1197,11 +1216,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; Fake keys are flexible in usage but can be obscure to discover how they
 ;; can be useful to you.
 (deflayer fakekeys
-  _    @fcp @fsp @fmp @pal _    _    _    _    _    _    _    _    _
-  _    @fcr @fsr @fap @ral _    _    _    _    _    _    _    _    _
-  _    @fct @fst @rma _    _    _    _    _    _    _    _    _
-  _    @t1  _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    @fcp @fsp @fmp @pal _    _    _    _    _    _    _    _    _  _  _  _ 
+  _    @fcr @fsr @fap @ral _    _    _    _    _    _    _    _    _  _  _  _ 
+  _    @fct @fst @rma _    _    _    _    _    _    _    _    _               
+  _    @t1  _    _    _    _    _    _    _    _    _    _               _    
+  _    _    _              _              _    _    _                 _  _  _ 
 )
 
 (deffakekeys
@@ -1454,12 +1474,13 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 (t! left-hand-chords dvorak a o e u dva dvo dve dvu)
 
 (deflayer template-example
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @qwa @qws @qwd @qwf _    _    _    _    _    _    _    _    _
-  _    @dva @dvo @dve @dvu _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
-)
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  _  _ 
+  _    @qwa @qws @qwd @qwf _    _    _    _    _    _    _    _    _    _  _  _  
+  _    @dva @dvo @dve @dvu _    _    _    _    _    _    _    _                  
+  _    _    _    _    _    _    _    _    _    _    _    _                 _     
+  _    _    _              _              _    _    _                   _  _  _  
+)                                                                     
 
 ;; Within a deftemplate you can use if-equal to conditionally insert content
 ;; into the template.
