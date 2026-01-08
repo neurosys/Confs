@@ -13,8 +13,10 @@ keymap = [
 	{ on = "<C-z>", run = "suspend",            desc = "Suspend the process" },
 
 	# Hopping
-	{ on = "k", run = "arrow prev", desc = "Previous file" },
-	{ on = "j", run = "arrow next", desc = "Next file" },
+	# This does wrapping when scrolling: #{ on = "k", run = "arrow prev", desc = "Previous file" },
+	# This does wrapping when scrolling: #{ on = "j", run = "arrow next", desc = "Next file" },
+	{ on = "k", run = "arrow -1", desc = "Previous file" },
+	{ on = "j", run = "arrow 1", desc = "Next file" },
 
 	{ on = "<Up>",   run = "arrow prev", desc = "Previous file" },
 	{ on = "<Down>", run = "arrow next", desc = "Next file" },
