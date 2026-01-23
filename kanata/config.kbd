@@ -100,7 +100,7 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   ;; and on live reload via the config below. The first number is the delay in ms
   ;; and the second number is the repeat rate in repeats/second.
   ;;
-  ;; linux-x11-repeat-delay-rate 400,50
+  linux-x11-repeat-delay-rate 180,35
 
   ;; On linux, you can ask kanata to label itself as a trackpoint. This has several
   ;; effects on libinput including enabling middle mouse button scrolling and using
@@ -400,12 +400,12 @@ If you need help, please feel welcome to ask in the GitHub discussions.
 ;; If you are looking for other keys, the file src/keys/mod.rs should hopefully
 ;; provide some insight.
 (defsrc
-  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc Insert    Home      PageUp
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    Delete    End       PageDown
+  esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  PrintScreen  
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc          Insert      Home        PageUp
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \             Delete      End         PageDown
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft                     ArrowUp
-  lctl lmet lalt           spc            ralt menu rctl                ArrowLeft ArrowDown ArrowRight  
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                                ArrowUp
+  lctl lmet lalt           spc            ralt menu rctl                         ArrowLeft   ArrowDown   ArrowRight  
 )
 
 ;; The first layer defined is the layer that will be active by default when
