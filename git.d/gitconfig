@@ -45,7 +45,9 @@
 
     # delta is found in git-delta package on ubuntu
     # -n (show line numbers)
-    pager = delta -n
+    pager = delta -n --dark --navigate --tabs 4 --diff-so-fancy --map-styles='bold purple' --hunk-header-file-style "cyan" --hunk-header-line-number-style "yellow"
+    #--diff-so-fancy
+    #--file-style cyan 
     #pager = view -
 
     # Use lf as line ending
