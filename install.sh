@@ -75,4 +75,6 @@ link_or_fail        $PWD/xprofile                    ~/.xprofile             $ba
 link_or_fail        $PWD/yazi                        ~/.config/yazi          $backup_folder
 #link_or_fail        $PWD/alacritty                   ~/.config/alacritty     $backup_folder
 
+link_or_fail        $PWD/lf                          ~/.config/lf            $backup_folder
+
 [[ ! -d ~/.myconfig ]] && ln -s $PWD                 ~/.myconfig
