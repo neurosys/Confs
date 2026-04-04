@@ -70,7 +70,7 @@ else
     plugins=(
         zsh-syntax-highlighting
         colored-man-pages
-        colorize
+        #colorize
         sudo # Press Esc-Esc to run the last command with sudo as prefix
         bgnotify
         git
@@ -80,15 +80,15 @@ else
         systemd
         fzf
         golang
-        docker
-        docker-compose
-        kubectl
-        helm
+        #docker
+        #docker-compose
+        #kubectl
+        #helm
         taskwarrior
         extract
-        copyfile
-        cp # Use `cpv` to copy files and get progress bar (via rsync)
-        fasd # command line productivity booster use v j o to do... "stuff"???
+        #copyfile
+        #cp # Use `cpv` to copy files and get progress bar (via rsync)
+        #fasd # command line productivity booster use v j o to do... "stuff"???
         isodate # Show date in iso-8601 format
     )
 fi
