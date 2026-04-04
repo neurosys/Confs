@@ -23,7 +23,7 @@ weekstart=monday
 #include /usr/share/doc/task/rc/dark-green-256.theme
 #include 
 ###include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-blue-256.theme # /usr/share/doc/task/rc/dark-blue-256.theme
-include /opt/myconfig/taskwarrior/taskwarrior.theme
+#include /opt/myconfig/taskwarrior/taskwarrior.theme
 #include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-violets-256.theme # /usr/share/doc/task/rc/dark-violets-256.theme
 #include /usr/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/share/doc/task/rc/dark-gray-256.theme
