@@ -1,7 +1,7 @@
 
 # [terminal]
 
-[shell]
+[terminal.shell]
 #program = "/home/neurosys/.bin/tmx"
 # args = ["-L", "alacritty"]
 program = "/bin/zsh"
@@ -28,8 +28,8 @@ size = 14
 # bold_italic = { family = "DejaVu Sans Mono for Powerline", style = "Bold Oblique" }
 normal = { family = "FiraCode Nerd Font", style = "Regular" }
 bold = { family = "FiraCode Nerd Font", style = "Bold" }
-italic = { family = "DejaVu Sans Mono for Powerline", style = "Oblique" }
-bold_italic = { family = "DejaVu Sans Mono for Powerline", style = "Bold Oblique" }
+italic = { family = "FiraCode Nerd Font", style = "Oblique" }
+bold_italic = { family = "FiraCode Nerd Font", style = "Bold Oblique" }
 
 [colors]
 primary.foreground = "#FFFFFF"
