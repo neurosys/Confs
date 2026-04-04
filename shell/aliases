@@ -1,10 +1,11 @@
 
-if [ $is_cygwin -eq 1 ]
-then
-    mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $8; }' | xargs basename )
-else
-    mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $4; }' | xargs basename )
-fi
+# if [ $is_cygwin -eq 1 ]
+# then
+#     mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $8; }' | xargs basename )
+# else
+#     mySHELL=$(ps -p $$ | grep -v PID | awk '{ print $4; }' | xargs basename )
+# fi
+mySHELL=$(echo $SHELL | xargs basename)
 
 if [[ $mySHELL == bash ]]
 then
