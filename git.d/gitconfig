@@ -20,22 +20,27 @@
 # go env -w GOPRIVATE="github.com/<my-company>/*"
 #
 
+[include]
+    path = ~/.git_local_accounts
+
+
 #[url "git@github.com:/path/to/repo"]
 #    insteadOf = https://github.com/path/to/repo
 
 
-[user]
-   name = NeuroSys
-   username = neurosys
-   email = notrealemail@example.com
+#[user]
+#    name = Gogu Sclipici
+#    username = gogus
+#    email = spam.this.unlucky.guy@gmail.com
+#
+#    git config user.name
+#    git config user.username
+#    git config user.email
 
 [pager]
     # Don't show the list of branches in a pager
     branch = false
     tag = true
-
-[include]
-    path = ~/.git_local_accounts
 
 
 [core]
