@@ -24,7 +24,13 @@ fi
 #    export GREP_OPTIONS="-Rn --color=auto"
 #fi
 
-export FZF_DEFAULT_OPTS=
+fzf_path="$(which fzf )"
+if [ $? -eq 0 ]
+then
+    export FZF_DEFAULT_OPTS=
+    export FZF_BASE=$(dirname "$fzf_path")
+fi
+
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
