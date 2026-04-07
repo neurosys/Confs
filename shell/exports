@@ -31,6 +31,11 @@ then
     export FZF_BASE=$(dirname "$fzf_path")
 fi
 
+PATH_TO_ZSH=$(which zsh)
+if [[ $? -eq 0 ]]
+then
+    export PATH_TO_ZSH=$(which zsh)
+fi
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
@@ -38,12 +43,7 @@ then
 fi
 
 
-if [ $is_cygwin ]
-then
-    export EDITOR=vim
-else
-    export EDITOR=vim
-fi
+export EDITOR=vim
 
 # In order for the git gui to work on CYGWIN
 #if [ $is_cygwin ]
@@ -66,4 +66,4 @@ fi
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0 
 
-# vim:syn=sh
+# vim:syn=bash
