@@ -126,11 +126,11 @@
 
     # Short, decorated log
     # Optionsal --date=relative
-    ls = log --date=short --graph --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%C(cyan)%cd\\ %Creset%s%Cgreen\\ [%cn]" --decorate 
+    lf = log --name-only --graph --pretty=format:"%C(yellow)%h\\ %C(cyan)[%ci]\\ %C(auto)%d%Creset%Creset%s%Cgreen\\ [%cn]%n" --decorate 
 
     # Show a log with files changed in that commit
-    ll  = !git ls --name-only && 0
-
+    ll  = log --graph --pretty=format:"%C(yellow)%h\\ %Creset%C(cyan)[%ci]%C(magenta)%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate 
+    ls = !git ll
     # Show a normal log with diff included (-p means patch)
     lld = log -p
 
