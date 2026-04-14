@@ -57,12 +57,8 @@ xxd
 bvi
 universal-ctags
 cscope
-<<<<<<< HEAD
 bvi
-||||||| parent of e888ae3 (Add more entries to the list of regularry used apps)
-=======
 vscode
->>>>>>> e888ae3 (Add more entries to the list of regularry used apps)
 
 git
 tig
@@ -138,11 +134,12 @@ nmap
 strace
 wireshark
 tcpdump
-<<<<<<< HEAD
 mdadm
-||||||| parent of e888ae3 (Add more entries to the list of regularry used apps)
-=======
 xca
->>>>>>> e888ae3 (Add more entries to the list of regularry used apps)
+
+qemu-system
+qemu-user
+aqemu
+xmount
 
 https://github.com/dylanaraps/pure-bash-bible
