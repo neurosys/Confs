@@ -39,7 +39,7 @@ gaps outer 7
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Shift+Return exec gnome-terminal -- tmux
-bindsym $mod+Shift+Return exec kitty 
+bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+Ctrl+Return exec gnome-terminal 
 
 # kill focused window
@@ -55,10 +55,14 @@ bindsym $mod+shift+p exec i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
-bindsym $mod+j focus down
+bindsym $mod+Ctrl+h focus output left
+#bindsym $mod+j focus down
+#bindsym $mod+Ctrl+j focus down
 bindsym $mod+k focus up
+bindsym $mod+Ctrl+k focus up
 #bindsym $mod+semicolon focus right
 bindsym $mod+l focus right
+bindsym $mod+Ctrl+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -72,8 +76,8 @@ bindsym $mod+Right focus right
 #bindsym $mod+Shift+l move up
 #bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
+#bindsym $mod+Shift+j move down
+#bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # use the cursor keys to move the workspace on a different monitor
@@ -124,16 +128,16 @@ bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
 
 # Move window to left output (monitor)
-bindsym $mod+shift+comma move workspace to output down
+bindsym $mod+shift+comma move workspace to output left
 
 # Move window to right output (monitor)
-bindsym $mod+shift+period move workspace to output up
+bindsym $mod+shift+period move workspace to output right
 
 # Focus left monitor
-bindsym $mod+comma move workspace to output left
+bindsym $mod+comma focus left
 
 # Focus right monitor
-bindsym $mod+period move workspace to output right
+bindsym $mod+period focus right
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -162,8 +166,8 @@ bindsym $mod+F2 workspace 12
 bindsym $mod+Shift+F2 move container to workspace 12
 bindsym $mod+F3 workspace 13
 bindsym $mod+Shift+F3 move container to workspace 13
-bindsym $mod+F4 workspace 14
-bindsym $mod+Shift+F4 move container to workspace 14
+#bindsym $mod+F4 workspace 14
+#bindsym $mod+Shift+F4 move container to workspace 14
 
 
 # bindsym $mod+plus 
@@ -193,6 +197,8 @@ bindsym $mod+Shift+F4 move container to workspace 14
 bindsym $mod+asciitilde [con_mark="scratch1"] scratchpad show
 bindsym $mod+z mark "scratch1", move scratchpad
 
+bindsym $mod+F4 [con_mark="scratch2"] scratchpad show
+bindsym $mod+Shift+F4 mark "scratch2", move scratchpad
 
 # This setup works for i3blocks but fails in polybar
 # bindsym $mod+0 workspace 
@@ -328,7 +334,12 @@ exec_always --no-startup-id /opt/myconfig/xorg/launch_polybar.sh
 #exec_always --no-startup-id xrandr --output DisplayPort-1 --set TearFree on --left-of DisplayPort-2 --output DisplayPort-2 --set TearFree on
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --auto --left-of DisplayPort-1 --output DisplayPort-1 --auto
 #exec_always --no-startup-id xrandr --output DisplayPort-2 --set TearFree on --left-of DisplayPort-0 --output DisplayPort-0 --set TearFree on
-exec_always --no-startup-id xrandr --output HDMI-0 --auto --above DP-4 --output DP-4 --auto --left-of DP-2 --output DP-4 --auto
+
+# 3 monitors (one smaller, above)
+# exec_always --no-startup-id xrandr --output HDMI-0 --set TearFree on --above DP-4 --output DP-4 --set TearFree on --left-of DP-2 --output DP-4 --set TearFree on
+
+# 2 monitors
+exec_always --no-startup-id xrandr --output DP-4 --set TearFree on --left-of DP-2 --output DP-4 --set TearFree on
 
 
 # exec_always --no-startup-id xcompmgr 
@@ -342,10 +353,10 @@ exec_always --no-startup-id xset r rate 200 30
 
 exec_always --no-startup-id xbindkeys
 
-exec_always --no-startup-id xscreensaver
+#exec_always --no-startup-id xscreensaver
 
 # Enable transparency using compton (see ~/.config/compton for configuration)
-# exec --no-starup-id compton --config /home/camza/.config/compton.conf
+exec --no-starup-id compton --config /home/camza/.config/compton.conf
 # exec_always --no-startup-id compton -m 0.3
 # exec_always --no-startup-id compton --config ~/.myconfig/xorg/compton
 
