@@ -1,10 +1,9 @@
 
 # [terminal]
 
-[terminal.shell]
 #program = "/home/neurosys/.bin/tmx"
 # args = ["-L", "alacritty"]
-program = "/bin/zsh"
+shell.program = "/bin/zsh"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"

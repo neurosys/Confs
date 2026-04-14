@@ -16,8 +16,10 @@ function sourceIfExists()
 
 # Path to whom other paths are relative to
 #confs_folder=~/Confs/bash_files
-path_to_bashrc=$(readlink -f ~/.bashrc)
-confs_folder=$(dirname $path_to_bashrc)/
+path_to_bashrc=$(/bin/readlink -f ~/.bashrc)
+confs_folder=$(/bin/dirname $path_to_bashrc)/
+export MY_CONF_FOLDER="$confs_folder"
+export MY_BASHRC="$path_to_bashrc"
 
 sourceIfExists ${confs_folder}/envtests
 sourceIfExists ${confs_folder}/defines
@@ -27,3 +29,16 @@ sourceIfExists ${confs_folder}/aliases
 sourceIfExists ~/.local_aliases
 sourceIfExists ~/.fzf.bash
 [ -d "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+PATH="/opt/local/bin:$PATH"
+PATH="$HOME/.bin:$PATH"
+
+which fzf &> /dev/null
+if [[ $? -eq 0 ]]
+then
+	eval "$(fzf --bash)"
+fi
+
+# Added by LM Studio CLI (lms)
+PATH="$PATH:/home/neurosys/.lmstudio/bin"
+# End of LM Studio CLI section

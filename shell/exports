@@ -9,7 +9,7 @@
 #fi
 
 # without this, subshells would have the paths doubled for each layer of shell they are
-tmpPATH=$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin
+tmpPATH="$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin"
 echo $PATH | grep -q "$tmpPATH"
 if [[ $? -ne 0 ]]
 then
@@ -31,11 +31,21 @@ then
     export FZF_BASE=$(dirname "$fzf_path")
 fi
 
+#export FZF_DEFAULT_OPTS=
+export FZF_CTRL_T_OPTS="--walker-skip .git,node-modules,target --style full --preview \"bat -n -f {}\" --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# When doing `cd` you can press ALT-C to choose a folder and preview its content
+export FZF_ALT_C_OPTS="--walker-skip .git,node_modules,target --preview 'tree -C {}'"
+
+export FZF_COMPLETION_OPTS='--border --info=inline'
+
+
 PATH_TO_ZSH=$(which zsh)
 if [[ $? -eq 0 ]]
 then
     export PATH_TO_ZSH=$(which zsh)
 fi
+
 
 if [ -f ${confs_folder}/.cfgproxy ]
 then
