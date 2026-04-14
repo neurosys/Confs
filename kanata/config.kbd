@@ -509,6 +509,7 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   lay (layer-toggle layers)
   mse (layer-toggle mouse)
   fks (layer-while-held fakekeys)
+  snd (layer-while-held multimedia)
 
   ;; tap-hold aliases with tap for dvorak key, and hold for toggle layers
   ;; WARNING(Linux only): key repeat with tap-hold can behave unexpectedly.
@@ -586,7 +587,7 @@ If you need help, please feel welcome to ask in the GitHub discussions.
   utk (tap-hold-tap-keys 200 200 u @msc (a o e))
 
   ;; tap for capslk, hold for lctl
-  cap (tap-hold 150 100 caps lctl)
+  cap (tap-hold 80 100 caps lctl)
 
   ;; Below is an alias for the `multi` action which executes multiple actions
   ;; in order but at the same time.
