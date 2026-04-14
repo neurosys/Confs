@@ -35,8 +35,8 @@ color.blocking=white on rgb002
 
 # Project
 color.project.none=
-color.project.Learn=rgb505
-color.project.Questions=rgb550
+color.project.learn=rgb505
+color.project.questions=rgb550
 
 # Priority
 color.uda.priority.H=rgb035
