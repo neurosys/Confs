@@ -2,4 +2,4 @@
 #GTK_THEME=Pax-GTK
 GTK_THEME=Nordic-bluish-accent
 
-PATH=/opt/bin:/opt/local/bin:$PATH
+#PATH=/opt/bin:/opt/local/bin:$PATH

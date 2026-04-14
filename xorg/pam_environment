@@ -1,6 +1,10 @@
 # This file is for setting environment variables for the login session
 # This file is sourced by pam at login
 
+# You can set environment variables here, but
+# DON'T USE SHELL, because this is not interpreted in any way
+# $VAR_NAME don't get expanded 
+
 GTK_THEME=Nordic-bluish-accent
 
-PATH=/opt/bin:/opt/local/bin:$PATH
+#PATH=/opt/bin:/opt/local/bin:$PATH
