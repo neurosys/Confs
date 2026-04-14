@@ -19,7 +19,6 @@
     "[Log]": {
         "editor.fontSize": 14
     },
-    "circleci.API-token": "b95960269ade30d29087602a893bb018018d89f7",
 
     "go.showGlobalVariables": true,
     "go.fillStruct": true,
