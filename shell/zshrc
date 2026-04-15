@@ -168,4 +168,5 @@ then
 
 fi
 
+eval "$(direnv hook zsh)"
 # vim:syn=sh
