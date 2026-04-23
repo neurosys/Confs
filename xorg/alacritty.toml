@@ -3,7 +3,7 @@
 
 #program = "/home/neurosys/.bin/tmx"
 # args = ["-L", "alacritty"]
-shell.program = "/bin/zsh"
+terminal.shell = "/bin/zsh"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
