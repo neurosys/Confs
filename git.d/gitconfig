@@ -60,8 +60,8 @@
     autocrlf = input
 
 [merge]
-    #tool = kdiff3
-    tool = vimdiff
+    tool = kdiff3
+    #tool = vimdiff
     #tool = meld
 	conflictstyle = diff3
 
