@@ -55,6 +55,8 @@ link_or_fail        $PWD/xorg/zathurarc             ~/.config/zathura/zathurarc 
 
 # default apps for mime types (used with xdg-open)
 link_or_fail        $PWD/xorg/mimeapps.list         ~/.config/mimeapps.list     $backup_folder
+
+mkdir -p ~/.local/share/applications/
 link_or_fail        $PWD/xorg/nsxiv-rifle.desktop   ~/.local/share/applications/nsxiv-rifle.desktop $backup_folder
 
 #backup_if_exists    ~/.fetchmailrc                                          $backup_folder
