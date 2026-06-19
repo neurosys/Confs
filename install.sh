@@ -79,4 +79,4 @@ link_or_fail        $PWD/yazi                        ~/.config/yazi          $ba
 
 link_or_fail        $PWD/lf                          ~/.config/lf            $backup_folder
 
-[[ ! -d ~/.myconfig ]] && ln -s $PWD                 ~/.myconfig
+[ ! -d ~/.myconfig ] && ln -s $PWD                 ~/.myconfig
