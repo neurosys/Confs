@@ -125,9 +125,9 @@ set icons
 
 
 # Use eza to display file information show in the bottom left corner
-cmd on-select &{{
-    lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
-}}
+# cmd on-select &{{
+#     lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+# }}
 
 # use fasd to navigate dirs
 cmd fasd_dir ${{
