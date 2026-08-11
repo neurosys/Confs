@@ -9,7 +9,7 @@
 #fi
 
 # without this, subshells would have the paths doubled for each layer of shell they are
-tmpPATH="$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin"
+tmpPATH="$HOME/go/bin:$HOME/.bin:$HOME/bin:$HOME/.mylocal/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin"
 echo $PATH | grep -q "$tmpPATH"
 if [[ $? -ne 0 ]]
 then
