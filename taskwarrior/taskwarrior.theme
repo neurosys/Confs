@@ -16,7 +16,7 @@ rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,sc
 # Header of the task listing, or calendar
 color.label=rgb050
 color.label.sort=
-color.alternate=on gray2
+color.alternate=on gray3
 color.header=rgb550
 color.footnote=rgb013
 color.warning=bold red
@@ -26,7 +26,7 @@ color.debug=rgb013
 # Task state
 color.completed=
 color.deleted=
-color.active=rgb045 on rgb015
+color.active=color rgb150 on rgb020
 color.recurring=rgb115
 color.scheduled=on rgb012
 color.until=

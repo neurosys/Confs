@@ -14,6 +14,27 @@
 data.location=~/.task
 weekstart=monday
 
+# (1) `t tags` lists all tags not just the ones in active tasks
+list.all.tags=1
+
+# Print empty columns in list / long
+print.empty.columns=1
+
+# Searches should support regex
+regex=1
+
+# `t projects` lists just current projects from active tasks 0 (1 for everything from the entire history)
+list.all.projects=0
+
+# Default command (task with no params) will be equivalent to `t long`
+default.command=long
+
+calendar.details=full
+include ~/.task/taskwarrior.theme
+include ~/.task/my-projects
+#calendar.offset=0
+#calendar.offset.value=-3
+
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
 #include /usr/share/doc/task/rc/light-256.theme
@@ -21,8 +42,7 @@ weekstart=monday
 #include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-256.theme # /usr/share/doc/task/rc/dark-256.theme
 #include /usr/share/doc/task/rc/dark-red-256.theme
 #include /usr/share/doc/task/rc/dark-green-256.theme
-#include 
-###include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-blue-256.theme # /usr/share/doc/task/rc/dark-blue-256.theme
+#include ~/.task/dark-violets-256.theme
 #include /opt/myconfig/taskwarrior/taskwarrior.theme
 #include /opt/homebrew/Cellar/task/2.6.2/share/doc/task/rc/dark-violets-256.theme # /usr/share/doc/task/rc/dark-violets-256.theme
 #include /usr/share/doc/task/rc/dark-yellow-green.theme
@@ -62,5 +82,5 @@ uda.taskwarrior-tui.mark.indicator=✔
 #uda.taskwarrior-tui.task-report.reset-filter-on-esc=true
 #uda.taskwarrior-tui.context-menu.select-on-move=false
 
-news.version=3.4.2
-include ~/.my-projects
+news.version=3.5.0
+context=bd
