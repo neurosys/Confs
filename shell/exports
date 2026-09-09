@@ -16,14 +16,6 @@ then
     export PATH="$tmpPATH:$PATH"
 fi
 
-#if [ $is_cygwin ]
-#then 
-#    #unset GREP_OPTIONS
-#    export GREP_OPTIONS="-Rn --color=auto"
-#else 
-#    export GREP_OPTIONS="-Rn --color=auto"
-#fi
-
 fzf_path="$(which fzf )"
 if [ $? -eq 0 ]
 then
@@ -62,11 +54,6 @@ export EDITOR=vim
 #    export DISPLAY=:0.0
 #fi
 #
-# Make minicom colorfull and use meta key instead of <C-a> as cmd prefix
-if [ ! $is_cygwin ] && [ -f /usr/bin/minicom ]
-then
-    export MINICOM="-m -c on"
-fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

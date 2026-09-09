@@ -188,25 +188,12 @@ alias mct='mvn clean install'
 # ======================================================================================
 #     ============== Experimental plugins from common-alias (oh-my-zsh) ============
 # ======================================================================================
-mySHELL=$(ps -p $$ | grep -v CMD | awk '{ print $4; }')
+mySHELL=$(ps -p $$ | \grep -v CMD | awk '{ print $4; }')
 if [[ $mySHELL == zsh ]]
 then
 
-alias zshrc='$EDITOR ~/.zshrc' # Quick access to the ~/.zshrc file
-
-#alias grep='grep --color'
-#alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
-
-alias whereami=display_info
-
-fi
 
 alias cobzar='mplayer -novideo -loop 0'
-
-# -C = compress
-# -X -Y = X11 forwarding enabled
-# -c = use cypher (taken from man ssh_config)
-alias fastssh='ssh -C -X -Y -c 3des-cbc'
 
 function mkscript()
 {
@@ -276,13 +263,13 @@ dog() {
 # pablo
 }
 
-alias mci='mvn clean install -DskipTests'
-alias mcit='mvn clean install'
+#alias mci='mvn clean install -DskipTests'
+#alias mcit='mvn clean install'
 
-alias sctl='systemctl'
+#alias sctl='systemctl'
 
-alias pacs='pacman -Ss'
-alias ipacs='sudo pacman -S'
+#alias pacs='pacman -Ss'
+#alias ipacs='sudo pacman -S'
 
 function cdf() {
     local fullTarget=$1
@@ -291,7 +278,7 @@ function cdf() {
 }
 
 # Do a lint check over go files
-alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
+# alias govet='go vet && echo " "{=,=,=}{=,=,=}{=,=,=} && golangci-lint run ./...'
 
 alias tt='task calendar'
 alias tw='timew'
@@ -307,27 +294,27 @@ alias vv='valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -
 alias vvv='valgrind --leak-check=full --num-callers=30 --read-var-info=yes "--error-markers=<begin>,<end>"  --track-origins=yes --show-leak-kinds=all -s --main-stacksize=16000000  --time-stamp=yes'
 
 # Pcl
-alias pv='pcl_viewer -multiview'
+#alias pv='pcl_viewer -multiview'
 
 # ncdu
 alias ncdu='ncdu -e --confirm-quit --color dark'
 
 # If cal is actually ncal
-which cal &> /dev/null
-if [[ $? -eq 0 && -h $(which cal) ]]
-then
-    alias cal='ncal -bM'
-fi
+# which cal &> /dev/null
+# if [[ $? -eq 0 && -h $(which cal) ]]
+# then
+#     alias cal='ncal -bM'
+# fi
 
 # List files contained in a debian/ubuntu package that is in an
 # official repo
-function deb_list () {
-    curl -s $(lsb_release -si \
-                | sed -e 's Ubuntu https://packages.ubuntu.com ' \
-                      -e 's Debian https://packages.debian.org '
-              )/$(lsb_release -sc)/all/$1/filelist \
-      | sed -n -e '/<pre>/,/<\/pre>/p' \
-      | sed -e 's/<[^>]\+>//g' -e '/^$/d';
-}
+# function deb_list () {
+#     curl -s $(lsb_release -si \
+#                 | sed -e 's Ubuntu https://packages.ubuntu.com ' \
+#                       -e 's Debian https://packages.debian.org '
+#               )/$(lsb_release -sc)/all/$1/filelist \
+#       | sed -n -e '/<pre>/,/<\/pre>/p' \
+#       | sed -e 's/<[^>]\+>//g' -e '/^$/d';
+# }
 
 # vim:syn=sh
