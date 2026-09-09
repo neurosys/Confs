@@ -39,6 +39,7 @@ export FZF_ALT_C_OPTS="--walker-skip .git,node_modules,target --preview 'tree -C
 
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
+export BAT_THEME="Coldark-Dark"
 
 PATH_TO_ZSH=$(which zsh)
 if [[ $? -eq 0 ]]
