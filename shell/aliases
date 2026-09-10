@@ -184,6 +184,7 @@ alias ggc='git adu ; git commit -m '
 alias mci='mvn clean install -DskipTests'
 alias mct='mvn clean install'
 
+alias dex='docker exec -e TERM=xterm-256color -it '
 
 # ======================================================================================
 #     ============== Experimental plugins from common-alias (oh-my-zsh) ============
