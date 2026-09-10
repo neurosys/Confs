@@ -184,7 +184,7 @@ map a push :touch<space>
 
 cmd pager ${{
     if [ -f "$f" ]; then
-        exec bat --theme-dark Coldark-Dark --color=always --theme=base16 --paging=always "$f"
+        exec bat --theme-dark Coldark-Dark --color=always --paging=always "$f"
     elif [ -d "$f" ]; then
         exec tree -C "$f" | $PAGER
     fi
