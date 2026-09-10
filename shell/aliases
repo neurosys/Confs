@@ -191,6 +191,7 @@ alias mct='mvn clean install'
 mySHELL=$(ps -p $$ | \grep -v CMD | awk '{ print $4; }')
 if [[ $mySHELL == zsh ]]
 then
+fi
 
 
 alias cobzar='mplayer -novideo -loop 0'
