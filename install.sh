@@ -79,4 +79,7 @@ link_or_fail        $PWD/yazi                        ~/.config/yazi          $ba
 
 link_or_fail        $PWD/lf                          ~/.config/lf            $backup_folder
 
+mkdir -p ~/.docker
+link_or_fail        $PWD/docker/config.json          ~/.docker/config.json    $backup_folder
+
 [ ! -d ~/.myconfig ] && ln -s $PWD                 ~/.myconfig || true
