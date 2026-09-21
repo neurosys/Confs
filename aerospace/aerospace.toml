@@ -193,6 +193,8 @@ on-mode-changed = []
     #alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
     alt-shift-comma = 'move-workspace-to-monitor --wrap-around left'
     alt-shift-period = 'move-workspace-to-monitor --wrap-around right'
+    ctrl-alt-shift-j = 'move-workspace-to-monitor --wrap-around down'
+    ctrl-alt-shift-k = 'move-workspace-to-monitor --wrap-around up'
     alt-comma = 'focus-monitor --wrap-around left'
     alt-period = 'focus-monitor --wrap-around right'
 
