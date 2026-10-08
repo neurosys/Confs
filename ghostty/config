@@ -1,0 +1,10 @@
+
+background = 000000
+
+
+font-family = "FiraCode Nerd Font Mono Reg"
+font-size = 16
+
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
