@@ -82,4 +82,6 @@ link_or_fail        $PWD/lf                          ~/.config/lf            $ba
 mkdir -p ~/.docker
 link_or_fail        $PWD/docker/config.json          ~/.docker/config.json    $backup_folder
 
+link_or_fail        $PWD/ghostty                   ~/.config/ghostty          $backup_folder
+
 [ ! -d ~/.myconfig ] && ln -s $PWD                 ~/.myconfig || true
