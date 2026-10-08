@@ -99,6 +99,7 @@ sourceIfExists ${modules_folder}/exports
 sourceIfExists ${modules_folder}/aliases
 sourceIfExists ${modules_folder}/ls_colors
 sourceIfExists ~/.local_aliases
+sourceIfExists ~/.myvars/local_aliases
 
 
 
@@ -168,5 +169,8 @@ then
 
 fi
 
-eval "$(direnv hook zsh)"
+if {{ which direnv }}
+then
+    eval "$(direnv hook zsh)"
+fi
 # vim:syn=sh

@@ -27,6 +27,7 @@ sourceIfExists ${confs_folder}/exports
 sourceIfExists ${confs_folder}/prompt
 sourceIfExists ${confs_folder}/aliases
 sourceIfExists ~/.local_aliases
+sourceIfExists ~/.myvars/local_aliases
 sourceIfExists ~/.fzf.bash
 [ -d "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
@@ -40,5 +41,5 @@ then
 fi
 
 # Added by LM Studio CLI (lms)
-PATH="$PATH:/home/neurosys/.lmstudio/bin"
+PATH="$PATH:/home/${USER}/.lmstudio/bin"
 # End of LM Studio CLI section
