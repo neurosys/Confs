@@ -71,6 +71,7 @@
 [diff]
     #guitool = kdiff3
 	colorMoved = default
+    context = 10
 
 [difftool]
     trustExitCode = false
