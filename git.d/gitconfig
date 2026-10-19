@@ -118,7 +118,7 @@
 [alias]
     ss = status -sb -uno
     adu = add -u
-	mg  = mergetool --no-prompt
+    mg  = mergetool --no-prompt
     mt  = mergetool --no-prompt
     s = status
 
@@ -145,6 +145,15 @@
     # Show the heat map of a project (which is are the most edited files)
     code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10"
     cc = "!git code-changes"
+
+    # `git log` with patches shown with difftastic.
+    dl = -c diff.external=difft log -p --ext-diff
+
+    # Show the most recent commit with difftastic.
+    ds = -c diff.external=difft show --ext-diff
+
+    # `git diff` with difftastic.
+    dd = -c diff.external=difft diff
     
 # Interactive is a delta configuration section
 [interactive]
